@@ -67,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				643AB0641A01316900171976 /* FinancialSuperman */,
+				643AB08E1A0134EA00171976 /* Resource */,
 				643AB0811A01316900171976 /* FinancialSupermanTests */,
 				643AB0631A01316900171976 /* Products */,
 			);
@@ -122,6 +123,13 @@
 				643AB0831A01316A00171976 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		643AB08E1A0134EA00171976 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

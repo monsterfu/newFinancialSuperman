@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>1CAA646F-7A42-4E16-9BD9-B51692FBA468</string>
+	<key>IDESourceControlProjectName</key>
+	<string>FinancialSuperman</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>FFECAC43EB6EC31C6EDC0153B210048C6967892D</key>
+		<string>https://github.com/monsterfu/newFinancialSuperman.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>FinancialSuperman.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>FFECAC43EB6EC31C6EDC0153B210048C6967892D</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/monsterfu/newFinancialSuperman.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>FFECAC43EB6EC31C6EDC0153B210048C6967892D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>FFECAC43EB6EC31C6EDC0153B210048C6967892D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>FinancialSuperman</string>
+		</dict>
+	</array>
+</dict>
+</plist>
