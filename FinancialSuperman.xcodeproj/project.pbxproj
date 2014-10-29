@@ -121,6 +121,7 @@
 		643AB16D1A013C3500171976 /* OnListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 643AB16C1A013C3500171976 /* OnListViewController.m */; };
 		643AB1711A01400A00171976 /* percentRectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 643AB1701A01400A00171976 /* percentRectView.m */; };
 		643AB1741A0143B500171976 /* OnlistViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 643AB1731A0143B500171976 /* OnlistViewCell.m */; };
+		643AB1771A01469000171976 /* OnListCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 643AB1761A01469000171976 /* OnListCellModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -260,6 +261,8 @@
 		643AB1701A01400A00171976 /* percentRectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = percentRectView.m; path = views/percentRectView.m; sourceTree = "<group>"; };
 		643AB1721A0143B500171976 /* OnlistViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OnlistViewCell.h; path = views/OnlistViewCell.h; sourceTree = "<group>"; };
 		643AB1731A0143B500171976 /* OnlistViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OnlistViewCell.m; path = views/OnlistViewCell.m; sourceTree = "<group>"; };
+		643AB1751A01469000171976 /* OnListCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OnListCellModel.h; path = Model/OnListCellModel.h; sourceTree = "<group>"; };
+		643AB1761A01469000171976 /* OnListCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OnListCellModel.m; path = Model/OnListCellModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -305,6 +308,7 @@
 				643AB1641A01389800171976 /* GlobalHeader.h */,
 				643AB0691A01316900171976 /* AppDelegate.h */,
 				643AB06A1A01316900171976 /* AppDelegate.m */,
+				643AB1781A01469700171976 /* Model */,
 				643AB16E1A013FD900171976 /* views */,
 				643AB15C1A01383100171976 /* viewControllers */,
 				643AB1651A01390C00171976 /* category */,
@@ -507,6 +511,15 @@
 				643AB1731A0143B500171976 /* OnlistViewCell.m */,
 			);
 			name = views;
+			sourceTree = "<group>";
+		};
+		643AB1781A01469700171976 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				643AB1751A01469000171976 /* OnListCellModel.h */,
+				643AB1761A01469000171976 /* OnListCellModel.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -712,6 +725,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				643AB1711A01400A00171976 /* percentRectView.m in Sources */,
+				643AB1771A01469000171976 /* OnListCellModel.m in Sources */,
 				643AB1621A01386600171976 /* CommonNavigationController.m in Sources */,
 				643AB16D1A013C3500171976 /* OnListViewController.m in Sources */,
 				643AB1691A01390C00171976 /* UIColor+getColor.m in Sources */,

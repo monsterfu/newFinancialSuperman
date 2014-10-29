@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GlobalHeader.h"
 
 @interface OnListViewController : UITableViewController
+{
+    OnlistViewCell* _cell;
+}
 
+@property(nonatomic, retain)NSMutableArray* modelArray;
 @end
