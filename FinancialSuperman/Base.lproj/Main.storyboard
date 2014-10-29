@@ -5,20 +5,66 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--榜单-->
         <scene sceneID="egd-bX-A09">
             <objects>
-                <tableViewController id="Ry5-fe-4Qe" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="eJU-zc-eyJ">
+                <tableViewController id="Ry5-fe-4Qe" customClass="OnListViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="124" sectionHeaderHeight="22" sectionFooterHeight="22" id="eJU-zc-eyJ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="0sB-Rd-FeY">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="124" id="0sB-Rd-FeY" customClass="OnlistViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0sB-Rd-FeY" id="Ms3-vu-Qkj">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cell_bg_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="DCg-a5-Vav">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="123"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Pd-fd-ixb">
+                                            <rect key="frame" x="15" y="15" width="51" height="42"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="万起" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fo-lM-ZdP">
+                                            <rect key="frame" x="67" y="16" width="25" height="69"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cee-Wn-isK" customClass="percentRectView">
+                                            <rect key="frame" x="117" y="17" width="291" height="62"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="9%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6k8-dp-6mu">
+                                            <rect key="frame" x="422" y="19" width="59" height="61"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f57-Rf-GtE">
+                                            <rect key="frame" x="498" y="10" width="2" height="70"/>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGp-uq-ZtY">
+                                            <rect key="frame" x="530" y="16" width="35" height="32"/>
+                                            <state key="normal" backgroundImage="icon_like_normal.png">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="selected" backgroundImage="icon_like_selected.png"/>
+                                            <state key="highlighted" backgroundImage="icon_like_selected.png"/>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="关注" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOI-d6-lLw">
+                                            <rect key="frame" x="518" y="54" width="58" height="26"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -26,11 +72,11 @@
                             <outlet property="delegate" destination="Ry5-fe-4Qe" id="uf7-aP-NgF"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="6RC-dJ-RJ3"/>
+                    <navigationItem key="navigationItem" title="榜单" id="6RC-dJ-RJ3"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eyb-BY-sZc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="836" y="-1104"/>
+            <point key="canvasLocation" x="836" y="-1131"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="pqb-Jd-5tL">
@@ -113,14 +159,15 @@
             </objects>
             <point key="canvasLocation" x="862" y="1188"/>
         </scene>
-        <!--Item-->
+        <!--更多-->
         <scene sceneID="jQr-nI-7Qt">
             <objects>
-                <navigationController id="Jth-ag-xQz" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Xp0-ni-cQj"/>
+                <navigationController id="Jth-ag-xQz" customClass="CommonNavigationController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="更多" image="icon_more_normal.png" selectedImage="icon_more_selected.png" id="Xp0-ni-cQj"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="H8f-UU-1vZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.43137254901960786" green="0.4392156862745098" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="K8X-2o-YnX" kind="relationship" relationship="rootViewController" id="aqx-kr-49v"/>
@@ -130,11 +177,11 @@
             </objects>
             <point key="canvasLocation" x="98" y="1188"/>
         </scene>
-        <!--Item-->
+        <!--我-->
         <scene sceneID="0CE-z2-1OG">
             <objects>
-                <navigationController id="afc-PY-G3n" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="LZx-ia-7Df"/>
+                <navigationController id="afc-PY-G3n" customClass="CommonNavigationController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="我" image="icon_mine_normal.png" selectedImage="icon_mine_selected.png" id="LZx-ia-7Df"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XgB-fD-STr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -147,11 +194,11 @@
             </objects>
             <point key="canvasLocation" x="98" y="264"/>
         </scene>
-        <!--Item-->
+        <!--搜索-->
         <scene sceneID="Wtk-HM-J1D">
             <objects>
-                <navigationController id="Ayz-2L-MrR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="loP-9t-vE3"/>
+                <navigationController id="Ayz-2L-MrR" customClass="CommonNavigationController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="搜索" image="icon_search_normal.png" selectedImage="icon_search_selected.png" id="loP-9t-vE3"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5zf-mj-xZq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -164,11 +211,11 @@
             </objects>
             <point key="canvasLocation" x="92" y="-416"/>
         </scene>
-        <!--Item-->
+        <!--榜单-->
         <scene sceneID="1R5-L7-2zG">
             <objects>
-                <navigationController id="Zih-sH-TJ8" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="o2y-mV-7sw"/>
+                <navigationController id="Zih-sH-TJ8" customClass="CommonNavigationController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="榜单" image="icon_ranking_normal.png" selectedImage="icon_ranking_normal.png" id="o2y-mV-7sw"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kj3-kY-bGb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -203,4 +250,16 @@
             <point key="canvasLocation" x="-632" y="-194"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cell_bg_1.png" width="303" height="166"/>
+        <image name="icon_like_normal.png" width="18" height="15"/>
+        <image name="icon_like_selected.png" width="18" height="15"/>
+        <image name="icon_mine_normal.png" width="21" height="24"/>
+        <image name="icon_mine_selected.png" width="23" height="26"/>
+        <image name="icon_more_normal.png" width="25" height="6"/>
+        <image name="icon_more_selected.png" width="27" height="8"/>
+        <image name="icon_ranking_normal.png" width="29" height="20"/>
+        <image name="icon_search_normal.png" width="23" height="23"/>
+        <image name="icon_search_selected.png" width="25" height="25"/>
+    </resources>
 </document>

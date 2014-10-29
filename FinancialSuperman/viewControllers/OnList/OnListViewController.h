@@ -1,5 +1,5 @@
 //
-//  FirstViewController.h
+//  OnListViewController.h
 //  FinancialSuperman
 //
 //  Created by Monster on 14-10-29.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
-
+@interface OnListViewController : UITableViewController
 
 @end
-
