@@ -1,0 +1,433 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		643AB0681A01316900171976 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 643AB0671A01316900171976 /* main.m */; };
+		643AB06B1A01316900171976 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 643AB06A1A01316900171976 /* AppDelegate.m */; };
+		643AB06E1A01316900171976 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 643AB06D1A01316900171976 /* FirstViewController.m */; };
+		643AB0711A01316900171976 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 643AB0701A01316900171976 /* SecondViewController.m */; };
+		643AB0741A01316900171976 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 643AB0721A01316900171976 /* Main.storyboard */; };
+		643AB0761A01316900171976 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 643AB0751A01316900171976 /* Images.xcassets */; };
+		643AB0791A01316900171976 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 643AB0771A01316900171976 /* LaunchScreen.xib */; };
+		643AB0851A01316A00171976 /* FinancialSupermanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 643AB0841A01316A00171976 /* FinancialSupermanTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		643AB07F1A01316900171976 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 643AB05A1A01316900171976 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 643AB0611A01316900171976;
+			remoteInfo = FinancialSuperman;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		643AB0621A01316900171976 /* FinancialSuperman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinancialSuperman.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		643AB0661A01316900171976 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		643AB0671A01316900171976 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		643AB0691A01316900171976 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		643AB06A1A01316900171976 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		643AB06C1A01316900171976 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		643AB06D1A01316900171976 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		643AB06F1A01316900171976 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		643AB0701A01316900171976 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		643AB0731A01316900171976 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		643AB0751A01316900171976 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		643AB0781A01316900171976 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		643AB07E1A01316900171976 /* FinancialSupermanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinancialSupermanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		643AB0831A01316A00171976 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		643AB0841A01316A00171976 /* FinancialSupermanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FinancialSupermanTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		643AB05F1A01316900171976 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		643AB07B1A01316900171976 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		643AB0591A01316900171976 = {
+			isa = PBXGroup;
+			children = (
+				643AB0641A01316900171976 /* FinancialSuperman */,
+				643AB0811A01316900171976 /* FinancialSupermanTests */,
+				643AB0631A01316900171976 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		643AB0631A01316900171976 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				643AB0621A01316900171976 /* FinancialSuperman.app */,
+				643AB07E1A01316900171976 /* FinancialSupermanTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		643AB0641A01316900171976 /* FinancialSuperman */ = {
+			isa = PBXGroup;
+			children = (
+				643AB0691A01316900171976 /* AppDelegate.h */,
+				643AB06A1A01316900171976 /* AppDelegate.m */,
+				643AB06C1A01316900171976 /* FirstViewController.h */,
+				643AB06D1A01316900171976 /* FirstViewController.m */,
+				643AB06F1A01316900171976 /* SecondViewController.h */,
+				643AB0701A01316900171976 /* SecondViewController.m */,
+				643AB0721A01316900171976 /* Main.storyboard */,
+				643AB0751A01316900171976 /* Images.xcassets */,
+				643AB0771A01316900171976 /* LaunchScreen.xib */,
+				643AB0651A01316900171976 /* Supporting Files */,
+			);
+			path = FinancialSuperman;
+			sourceTree = "<group>";
+		};
+		643AB0651A01316900171976 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				643AB0661A01316900171976 /* Info.plist */,
+				643AB0671A01316900171976 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		643AB0811A01316900171976 /* FinancialSupermanTests */ = {
+			isa = PBXGroup;
+			children = (
+				643AB0841A01316A00171976 /* FinancialSupermanTests.m */,
+				643AB0821A01316A00171976 /* Supporting Files */,
+			);
+			path = FinancialSupermanTests;
+			sourceTree = "<group>";
+		};
+		643AB0821A01316A00171976 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				643AB0831A01316A00171976 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		643AB0611A01316900171976 /* FinancialSuperman */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 643AB0881A01316A00171976 /* Build configuration list for PBXNativeTarget "FinancialSuperman" */;
+			buildPhases = (
+				643AB05E1A01316900171976 /* Sources */,
+				643AB05F1A01316900171976 /* Frameworks */,
+				643AB0601A01316900171976 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FinancialSuperman;
+			productName = FinancialSuperman;
+			productReference = 643AB0621A01316900171976 /* FinancialSuperman.app */;
+			productType = "com.apple.product-type.application";
+		};
+		643AB07D1A01316900171976 /* FinancialSupermanTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 643AB08B1A01316A00171976 /* Build configuration list for PBXNativeTarget "FinancialSupermanTests" */;
+			buildPhases = (
+				643AB07A1A01316900171976 /* Sources */,
+				643AB07B1A01316900171976 /* Frameworks */,
+				643AB07C1A01316900171976 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				643AB0801A01316900171976 /* PBXTargetDependency */,
+			);
+			name = FinancialSupermanTests;
+			productName = FinancialSupermanTests;
+			productReference = 643AB07E1A01316900171976 /* FinancialSupermanTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		643AB05A1A01316900171976 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = Monster;
+				TargetAttributes = {
+					643AB0611A01316900171976 = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+					643AB07D1A01316900171976 = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = 643AB0611A01316900171976;
+					};
+				};
+			};
+			buildConfigurationList = 643AB05D1A01316900171976 /* Build configuration list for PBXProject "FinancialSuperman" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 643AB0591A01316900171976;
+			productRefGroup = 643AB0631A01316900171976 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				643AB0611A01316900171976 /* FinancialSuperman */,
+				643AB07D1A01316900171976 /* FinancialSupermanTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		643AB0601A01316900171976 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				643AB0741A01316900171976 /* Main.storyboard in Resources */,
+				643AB0791A01316900171976 /* LaunchScreen.xib in Resources */,
+				643AB0761A01316900171976 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		643AB07C1A01316900171976 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		643AB05E1A01316900171976 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				643AB0711A01316900171976 /* SecondViewController.m in Sources */,
+				643AB06B1A01316900171976 /* AppDelegate.m in Sources */,
+				643AB06E1A01316900171976 /* FirstViewController.m in Sources */,
+				643AB0681A01316900171976 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		643AB07A1A01316900171976 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				643AB0851A01316A00171976 /* FinancialSupermanTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		643AB0801A01316900171976 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 643AB0611A01316900171976 /* FinancialSuperman */;
+			targetProxy = 643AB07F1A01316900171976 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		643AB0721A01316900171976 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				643AB0731A01316900171976 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		643AB0771A01316900171976 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				643AB0781A01316900171976 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		643AB0861A01316A00171976 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		643AB0871A01316A00171976 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		643AB0891A01316A00171976 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FinancialSuperman/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		643AB08A1A01316A00171976 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FinancialSuperman/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		643AB08C1A01316A00171976 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FinancialSupermanTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FinancialSuperman.app/FinancialSuperman";
+			};
+			name = Debug;
+		};
+		643AB08D1A01316A00171976 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FinancialSupermanTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FinancialSuperman.app/FinancialSuperman";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		643AB05D1A01316900171976 /* Build configuration list for PBXProject "FinancialSuperman" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				643AB0861A01316A00171976 /* Debug */,
+				643AB0871A01316A00171976 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		643AB0881A01316A00171976 /* Build configuration list for PBXNativeTarget "FinancialSuperman" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				643AB0891A01316A00171976 /* Debug */,
+				643AB08A1A01316A00171976 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		643AB08B1A01316A00171976 /* Build configuration list for PBXNativeTarget "FinancialSupermanTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				643AB08C1A01316A00171976 /* Debug */,
+				643AB08D1A01316A00171976 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 643AB05A1A01316900171976 /* Project object */;
+}
