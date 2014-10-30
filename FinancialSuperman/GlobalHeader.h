@@ -12,9 +12,14 @@
 
 #import "UIColor+getColor.h"
 #import "percentRectView.h"
-#import "OnlistViewCell.h"
-#import "OnListCellModel.h"
 
+//cell about
+#import "OnlistViewCell.h"
+#import "searchListViewCell.h"
+
+//model about
+#import "OnListCellModel.h"
+#import "SearchListCellModel.h"
 
 
 
@@ -29,6 +34,11 @@
 #define DEGREES_TO_RADIANS(angle) ((angle) / 180.0 * M_PI)
 #define RADIANS_TO_DEGREES(radians) ((radians) * (180.0 / M_PI))
 
+//色值
+
+#define BLUE_COLOR   [UIColor getColor:@"4A9DF5"]
+#define GREEN_COLOR  [UIColor getColor:@"B0D633"]
+#define RED_COLOR    [UIColor getColor:@"F16A9F"]
 
 
 #define KEY_DEVICE_INFO   @"key_device_info"

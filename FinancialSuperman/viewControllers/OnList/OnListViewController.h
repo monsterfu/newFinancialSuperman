@@ -15,4 +15,8 @@
 }
 
 @property(nonatomic, retain)NSMutableArray* modelArray;
+
+
+- (IBAction)phoneButtonTouched:(UIBarButtonItem *)sender;
+
 @end

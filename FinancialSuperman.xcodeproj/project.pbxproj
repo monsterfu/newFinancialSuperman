@@ -122,6 +122,11 @@
 		643AB1711A01400A00171976 /* percentRectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 643AB1701A01400A00171976 /* percentRectView.m */; };
 		643AB1741A0143B500171976 /* OnlistViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 643AB1731A0143B500171976 /* OnlistViewCell.m */; };
 		643AB1771A01469000171976 /* OnListCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 643AB1761A01469000171976 /* OnListCellModel.m */; };
+		643BBD7F1A02587300D151E4 /* moreTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 643BBD7E1A02587300D151E4 /* moreTableViewController.m */; };
+		643BBD831A02662200D151E4 /* searchMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 643BBD821A02662200D151E4 /* searchMainViewController.m */; };
+		643BBD861A02670100D151E4 /* searchListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 643BBD851A02670100D151E4 /* searchListViewCell.m */; };
+		643BBD891A026B4300D151E4 /* SearchListCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 643BBD881A026B4300D151E4 /* SearchListCellModel.m */; };
+		643BBD8C1A02958E00D151E4 /* productDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 643BBD8B1A02958E00D151E4 /* productDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -263,6 +268,16 @@
 		643AB1731A0143B500171976 /* OnlistViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OnlistViewCell.m; path = views/OnlistViewCell.m; sourceTree = "<group>"; };
 		643AB1751A01469000171976 /* OnListCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OnListCellModel.h; path = Model/OnListCellModel.h; sourceTree = "<group>"; };
 		643AB1761A01469000171976 /* OnListCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OnListCellModel.m; path = Model/OnListCellModel.m; sourceTree = "<group>"; };
+		643BBD7D1A02587300D151E4 /* moreTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = moreTableViewController.h; path = viewControllers/More/moreTableViewController.h; sourceTree = "<group>"; };
+		643BBD7E1A02587300D151E4 /* moreTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = moreTableViewController.m; path = viewControllers/More/moreTableViewController.m; sourceTree = "<group>"; };
+		643BBD811A02662200D151E4 /* searchMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = searchMainViewController.h; path = viewControllers/Search/searchMainViewController.h; sourceTree = "<group>"; };
+		643BBD821A02662200D151E4 /* searchMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = searchMainViewController.m; path = viewControllers/Search/searchMainViewController.m; sourceTree = "<group>"; };
+		643BBD841A02670100D151E4 /* searchListViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = searchListViewCell.h; path = views/searchListViewCell.h; sourceTree = "<group>"; };
+		643BBD851A02670100D151E4 /* searchListViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = searchListViewCell.m; path = views/searchListViewCell.m; sourceTree = "<group>"; };
+		643BBD871A026B4300D151E4 /* SearchListCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchListCellModel.h; path = Model/SearchListCellModel.h; sourceTree = "<group>"; };
+		643BBD881A026B4300D151E4 /* SearchListCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchListCellModel.m; path = Model/SearchListCellModel.m; sourceTree = "<group>"; };
+		643BBD8A1A02958E00D151E4 /* productDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = productDetailViewController.h; path = viewControllers/Search/productDetailViewController.h; sourceTree = "<group>"; };
+		643BBD8B1A02958E00D151E4 /* productDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = productDetailViewController.m; path = viewControllers/Search/productDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -467,6 +482,8 @@
 		643AB15C1A01383100171976 /* viewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				643BBD801A0265E400D151E4 /* Search */,
+				643BBD791A02581A00D151E4 /* More */,
 				643AB16A1A013BB500171976 /* OnList */,
 				643AB15E1A01386600171976 /* CommonNavigationController.h */,
 				643AB15F1A01386600171976 /* CommonNavigationController.m */,
@@ -509,6 +526,8 @@
 				643AB1701A01400A00171976 /* percentRectView.m */,
 				643AB1721A0143B500171976 /* OnlistViewCell.h */,
 				643AB1731A0143B500171976 /* OnlistViewCell.m */,
+				643BBD841A02670100D151E4 /* searchListViewCell.h */,
+				643BBD851A02670100D151E4 /* searchListViewCell.m */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -516,10 +535,32 @@
 		643AB1781A01469700171976 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				643BBD871A026B4300D151E4 /* SearchListCellModel.h */,
+				643BBD881A026B4300D151E4 /* SearchListCellModel.m */,
 				643AB1751A01469000171976 /* OnListCellModel.h */,
 				643AB1761A01469000171976 /* OnListCellModel.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		643BBD791A02581A00D151E4 /* More */ = {
+			isa = PBXGroup;
+			children = (
+				643BBD7D1A02587300D151E4 /* moreTableViewController.h */,
+				643BBD7E1A02587300D151E4 /* moreTableViewController.m */,
+			);
+			name = More;
+			sourceTree = "<group>";
+		};
+		643BBD801A0265E400D151E4 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				643BBD811A02662200D151E4 /* searchMainViewController.h */,
+				643BBD821A02662200D151E4 /* searchMainViewController.m */,
+				643BBD8A1A02958E00D151E4 /* productDetailViewController.h */,
+				643BBD8B1A02958E00D151E4 /* productDetailViewController.m */,
+			);
+			name = Search;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -724,12 +765,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				643BBD891A026B4300D151E4 /* SearchListCellModel.m in Sources */,
+				643BBD861A02670100D151E4 /* searchListViewCell.m in Sources */,
 				643AB1711A01400A00171976 /* percentRectView.m in Sources */,
 				643AB1771A01469000171976 /* OnListCellModel.m in Sources */,
 				643AB1621A01386600171976 /* CommonNavigationController.m in Sources */,
 				643AB16D1A013C3500171976 /* OnListViewController.m in Sources */,
 				643AB1691A01390C00171976 /* UIColor+getColor.m in Sources */,
+				643BBD8C1A02958E00D151E4 /* productDetailViewController.m in Sources */,
 				643AB06B1A01316900171976 /* AppDelegate.m in Sources */,
+				643BBD831A02662200D151E4 /* searchMainViewController.m in Sources */,
+				643BBD7F1A02587300D151E4 /* moreTableViewController.m in Sources */,
 				643AB0681A01316900171976 /* main.m in Sources */,
 				643AB1631A01386600171976 /* CommonTabbarViewController.m in Sources */,
 				643AB1741A0143B500171976 /* OnlistViewCell.m in Sources */,
@@ -854,10 +900,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FinancialSuperman/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -865,10 +915,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FinancialSuperman/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -925,6 +979,7 @@
 				643AB08A1A01316A00171976 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		643AB08B1A01316A00171976 /* Build configuration list for PBXNativeTarget "FinancialSupermanTests" */ = {
 			isa = XCConfigurationList;
@@ -933,6 +988,7 @@
 				643AB08D1A01316A00171976 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -17,7 +17,6 @@
         NSString* imageName = [NSString stringWithFormat:@"cell_bg_%lu",model.startNum/30];
         [self.bgImageView setImage:[UIImage imageNamed:imageName]];
         
-        [self]
     }
 }
 @end

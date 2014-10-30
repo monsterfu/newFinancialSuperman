@@ -15,10 +15,10 @@
 {
     _modelArray = [NSMutableArray array];
     
-    for (NSInteger index = 0; index < 4; index++) {
+    for (NSInteger index = 1; index < 5; index++) {
         OnListCellModel* model = [[OnListCellModel alloc]init];
         model.startNum = 30*index;
-        model.earningsPercent = 0.19*index;
+//        model.prospectiveEarningsPercent = 0.19*index;
         model.isFocus = ((index+1)%2 == 0)?(YES):(NO);
         [_modelArray addObject:model];
     }
@@ -27,18 +27,27 @@
 
 #pragma mark - UITableViewDelegate
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return 90;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 4;
+    return 3;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     _cell = [tableView dequeueReusableCellWithIdentifier:@"onListViewCellIndentifier" forIndexPath:indexPath];
-    _cell
+    [_cell setCellModel:[_modelArray objectAtIndex:indexPath.row]];
+    return _cell;
+}
+//
+- (IBAction)phoneButtonTouched:(UIBarButtonItem *)sender {
+    UIAlertView* alertView = [[UIAlertView alloc]initWithTitle:@"呼叫经理人 " message:@"18664598717" delegate:self cancelButtonTitle:@"不了" otherButtonTitles:@"呼叫", nil];
+    [alertView show];
+}
+
+#pragma mark  - UIAlertDelegate
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel://18664598717"]];
+    }
 }
 @end

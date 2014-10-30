@@ -26,7 +26,7 @@
     aPath.lineCapStyle = kCGLineCapRound; //线条拐角
     aPath.lineJoinStyle = kCGLineCapRound; //终点处理
     
-    [aPath stroke];
+    [aPath fill];
     
 }
 @end

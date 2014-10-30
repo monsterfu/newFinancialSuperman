@@ -7,6 +7,7 @@
 //
 
 #import "CommonTabbarViewController.h"
+#import "UIColor+getColor.h"
 
 @interface CommonTabbarViewController ()
 
@@ -27,8 +28,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.tabBar setTintColor:[UIColor whiteColor]];
-    [self.tabBar setSelectedImageTintColor:[UIColor whiteColor]];
+    [self.tabBar setTintColor:[UIColor getColor:@"F89D40"]];
+    [self.tabBar setSelectedImageTintColor:[UIColor getColor:@"F89D40"]];
 }
 
 - (void)didReceiveMemoryWarning
