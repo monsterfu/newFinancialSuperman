@@ -7,26 +7,34 @@
 //
 
 #import "percentRectView.h"
+#import <QuartzCore/QuartzCore.h>
+#import "UIColor+getcolor.h"
 
 @implementation percentRectView
 
 -(void)animationRectWithColor:(UIColor *)color percent:(CGFloat)percent
 {
-    _percentRect = CGRectMake(0, 0, self.frame.size.width*percent, self.frame.size.height);
-    _bgColor = color;
+    process = percent;
+    
+    [self setNeedsDisplay];
     
 }
+
 -(void)drawRect:(CGRect)rect
 {
-    [_bgColor set]; //设置线条颜色
+    self.backgroundColor = [UIColor getColor:@"F1F1F1"];
+    if (processView == nil) {
+        processView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, process*self.frame.size.width, rect.size.height)];
+        processView.backgroundColor = [UIColor getColor:@"F89D40"];
+        [self addSubview:processView];
+    }
+    processView.layer.cornerRadius = 5;
     
-    UIBezierPath* aPath = [UIBezierPath bezierPathWithRect:_percentRect];
-    
-    aPath.lineWidth = 5.0;
-    aPath.lineCapStyle = kCGLineCapRound; //线条拐角
-    aPath.lineJoinStyle = kCGLineCapRound; //终点处理
-    
-    [aPath fill];
-    
+    processView.frame = CGRectMake(processView.frame.origin.x,processView.frame.origin.y, 0*self.frame.size.width, processView.frame.size.height);;
+    [UIView animateWithDuration:2.0f animations:^{
+        
+        _percentRect = CGRectMake(processView.frame.origin.x,processView.frame.origin.y, process*self.frame.size.width, processView.frame.size.height);
+        processView.frame = _percentRect;
+    }];
 }
 @end

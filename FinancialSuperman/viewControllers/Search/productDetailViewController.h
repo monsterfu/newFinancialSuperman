@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GlobalHeader.h"
+
 
 @interface productDetailViewController : UIViewController
+{
+    NSMutableArray* _headerTitleArray;
+    NSMutableArray* _baseInfoTitleArray;
+    
+    baseInfoTableViewController* _baseInfoViewController;
+    orderViewController* _orderViewController;
+}
+
+@property(nonatomic, retain)ProductOneParamModel* productOne;
 
 @end

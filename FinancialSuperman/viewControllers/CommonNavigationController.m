@@ -23,24 +23,28 @@
     return self;
 }
 
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     if (![self.navigationBar respondsToSelector:@selector(setBarTintColor:)])
     {
-        self.navigationBar.tintColor = [UIColor getColor:@"525352"];
+        self.navigationBar.tintColor = [UIColor getColor:@"424342"];
         self.navigationBar.translucent = NO;
     }else{
-        self.navigationBar.barTintColor = [UIColor getColor:@"525352"];
+        self.navigationBar.barTintColor = [UIColor getColor:@"424342"];
         self.navigationBar.translucent = NO;
     }
     self.navigationBar.tintColor = [UIColor whiteColor];
     //
-    [self.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], UITextAttributeTextColor,
-                                                                     nil]];
+    [self.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName,nil]];
     
-    
+    [self setNeedsStatusBarAppearanceUpdate];
 }
 
 - (void)didReceiveMemoryWarning

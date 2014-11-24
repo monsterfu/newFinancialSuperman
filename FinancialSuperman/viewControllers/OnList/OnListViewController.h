@@ -9,13 +9,16 @@
 #import <UIKit/UIKit.h>
 #import "GlobalHeader.h"
 
-@interface OnListViewController : UITableViewController
+@interface OnListViewController : UITableViewController<EGORefreshTableHeaderDelegate,EGORefreshTableHeaderDelegate,UIViewControllerLoadViewDelegate,OnlistViewCellDelegate>
 {
     OnlistViewCell* _cell;
+    ProductOneParamModel* _productOneModel;
+    UIButton* _focusButton;
+    EGORefreshTableHeaderView *_refreshHeaderView;
+    BOOL _reloading;
 }
-
-@property(nonatomic, retain)NSMutableArray* modelArray;
-
+@property(nonatomic,retain)UIImageView *barView;
+@property (nonatomic, retain)NSMutableArray* dataArray;
 
 - (IBAction)phoneButtonTouched:(UIBarButtonItem *)sender;
 

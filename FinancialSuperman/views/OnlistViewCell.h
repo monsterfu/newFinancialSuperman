@@ -10,9 +10,19 @@
 #import "GlobalHeader.h"
 
 
-@class OnListCellModel;
+@class ProductOneParamModel;
+
+@protocol OnlistViewCellDelegate <NSObject>
+
+-(void)onlistViewCellIsFucus:(UIButton*)button product:(ProductOneParamModel*)product;
+
+@end
 
 @interface OnlistViewCell : UITableViewCell
+
+@property(nonatomic, assign)id<OnlistViewCellDelegate>delegate;
+
+@property (nonatomic, retain)ProductOneParamModel* productOneModel;
 
 @property (weak, nonatomic) IBOutlet UIImageView *bgImageView;
 @property (weak, nonatomic) IBOutlet UILabel *numLabel;//XX万起
@@ -27,6 +37,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *focusLabel;
 @property (weak, nonatomic) IBOutlet UILabel *detailLabel;
 
--(void)setCellModel:(OnListCellModel*)model;
+- (IBAction)focusButtonTouch:(UIButton *)sender;
+-(void)setproductOneModel:(ProductOneParamModel*)model;
 
 @end

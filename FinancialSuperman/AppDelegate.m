@@ -17,6 +17,23 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    NSString* userName = [USERDEFAULT objectForKey:KEY_USERNAME_INFO];
+    NSString* passWord = [USERDEFAULT objectForKey:KEY_PASSWORD_INFO];
+    
+    [USERDEFAULT setBool:NO forKey:KEY_ISLOGIN_INFO];
+    
+    if (userName && passWord&&[USER_DEFAULT boolForKey:KEY_ISLOGIN_WHEN_EXIT_INFO]) {
+        [HttpRequest userLoginRequest:[LoginModel stanceWithUserName:userName password:passWord captcha:@""] delegate:self finishSel:@selector(GetResult:) failSel:@selector(GetErr:) tag:TAG_ProductAll];
+    }
+    
+    //目前此项暂时写死
+    if ([USERDEFAULT objectForKey:KEY_APPKEY_INFO] == nil) {
+        [USERDEFAULT setObject:@"licai670a083b7b2738d8285b89da2ed82" forKey:KEY_APPKEY_INFO];
+    }
+    
+    
     return YES;
 }
 
@@ -40,6 +57,34 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    BOOL last = [USER_DEFAULT boolForKey:KEY_ISLOGIN_INFO];
+    [USER_DEFAULT removeObjectForKey:KEY_ISLOGIN_WHEN_EXIT_INFO];
+    [USER_DEFAULT setBool:last forKey:KEY_ISLOGIN_WHEN_EXIT_INFO];
+    [USER_DEFAULT synchronize];
 }
 
+#pragma mark http result
+-(void) GetErr:(ASIHTTPRequest *)request
+{
+    //    [ProgressHUD showError:@"获取失败，请检查网络连接是否正常!"];
+}
+-(void) GetResult:(ASIHTTPRequest *)request
+{
+    NSData *responseData = [request responseData];
+    NSString*pageSource = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+    NSLog(@"pageSource:%@",pageSource);
+    NSError *error;
+    NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
+    NSLog(@"dic is %@",dictionary);
+    if(dictionary!=nil){
+        [USER_DEFAULT removeObjectForKey:KEY_TOKEN_INFO];
+        [USER_DEFAULT removeObjectForKey:KEY_ISLOGIN_INFO];
+        [USER_DEFAULT setObject:[dictionary objectForKey:@"token"] forKey:KEY_TOKEN_INFO];
+        [USER_DEFAULT setBool:YES forKey:KEY_ISLOGIN_INFO];
+        [USER_DEFAULT synchronize];
+        [[NSNotificationCenter defaultCenter]postNotificationName:NSNotificationCenter_userbeLogin object:nil];
+    }else{
+        //        [ProgressHUD showError:@"获取失败，请检查网络连接是否正常!"];
+    }
+}
 @end

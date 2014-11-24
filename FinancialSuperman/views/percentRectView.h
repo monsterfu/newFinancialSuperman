@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface percentRectView : UIView
-
+{
+    float process;
+    UIView* processView;
+}
 @property(nonatomic, retain)UIColor* bgColor;
 @property(nonatomic, assign)CGRect percentRect;
 
