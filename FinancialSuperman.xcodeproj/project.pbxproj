@@ -157,6 +157,8 @@
 		643AB1711A01400A00171976 /* percentRectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 643AB1701A01400A00171976 /* percentRectView.m */; };
 		643AB1741A0143B500171976 /* OnlistViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 643AB1731A0143B500171976 /* OnlistViewCell.m */; };
 		643AB1771A01469000171976 /* OnListCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 643AB1761A01469000171976 /* OnListCellModel.m */; };
+		643B66241A237A0E00F14AC5 /* attentionProductModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 643B66231A237A0E00F14AC5 /* attentionProductModel.m */; };
+		643B66271A238E5300F14AC5 /* MeOrderListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 643B66261A238E5300F14AC5 /* MeOrderListViewController.m */; };
 		643BBD7F1A02587300D151E4 /* moreTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 643BBD7E1A02587300D151E4 /* moreTableViewController.m */; };
 		643BBD831A02662200D151E4 /* searchMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 643BBD821A02662200D151E4 /* searchMainViewController.m */; };
 		643BBD861A02670100D151E4 /* searchListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 643BBD851A02670100D151E4 /* searchListViewCell.m */; };
@@ -426,6 +428,10 @@
 		643AB1731A0143B500171976 /* OnlistViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OnlistViewCell.m; path = views/OnlistViewCell.m; sourceTree = "<group>"; };
 		643AB1751A01469000171976 /* OnListCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OnListCellModel.h; path = Model/OnListCellModel.h; sourceTree = "<group>"; };
 		643AB1761A01469000171976 /* OnListCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OnListCellModel.m; path = Model/OnListCellModel.m; sourceTree = "<group>"; };
+		643B66221A237A0E00F14AC5 /* attentionProductModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = attentionProductModel.h; path = Model/attentionProductModel.h; sourceTree = "<group>"; };
+		643B66231A237A0E00F14AC5 /* attentionProductModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = attentionProductModel.m; path = Model/attentionProductModel.m; sourceTree = "<group>"; };
+		643B66251A238E5300F14AC5 /* MeOrderListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeOrderListViewController.h; path = viewControllers/Me/MeOrderListViewController.h; sourceTree = "<group>"; };
+		643B66261A238E5300F14AC5 /* MeOrderListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeOrderListViewController.m; path = viewControllers/Me/MeOrderListViewController.m; sourceTree = "<group>"; };
 		643BBD7D1A02587300D151E4 /* moreTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = moreTableViewController.h; path = viewControllers/More/moreTableViewController.h; sourceTree = "<group>"; };
 		643BBD7E1A02587300D151E4 /* moreTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = moreTableViewController.m; path = viewControllers/More/moreTableViewController.m; sourceTree = "<group>"; };
 		643BBD811A02662200D151E4 /* searchMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = searchMainViewController.h; path = viewControllers/Search/searchMainViewController.h; sourceTree = "<group>"; };
@@ -641,14 +647,16 @@
 		6417B8681A0547310060E236 /* content */ = {
 			isa = PBXGroup;
 			children = (
+				64B6C7781A06641B00F251D4 /* MeAttentionViewController.h */,
+				64B6C7791A06641B00F251D4 /* MeAttentionViewController.m */,
+				643B66251A238E5300F14AC5 /* MeOrderListViewController.h */,
+				643B66261A238E5300F14AC5 /* MeOrderListViewController.m */,
 				6417B8691A0547670060E236 /* MeManageViewController.h */,
 				6417B86A1A0547670060E236 /* MeManageViewController.m */,
 				6417B86C1A0547DF0060E236 /* MeCommissionViewController.h */,
 				6417B86D1A0547DF0060E236 /* MeCommissionViewController.m */,
 				64B6C7751A06608D00F251D4 /* MeAccountViewController.h */,
 				64B6C7761A06608D00F251D4 /* MeAccountViewController.m */,
-				64B6C7781A06641B00F251D4 /* MeAttentionViewController.h */,
-				64B6C7791A06641B00F251D4 /* MeAttentionViewController.m */,
 			);
 			name = content;
 			sourceTree = "<group>";
@@ -944,6 +952,8 @@
 				643AB1761A01469000171976 /* OnListCellModel.m */,
 				64702B1D1A10855700850E32 /* ProductParam.h */,
 				64702B1E1A10855700850E32 /* ProductParam.m */,
+				643B66221A237A0E00F14AC5 /* attentionProductModel.h */,
+				643B66231A237A0E00F14AC5 /* attentionProductModel.m */,
 				64702B691A10E46500850E32 /* ProductOneParamModel.h */,
 				64702B6A1A10E46500850E32 /* ProductOneParamModel.m */,
 				6418BE401A1CA11F00F5B353 /* BaseInfoModel.h */,
@@ -1432,6 +1442,7 @@
 				64702AFB1A107C1A00850E32 /* ASIWebPageRequest.m in Sources */,
 				64702B091A107C1A00850E32 /* ASIS3Request.m in Sources */,
 				6417B8571A04CB2D0060E236 /* UIButtonImageOrder+reversal.m in Sources */,
+				643B66271A238E5300F14AC5 /* MeOrderListViewController.m in Sources */,
 				643BBD8C1A02958E00D151E4 /* productDetailViewController.m in Sources */,
 				64702AFA1A107C1A00850E32 /* ASINetworkQueue.m in Sources */,
 				643AB06B1A01316900171976 /* AppDelegate.m in Sources */,
@@ -1442,6 +1453,7 @@
 				643BBD831A02662200D151E4 /* searchMainViewController.m in Sources */,
 				643BBD7F1A02587300D151E4 /* moreTableViewController.m in Sources */,
 				6418BE421A1CA11F00F5B353 /* BaseInfoModel.m in Sources */,
+				643B66241A237A0E00F14AC5 /* attentionProductModel.m in Sources */,
 				64702B1F1A10855700850E32 /* ProductParam.m in Sources */,
 				6417B85B1A04D0410060E236 /* UIButtonImageOrder.m in Sources */,
 				643AB0681A01316900171976 /* main.m in Sources */,

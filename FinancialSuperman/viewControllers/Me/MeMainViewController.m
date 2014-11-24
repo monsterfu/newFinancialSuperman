@@ -41,10 +41,9 @@
     leftTabController.buttonTitleEdgeInsets = UIEdgeInsetsMake(10, 0, 0, 0);
     
     leftTabController.selection = @[@"PLACE\n0", @"PLACE\n0", @"PLACE\n0", @"PLACE\n0", @"PLACE\n0"];
-    [leftTabController setButtonName:@"账户" atIndex:0];
-    [leftTabController setButtonName:@"关注" atIndex:1];
+    [leftTabController setButtonName:@"关注" atIndex:0];
+    [leftTabController setButtonName:@"订单" atIndex:1];
     [leftTabController setButtonName:@"佣金" atIndex:2];
-    [leftTabController setButtonName:@"管理" atIndex:3];
     [leftTabController setButtonName:@"管理" atIndex:3];
     
     
@@ -63,12 +62,12 @@
     _meCommissionViewController = [storyBoard instantiateViewControllerWithIdentifier:@"meCommissionViewControllerIdentifier"];
     _meManageViewController = [storyBoard instantiateViewControllerWithIdentifier:@"meManageViewControllerIdentifier"];
     
-    _controllerArry = @[_meAccountViewController,_meAttentionViewController,_meCommissionViewController,_meManageViewController];
+    _controllerArry = @[_meAttentionViewController,_meAccountViewController,_meCommissionViewController,_meManageViewController];
     
-    [_meAccountViewController.view setFrame:CGRectOffset(_meManageViewController.view.frame, DEVICE_WIDTH*0, 0)];
-    [_meAttentionViewController.view setFrame:CGRectOffset(_meManageViewController.view.frame, DEVICE_WIDTH*1, 0)];
-    [_meCommissionViewController.view setFrame:CGRectOffset(_meCommissionViewController.view.frame, DEVICE_WIDTH*2, 0)];
-    [_meManageViewController.view setFrame:CGRectOffset(_meManageViewController.view.frame, DEVICE_WIDTH*3, 0)];
+    [_meAttentionViewController.view setFrame:CGRectOffset(CGRectMake(0, 0, _scrollView.frame.size.width, _scrollView.frame.size.height), DEVICE_WIDTH*0, 0)];
+    [_meAccountViewController.view setFrame:CGRectOffset(_meManageViewController.view.frame, DEVICE_WIDTH*1, _scrollView.frame.size.height)];
+    [_meCommissionViewController.view setFrame:CGRectOffset(_meCommissionViewController.view.frame, DEVICE_WIDTH*2, _scrollView.frame.size.height)];
+    [_meManageViewController.view setFrame:CGRectOffset(_meManageViewController.view.frame, DEVICE_WIDTH*3, _scrollView.frame.size.height)];
     
     [_scrollView setContentSize:CGSizeMake(4*DEVICE_WIDTH, _scrollView.frame.size.height)];
     

@@ -202,6 +202,8 @@
             {
                 _focusButton.selected = (!_focusButton.selected)?(YES):(NO);
                 [ProgressHUD showError:[dictionary objectForKey:@"message"]];
+            }else{
+                [[NSNotificationCenter defaultCenter]postNotificationName:NSNotificationCenter_userFocusProduct object:nil];
             }
         }else if (request.tag == TAG_ProductAll){
             [self endLoadView];

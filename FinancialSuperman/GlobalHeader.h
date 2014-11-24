@@ -43,6 +43,7 @@
 #import "SearchListCellModel.h"
 #import "ProductOneParamModel.h"
 #import "LoginModel.h"
+#import "attentionProductModel.h"
 
 //thrid-party view control
 #import "DKScrollingTabController.h"
@@ -66,9 +67,10 @@
 #define CHECKCODE_API           @"?c=authAPI&m=get_captcha_code"
 #define REGISTER_API            @"?c=authAPI&m=register"
 #define PASSWORDRESET_API       @"?c=authAPI&m=forgot_password"
-#define ATTENTION_API           @"?c=productAPI&m=watchlist_action"  //关注
+#define ATTENTION_API           @"?c=productAPI&m=watchlist_action"     //关注
 #define ONLIST_API              @"?c=productAPI&m=products_ranking&appkey=licai670a083b7b2738d8285b89da2ed82"
-#define ORDER_API               @"?c=productAPI&m=booking"           //预约产品
+#define ORDER_API               @"?c=productAPI&m=booking"              //预约产品
+#define ORDER_LIST_API          @"?c=productAPI&m=bookings_json"        //预约产品列表
 
 
 #define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
@@ -108,10 +110,13 @@
 #define NSNotificationCenter_dismissRecordChange                @"NSNotificationCenter_dismissRecordChange"
 #define NSNotificationCenter_userbeLogin                        @"NSNotificationCenter_userbeLogin"
 #define NSNotificationCenter_userbeLogout                       @"NSNotificationCenter_userbeLogout"
+#define NSNotificationCenter_userFocusProduct                   @"NSNotificationCenter_userFocusProduct"
 
-#define TAG_ProductAll     4001
-#define TAG_Product_Focus     4002
-#define TAG_Product_Order     4003
+#define TAG_ProductAll              4001
+#define TAG_Product_Focus           4002
+#define TAG_Product_FocusList       4003
+#define TAG_Product_Order           4004
+#define TAG_Product_OrderList       4005
 
 #define TAG_PersonCenter_Register    5000
 #define TAG_PersonCenter_CheckCode   5001

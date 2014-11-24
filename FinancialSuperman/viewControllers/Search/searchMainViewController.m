@@ -234,14 +234,14 @@
 */
 
 #pragma mark -- CellDelegate
--(void)searchListCellIsFucus:(UIButton*)sender product:(ProductOneParamModel *)product
+-(void)searchListCellIsFucus:(UIButton*)sender productid:(NSString *)productid
 {
     if (![USERDEFAULT boolForKey:KEY_ISLOGIN_INFO]) {
         [self.navigationController.tabBarController performSegueWithIdentifier:@"userLoginIdentifier" sender:nil];
     }else{
         _focusButton = sender;
         NSString* focusStr = sender.selected?(@"add"):(@"cancel");
-        [HttpRequest attentionRequest:[NSMutableDictionary dictionaryWithObjects:@[[USER_DEFAULT objectForKey:KEY_TOKEN_INFO],focusStr,product.productId] forKeys:@[@"token",@"action",@"product_id"]] delegate:self finishSel:@selector(GetResult:) failSel:@selector(GetErr:) tag:TAG_Product_Focus];
+        [HttpRequest attentionRequest:[NSMutableDictionary dictionaryWithObjects:@[[USER_DEFAULT objectForKey:KEY_TOKEN_INFO],focusStr,productid] forKeys:@[@"token",@"action",@"product_id"]] delegate:self finishSel:@selector(GetResult:) failSel:@selector(GetErr:) tag:TAG_Product_Focus];
     }
 }
 #pragma mark - touch
@@ -332,6 +332,8 @@
             {
                 _focusButton.selected = (!_focusButton.selected)?(YES):(NO);
                 [ProgressHUD showError:[dictionary objectForKey:@"message"]];
+            }else{
+                [[NSNotificationCenter defaultCenter]postNotificationName:NSNotificationCenter_userFocusProduct object:nil];
             }
         }else if (request.tag == TAG_ProductAll){
             [self endLoadView];

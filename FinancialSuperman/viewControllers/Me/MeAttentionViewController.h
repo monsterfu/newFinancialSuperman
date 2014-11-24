@@ -7,9 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GlobalHeader.h"
 
-@interface MeAttentionViewController : UIViewController
+@interface MeAttentionViewController : UIViewController<searchListViewCell>
 {
-    UITableViewCell* _cell;
+    searchListViewCell* _cell;
+    attentionProductModel* _attetionModel;
+    
+    UIButton* _focusButton;
+    
+    UILabel* _emptylabel;
 }
+
+@property (nonatomic, retain)NSMutableArray* dataArray;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
 @end

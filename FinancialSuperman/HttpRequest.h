@@ -40,6 +40,9 @@
 
 //预约产品
 +(void)orderProductRequest:(NSMutableDictionary*)infoDic delegate:(id)delegate finishSel:(SEL)finishSel failSel:(SEL)failSel tag:(NSUInteger)tag;
+
+//获取预约产品列表
++(void)orderProductListRequest:(NSMutableDictionary*)infoDic delegate:(id)delegate finishSel:(SEL)finishSel failSel:(SEL)failSel tag:(NSUInteger)tag;
 @end
 
 

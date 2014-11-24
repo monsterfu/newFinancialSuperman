@@ -20,6 +20,7 @@
     BOOL _reloading;
     
     UIButton* _focusButton;
+    
 }
 
 @property (weak, nonatomic) IBOutlet UIView *productTypeView;

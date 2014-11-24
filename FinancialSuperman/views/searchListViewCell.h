@@ -9,17 +9,22 @@
 #import <UIKit/UIKit.h>
 @class percentRectView;
 @class ProductOneParamModel;
+@class attentionProductModel;
 
 @protocol searchListViewCell <NSObject>
--(void)searchListCellIsFucus:(UIButton*)button product:(ProductOneParamModel*)product;
+-(void)searchListCellIsFucus:(UIButton*)button productid:(NSString*)productid;
 @end
 
 
 @interface searchListViewCell : UITableViewCell
-
+{
+    
+    NSString* _productId;
+}
 
 @property (nonatomic, assign)id<searchListViewCell>delegate;
 @property (nonatomic, retain)ProductOneParamModel* productOneModel;
+@property (nonatomic, retain)attentionProductModel* attentionModel;
 
 @property (weak, nonatomic) IBOutlet UIImageView *statusImage;
 @property (weak, nonatomic) IBOutlet UILabel *productLabel;

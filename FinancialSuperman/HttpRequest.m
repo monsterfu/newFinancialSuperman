@@ -84,6 +84,12 @@
     
     [self Request:[NSString stringWithFormat:@"%@%@",Test2_Server,ORDER_API] postdate:infoDic tag:tag delegate:delegate finishSel:finishSel failSel:failSel];
 }
+
+//获取预约产品列表
++(void)orderProductListRequest:(NSMutableDictionary*)infoDic delegate:(id)delegate finishSel:(SEL)finishSel failSel:(SEL)failSel tag:(NSUInteger)tag{
+    
+    [self Request:[NSString stringWithFormat:@"%@%@",Test2_Server,ORDER_LIST_API] postdate:infoDic tag:tag delegate:delegate finishSel:finishSel failSel:failSel];
+}
 @end
 
 
