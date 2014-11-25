@@ -1226,7 +1226,6 @@
 				TargetAttributes = {
 					643AB0611A01316900171976 = {
 						CreatedOnToolsVersion = 6.0.1;
-						DevelopmentTeam = H6NR6KPK2Z;
 					};
 					643AB07D1A01316900171976 = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -1625,7 +1624,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "816e70ee-4735-4d02-b36a-bcac336df862";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1646,7 +1645,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "816e70ee-4735-4d02-b36a-bcac336df862";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

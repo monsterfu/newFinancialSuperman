@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FinancialSuperman/viewControllers/PersonCenter/RegisterViewController.m"
-            timestampString = "437730102.025674"
+            timestampString = "438626662.750438"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "174"
-            endingLineNumber = "174"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
             landmarkName = "-GetResult:"
             landmarkType = "5">
          </BreakpointContent>
@@ -499,13 +499,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FinancialSuperman/viewControllers/Me/MeMainViewController.m"
-            timestampString = "438535517.938339"
+            filePath = "FinancialSuperman/views/personcenterCells/checkCodeTableViewCell.m"
+            timestampString = "438626174.935459"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
-            landmarkName = "-viewDidLoad"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "-countDownAction"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

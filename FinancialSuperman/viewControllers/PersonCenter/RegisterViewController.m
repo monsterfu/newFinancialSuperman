@@ -160,7 +160,12 @@
     }
 
     [ProgressHUD show:@"注册中，请稍候……"];
-    [HttpRequest userRegisterRequest:[NSMutableDictionary dictionaryWithObjects:@[[USER_DEFAULT objectForKey:KEY_CHECKCODE_TOKEN_INFO],_userNameTextField.text,_passWordTextField.text,_checkCodeTextField.text] forKeys:@[@"token",@"phone",@"password",@"captcha"]] delegate:self finishSel:@selector(GetResult:) failSel:@selector(GetErr:) tag:TAG_PersonCenter_Register];
+    NSString* token = [USER_DEFAULT objectForKey:KEY_CHECKCODE_TOKEN_INFO];
+    if (token == nil) {
+        [ProgressHUD showError:@"异常错误"];
+        token = @"";
+    }
+    [HttpRequest userRegisterRequest:[NSMutableDictionary dictionaryWithObjects:@[token,_userNameTextField.text,_passWordTextField.text,_checkCodeTextField.text] forKeys:@[@"token",@"phone",@"password",@"captcha"]] delegate:self finishSel:@selector(GetResult:) failSel:@selector(GetErr:) tag:TAG_PersonCenter_Register];
     
 }
 
