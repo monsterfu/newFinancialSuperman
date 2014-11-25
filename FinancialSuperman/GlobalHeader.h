@@ -44,6 +44,8 @@
 #import "ProductOneParamModel.h"
 #import "LoginModel.h"
 #import "attentionProductModel.h"
+#import "orderProductModel.h"
+#import "UserDetailModel.h"
 
 //thrid-party view control
 #import "DKScrollingTabController.h"
@@ -71,6 +73,7 @@
 #define ONLIST_API              @"?c=productAPI&m=products_ranking&appkey=licai670a083b7b2738d8285b89da2ed82"
 #define ORDER_API               @"?c=productAPI&m=booking"              //预约产品
 #define ORDER_LIST_API          @"?c=productAPI&m=bookings_json"        //预约产品列表
+#define USER_DETAIL_API         @"?c=userAPI&m=user_detail"
 
 
 #define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
@@ -85,6 +88,13 @@
 //弧度、角度转换
 #define DEGREES_TO_RADIANS(angle) ((angle) / 180.0 * M_PI)
 #define RADIANS_TO_DEGREES(radians) ((radians) * (180.0 / M_PI))
+
+
+//订单状态
+#define order_type_booking      @"booking"      //预约
+#define order_type_contract       @"contract"   //合同
+#define order_type_prepay     @"prepay"         //打款
+#define order_type_return       @"return"       //返佣
 
 //色值
 
@@ -118,9 +128,12 @@
 #define TAG_Product_Order           4004
 #define TAG_Product_OrderList       4005
 
+
+
 #define TAG_PersonCenter_Register    5000
 #define TAG_PersonCenter_CheckCode   5001
 #define TAG_PersonCenter_Login       5002
+#define TAG_PersonDetail             5003
 
 
 

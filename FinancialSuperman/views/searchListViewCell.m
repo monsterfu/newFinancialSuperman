@@ -31,10 +31,10 @@
     [self.focusButton setSelected:YES];
     [self.productLabel setText:_attentionModel.product_name];
     [self.amountLabel setText:[NSString stringWithFormat:@"%@万起",_attentionModel.investment_amount]];
-//    [self.limitLabel setText:[NSString stringWithFormat:@"%@个月",_productOneModel.investment_cycle]];
+    [self.limitLabel setText:[NSString stringWithFormat:@"%@个月",_attentionModel.investment_cycle]];
     [self.earningsLabel setText:[NSString stringWithFormat:@"%@%%",_attentionModel.expected_return_rate]];
     [self.commissionLabel setText:[NSString stringWithFormat:@"%@%%",_attentionModel.return_rate]];
-//    [self.surplusPercentLabel setText:[NSString stringWithFormat:@"%.1f%%",_productOneModel.remainPercent*100]];
+    [self.surplusPercentLabel setText:[NSString stringWithFormat:@"%.1f%%",_attentionModel.complete_percent*100]];
     [self.percentView animationRectWithColor:[UIColor getColor:@"F89D40"] percent:_attentionModel.complete_percent];
     
     float value = [_productOneModel.expected_return_rate floatValue];

@@ -90,6 +90,12 @@
     
     [self Request:[NSString stringWithFormat:@"%@%@",Test2_Server,ORDER_LIST_API] postdate:infoDic tag:tag delegate:delegate finishSel:finishSel failSel:failSel];
 }
+
+//获取用户明细
++(void)personDetailRequest:(NSMutableDictionary*)infoDic delegate:(id)delegate finishSel:(SEL)finishSel failSel:(SEL)failSel tag:(NSUInteger)tag{
+    
+    [self Request:[NSString stringWithFormat:@"%@%@",Test2_Server,USER_DETAIL_API] postdate:infoDic tag:tag delegate:delegate finishSel:finishSel failSel:failSel];
+}
 @end
 
 

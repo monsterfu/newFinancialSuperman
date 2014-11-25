@@ -11,9 +11,11 @@
 @implementation UIViewController (loadView)
 
 static loadViewContoller* _loadViewController = nil;
+static UIViewController* _baseViewController = nil;
 
--(void)startLoadView:(UIView*)view
+-(void)startLoadView:(UIView*)view baseController:(UIViewController*)baseController
 {
+#if 1
     _loadViewController = nil;
     if (_loadViewController == nil) {
         UIStoryboard* storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
@@ -21,6 +23,13 @@ static loadViewContoller* _loadViewController = nil;
         [view addSubview:_loadViewController.view];
         [view bringSubviewToFront:_loadViewController.view];
     }
+    _baseViewController = baseController;
+#else
+    UIStoryboard* storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    _loadViewController  = [storyBoard instantiateViewControllerWithIdentifier:@"loadViewControllerIdentifier"];
+    [view addSubview:_loadViewController.view];
+    [view bringSubviewToFront:_loadViewController.view];
+#endif
     [_loadViewController.fingerImageView setHidden:YES];
     [_loadViewController.refreshLabel setHidden:YES];
     [_loadViewController.label setHidden:NO];

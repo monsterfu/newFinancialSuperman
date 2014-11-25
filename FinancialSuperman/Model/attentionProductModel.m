@@ -21,13 +21,14 @@
 @synthesize product_type;
 @synthesize return_rate;
 @synthesize user_id;
-
+@synthesize investment_cycle;
 
 - (id)initWithDictionary:(NSDictionary *)dictionary
 {
     if (self = [super init])
     {
-        complete_percent = [[dictionary objectForKey:@"complete_percent"]floatValue];
+        complete_percent = [[dictionary objectForKey:@"complete_percent"]floatValue]/100.0f;
+        investment_cycle = [dictionary objectForKey:@"investment_cycle"];
         expected_return_rate = [dictionary objectForKey:@"expected_return_rate"];
         attention_id  = [[dictionary objectForKey:@"attention_id"]doubleValue];
         investment_amount  = [dictionary objectForKey:@"investment_amount"];

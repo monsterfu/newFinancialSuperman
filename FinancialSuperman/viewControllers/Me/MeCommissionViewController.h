@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GlobalHeader.h"
 
 @interface MeCommissionViewController : UIViewController
 {
     UITableViewCell* _cell;
+    UserDetailModel* _model;
 }
+
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @end

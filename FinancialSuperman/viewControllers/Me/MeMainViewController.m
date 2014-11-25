@@ -57,21 +57,21 @@
     
     UIStoryboard* storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     
-    _meAccountViewController  = [storyBoard instantiateViewControllerWithIdentifier:@"meAccountViewControllerIdentifier"];
     _meAttentionViewController = [storyBoard instantiateViewControllerWithIdentifier:@"meAttentionViewControllerIdentifier"];
+    _meOrderListViewController  = [storyBoard instantiateViewControllerWithIdentifier:@"MeOrderListViewControllerIdentifier"];
     _meCommissionViewController = [storyBoard instantiateViewControllerWithIdentifier:@"meCommissionViewControllerIdentifier"];
     _meManageViewController = [storyBoard instantiateViewControllerWithIdentifier:@"meManageViewControllerIdentifier"];
     
-    _controllerArry = @[_meAttentionViewController,_meAccountViewController,_meCommissionViewController,_meManageViewController];
+    _controllerArry = @[_meAttentionViewController,_meOrderListViewController,_meCommissionViewController,_meManageViewController];
     
     [_meAttentionViewController.view setFrame:CGRectOffset(CGRectMake(0, 0, _scrollView.frame.size.width, _scrollView.frame.size.height), DEVICE_WIDTH*0, 0)];
-    [_meAccountViewController.view setFrame:CGRectOffset(_meManageViewController.view.frame, DEVICE_WIDTH*1, _scrollView.frame.size.height)];
+    [_meOrderListViewController.view setFrame:CGRectOffset(_meManageViewController.view.frame, DEVICE_WIDTH*1, _scrollView.frame.size.height)];
     [_meCommissionViewController.view setFrame:CGRectOffset(_meCommissionViewController.view.frame, DEVICE_WIDTH*2, _scrollView.frame.size.height)];
     [_meManageViewController.view setFrame:CGRectOffset(_meManageViewController.view.frame, DEVICE_WIDTH*3, _scrollView.frame.size.height)];
     
     [_scrollView setContentSize:CGSizeMake(4*DEVICE_WIDTH, _scrollView.frame.size.height)];
     
-    [_scrollView addSubview:_meAccountViewController.view];
+    [_scrollView addSubview:_meOrderListViewController.view];
     [_scrollView addSubview:_meAttentionViewController.view];
     [_scrollView addSubview:_meManageViewController.view];
     [_scrollView addSubview:_meCommissionViewController.view];

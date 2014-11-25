@@ -48,6 +48,7 @@
     [self startLoadView:_tableView];
     [HttpRequest attentionRequest:[NSMutableDictionary dictionaryWithObjects:@[[USER_DEFAULT objectForKey:KEY_TOKEN_INFO],@"list",@""] forKeys:@[@"token",@"action",@"product_id"]] delegate:self finishSel:@selector(GetResult:) failSel:@selector(GetErr:) tag:TAG_Product_FocusList];
 }
+
 #pragma mark - Table view data source
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.

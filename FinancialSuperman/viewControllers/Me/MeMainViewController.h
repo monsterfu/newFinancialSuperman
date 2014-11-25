@@ -10,7 +10,7 @@
 #import "GlobalHeader.h"
 #import "MeCommissionViewController.h"
 #import "MeManageViewController.h"
-#import "MeAccountViewController.h"
+#import "MeOrderListViewController.h"
 #import "MeAttentionViewController.h"
 #import "RemindLoginViewController.h"
 
@@ -20,7 +20,7 @@
     
     MeCommissionViewController* _meCommissionViewController;
     MeManageViewController* _meManageViewController;
-    MeAccountViewController* _meAccountViewController;
+    MeOrderListViewController* _meOrderListViewController;
     MeAttentionViewController* _meAttentionViewController;
     
     RemindLoginViewController* _remindLoginViewController;

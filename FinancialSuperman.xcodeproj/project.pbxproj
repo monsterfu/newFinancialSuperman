@@ -221,7 +221,6 @@
 		64702B781A10F88900850E32 /* grayArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 64702B721A10F88900850E32 /* grayArrow@2x.png */; };
 		64702B7B1A1108CA00850E32 /* timeline_new_status_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 64702B791A1108CA00850E32 /* timeline_new_status_background.png */; };
 		64702B7C1A1108CA00850E32 /* timeline_new_status_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 64702B7A1A1108CA00850E32 /* timeline_new_status_background@2x.png */; };
-		64B6C7771A06608D00F251D4 /* MeAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64B6C7761A06608D00F251D4 /* MeAccountViewController.m */; };
 		64B6C77A1A06641B00F251D4 /* MeAttentionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64B6C7791A06641B00F251D4 /* MeAttentionViewController.m */; };
 		64B7D4BD1A223C550035E60F /* user_login_user_cellphone_number_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 64B7D4BC1A223C550035E60F /* user_login_user_cellphone_number_logo@2x.png */; };
 		64B7D4C01A223D6C0035E60F /* navi_custom_back_btn_hgihlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 64B7D4BE1A223D6C0035E60F /* navi_custom_back_btn_hgihlight.png */; };
@@ -229,6 +228,9 @@
 		64C8085A1A21D1DC0037ED25 /* product_detail_email_btn_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 64C808591A21D1DC0037ED25 /* product_detail_email_btn_normal.png */; };
 		64C8085D1A21D32A0037ED25 /* navi_custom_email_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 64C8085B1A21D32A0037ED25 /* navi_custom_email_normal@2x.png */; };
 		64C8085E1A21D32A0037ED25 /* navi_custom_email_press@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 64C8085C1A21D32A0037ED25 /* navi_custom_email_press@2x.png */; };
+		B113B63A1A2427ED00F0A04C /* orderProductModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B113B6391A2427ED00F0A04C /* orderProductModel.m */; };
+		B113B63F1A244EF600F0A04C /* orderListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B113B63E1A244EF600F0A04C /* orderListViewCell.m */; };
+		B113B6421A2467CE00F0A04C /* UserDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B113B6411A2467CE00F0A04C /* UserDetailModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -534,8 +536,6 @@
 		64702B721A10F88900850E32 /* grayArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grayArrow@2x.png"; sourceTree = "<group>"; };
 		64702B791A1108CA00850E32 /* timeline_new_status_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timeline_new_status_background.png; sourceTree = "<group>"; };
 		64702B7A1A1108CA00850E32 /* timeline_new_status_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "timeline_new_status_background@2x.png"; sourceTree = "<group>"; };
-		64B6C7751A06608D00F251D4 /* MeAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeAccountViewController.h; path = viewControllers/Me/MeAccountViewController.h; sourceTree = "<group>"; };
-		64B6C7761A06608D00F251D4 /* MeAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeAccountViewController.m; path = viewControllers/Me/MeAccountViewController.m; sourceTree = "<group>"; };
 		64B6C7781A06641B00F251D4 /* MeAttentionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeAttentionViewController.h; path = viewControllers/Me/MeAttentionViewController.h; sourceTree = "<group>"; };
 		64B6C7791A06641B00F251D4 /* MeAttentionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeAttentionViewController.m; path = viewControllers/Me/MeAttentionViewController.m; sourceTree = "<group>"; };
 		64B7D4BC1A223C550035E60F /* user_login_user_cellphone_number_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user_login_user_cellphone_number_logo@2x.png"; sourceTree = "<group>"; };
@@ -544,6 +544,12 @@
 		64C808591A21D1DC0037ED25 /* product_detail_email_btn_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = product_detail_email_btn_normal.png; sourceTree = "<group>"; };
 		64C8085B1A21D32A0037ED25 /* navi_custom_email_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navi_custom_email_normal@2x.png"; sourceTree = "<group>"; };
 		64C8085C1A21D32A0037ED25 /* navi_custom_email_press@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navi_custom_email_press@2x.png"; sourceTree = "<group>"; };
+		B113B6381A2427ED00F0A04C /* orderProductModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = orderProductModel.h; path = Model/orderProductModel.h; sourceTree = "<group>"; };
+		B113B6391A2427ED00F0A04C /* orderProductModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = orderProductModel.m; path = Model/orderProductModel.m; sourceTree = "<group>"; };
+		B113B63D1A244EF600F0A04C /* orderListViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = orderListViewCell.h; path = views/orderListViewCell.h; sourceTree = "<group>"; };
+		B113B63E1A244EF600F0A04C /* orderListViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = orderListViewCell.m; path = views/orderListViewCell.m; sourceTree = "<group>"; };
+		B113B6401A2467CE00F0A04C /* UserDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserDetailModel.h; path = Model/UserDetailModel.h; sourceTree = "<group>"; };
+		B113B6411A2467CE00F0A04C /* UserDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserDetailModel.m; path = Model/UserDetailModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -651,12 +657,10 @@
 				64B6C7791A06641B00F251D4 /* MeAttentionViewController.m */,
 				643B66251A238E5300F14AC5 /* MeOrderListViewController.h */,
 				643B66261A238E5300F14AC5 /* MeOrderListViewController.m */,
-				6417B8691A0547670060E236 /* MeManageViewController.h */,
-				6417B86A1A0547670060E236 /* MeManageViewController.m */,
 				6417B86C1A0547DF0060E236 /* MeCommissionViewController.h */,
 				6417B86D1A0547DF0060E236 /* MeCommissionViewController.m */,
-				64B6C7751A06608D00F251D4 /* MeAccountViewController.h */,
-				64B6C7761A06608D00F251D4 /* MeAccountViewController.m */,
+				6417B8691A0547670060E236 /* MeManageViewController.h */,
+				6417B86A1A0547670060E236 /* MeManageViewController.m */,
 			);
 			name = content;
 			sourceTree = "<group>";
@@ -931,6 +935,8 @@
 				643AB1701A01400A00171976 /* percentRectView.m */,
 				643AB1721A0143B500171976 /* OnlistViewCell.h */,
 				643AB1731A0143B500171976 /* OnlistViewCell.m */,
+				B113B63D1A244EF600F0A04C /* orderListViewCell.h */,
+				B113B63E1A244EF600F0A04C /* orderListViewCell.m */,
 				643BBD841A02670100D151E4 /* searchListViewCell.h */,
 				643BBD851A02670100D151E4 /* searchListViewCell.m */,
 				6417B84E1A04C5080060E236 /* searchCustomSegmentView.h */,
@@ -944,6 +950,8 @@
 			children = (
 				6418BE461A1CC50400F5B353 /* personModel.h */,
 				6418BE471A1CC50400F5B353 /* personModel.m */,
+				B113B6401A2467CE00F0A04C /* UserDetailModel.h */,
+				B113B6411A2467CE00F0A04C /* UserDetailModel.m */,
 				640C710A1A15F7A90091BE8F /* LoginModel.h */,
 				640C710B1A15F7A90091BE8F /* LoginModel.m */,
 				643BBD871A026B4300D151E4 /* SearchListCellModel.h */,
@@ -954,6 +962,8 @@
 				64702B1E1A10855700850E32 /* ProductParam.m */,
 				643B66221A237A0E00F14AC5 /* attentionProductModel.h */,
 				643B66231A237A0E00F14AC5 /* attentionProductModel.m */,
+				B113B6381A2427ED00F0A04C /* orderProductModel.h */,
+				B113B6391A2427ED00F0A04C /* orderProductModel.m */,
 				64702B691A10E46500850E32 /* ProductOneParamModel.h */,
 				64702B6A1A10E46500850E32 /* ProductOneParamModel.m */,
 				6418BE401A1CA11F00F5B353 /* BaseInfoModel.h */,
@@ -1210,6 +1220,7 @@
 					};
 					643AB07D1A01316900171976 = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = H6NR6KPK2Z;
 						TestTargetID = 643AB0611A01316900171976;
 					};
 				};
@@ -1406,6 +1417,7 @@
 				64702B681A10B37900850E32 /* DKScrollingTabController.m in Sources */,
 				6418BE481A1CC50400F5B353 /* personModel.m in Sources */,
 				6417B86B1A0547670060E236 /* MeManageViewController.m in Sources */,
+				B113B63F1A244EF600F0A04C /* orderListViewCell.m in Sources */,
 				643BBD891A026B4300D151E4 /* SearchListCellModel.m in Sources */,
 				64702B081A107C1A00850E32 /* ASIS3ObjectRequest.m in Sources */,
 				64702B621A10B17800850E32 /* EGORefreshTableHeaderView.m in Sources */,
@@ -1452,12 +1464,13 @@
 				64702AF41A107C1A00850E32 /* ASIDataCompressor.m in Sources */,
 				643BBD831A02662200D151E4 /* searchMainViewController.m in Sources */,
 				643BBD7F1A02587300D151E4 /* moreTableViewController.m in Sources */,
+				B113B6421A2467CE00F0A04C /* UserDetailModel.m in Sources */,
 				6418BE421A1CA11F00F5B353 /* BaseInfoModel.m in Sources */,
 				643B66241A237A0E00F14AC5 /* attentionProductModel.m in Sources */,
 				64702B1F1A10855700850E32 /* ProductParam.m in Sources */,
 				6417B85B1A04D0410060E236 /* UIButtonImageOrder.m in Sources */,
+				B113B63A1A2427ED00F0A04C /* orderProductModel.m in Sources */,
 				643AB0681A01316900171976 /* main.m in Sources */,
-				64B6C7771A06608D00F251D4 /* MeAccountViewController.m in Sources */,
 				64702B041A107C1A00850E32 /* Reachability.m in Sources */,
 				642A16D91A1DD3CF0022DC51 /* MeInfoViewController.m in Sources */,
 				640C71131A1602930091BE8F /* RemindLoginViewController.m in Sources */,
@@ -1600,7 +1613,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "816e70ee-4735-4d02-b36a-bcac336df862";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1609,8 +1622,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: xin fu (H6NR6KPK2Z)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: xin fu (H6NR6KPK2Z)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -1621,7 +1634,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "816e70ee-4735-4d02-b36a-bcac336df862";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -1630,6 +1643,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1641,6 +1656,7 @@
 				INFOPLIST_FILE = FinancialSupermanTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FinancialSuperman.app/FinancialSuperman";
 			};
 			name = Debug;
@@ -1649,6 +1665,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1656,6 +1674,7 @@
 				INFOPLIST_FILE = FinancialSupermanTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FinancialSuperman.app/FinancialSuperman";
 			};
 			name = Release;

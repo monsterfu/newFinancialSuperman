@@ -24,4 +24,5 @@
 
 @property (nonatomic,retain)UITapGestureRecognizer* gestureRecognizer;
 
+-(void)restartTouch;
 @end

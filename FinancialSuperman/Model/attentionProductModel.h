@@ -12,6 +12,7 @@
 
 
 @property(nonatomic, assign)float complete_percent;         //募集进度
+@property(nonatomic, retain)NSString* investment_cycle;     //周期
 @property(nonatomic, retain)NSString* expected_return_rate;
 @property(nonatomic, assign)double attention_id;
 @property(nonatomic, retain)NSString* investment_amount;
