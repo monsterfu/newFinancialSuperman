@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "GlobalHeader.h"
 
-@interface searchMainViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,EGORefreshTableHeaderDelegate,EGORefreshTableHeaderDelegate,UIViewControllerLoadViewDelegate,searchListViewCell>
+@interface searchMainViewController : baseLoadViewController<UITableViewDataSource,UITableViewDelegate,EGORefreshTableHeaderDelegate,EGORefreshTableHeaderDelegate,UIViewControllerLoadViewDelegate,searchListViewCell>
 {
     searchListViewCell* _cell;
     UIButtonImageOrder* _searchCustomSegementButton;

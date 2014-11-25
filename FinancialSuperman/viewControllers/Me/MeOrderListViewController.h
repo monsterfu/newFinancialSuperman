@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "GlobalHeader.h"
 
-@interface MeOrderListViewController : UIViewController
+@interface MeOrderListViewController : baseLoadViewController<UIViewControllerLoadViewDelegate>
 {
     orderProductModel* _orderProductModel;
     UILabel* _emptylabel;

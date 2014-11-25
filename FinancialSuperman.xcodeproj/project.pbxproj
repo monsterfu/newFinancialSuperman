@@ -232,6 +232,7 @@
 		B113B63F1A244EF600F0A04C /* orderListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B113B63E1A244EF600F0A04C /* orderListViewCell.m */; };
 		B113B6421A2467CE00F0A04C /* UserDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B113B6411A2467CE00F0A04C /* UserDetailModel.m */; };
 		B113B6451A2481B500F0A04C /* baseLoadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B113B6441A2481B500F0A04C /* baseLoadViewController.m */; };
+		B113B6481A24866700F0A04C /* baseLoadTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B113B6471A24866700F0A04C /* baseLoadTableTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -553,6 +554,8 @@
 		B113B6411A2467CE00F0A04C /* UserDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserDetailModel.m; path = Model/UserDetailModel.m; sourceTree = "<group>"; };
 		B113B6431A2481B500F0A04C /* baseLoadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = baseLoadViewController.h; path = common/baseLoadViewController.h; sourceTree = "<group>"; };
 		B113B6441A2481B500F0A04C /* baseLoadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = baseLoadViewController.m; path = common/baseLoadViewController.m; sourceTree = "<group>"; };
+		B113B6461A24866700F0A04C /* baseLoadTableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = baseLoadTableTableViewController.h; path = common/baseLoadTableTableViewController.h; sourceTree = "<group>"; };
+		B113B6471A24866700F0A04C /* baseLoadTableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = baseLoadTableTableViewController.m; path = common/baseLoadTableTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -606,6 +609,8 @@
 				640C71081A15F21B0091BE8F /* LoginObject.m */,
 				B113B6431A2481B500F0A04C /* baseLoadViewController.h */,
 				B113B6441A2481B500F0A04C /* baseLoadViewController.m */,
+				B113B6461A24866700F0A04C /* baseLoadTableTableViewController.h */,
+				B113B6471A24866700F0A04C /* baseLoadTableTableViewController.m */,
 			);
 			name = common;
 			sourceTree = "<group>";
@@ -1473,6 +1478,7 @@
 				B113B6421A2467CE00F0A04C /* UserDetailModel.m in Sources */,
 				6418BE421A1CA11F00F5B353 /* BaseInfoModel.m in Sources */,
 				643B66241A237A0E00F14AC5 /* attentionProductModel.m in Sources */,
+				B113B6481A24866700F0A04C /* baseLoadTableTableViewController.m in Sources */,
 				64702B1F1A10855700850E32 /* ProductParam.m in Sources */,
 				6417B85B1A04D0410060E236 /* UIButtonImageOrder.m in Sources */,
 				B113B63A1A2427ED00F0A04C /* orderProductModel.m in Sources */,

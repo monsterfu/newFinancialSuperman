@@ -65,14 +65,14 @@
     _controllerArry = @[_meAttentionViewController,_meOrderListViewController,_meCommissionViewController,_meManageViewController];
     
     [_meAttentionViewController.view setFrame:CGRectOffset(CGRectMake(0, 0, _scrollView.frame.size.width, _scrollView.frame.size.height), DEVICE_WIDTH*0, 0)];
-    [_meOrderListViewController.view setFrame:CGRectOffset(_meManageViewController.view.frame, DEVICE_WIDTH*1, _scrollView.frame.size.height)];
-    [_meCommissionViewController.view setFrame:CGRectOffset(_meCommissionViewController.view.frame, DEVICE_WIDTH*2, _scrollView.frame.size.height)];
-    [_meManageViewController.view setFrame:CGRectOffset(_meManageViewController.view.frame, DEVICE_WIDTH*3, _scrollView.frame.size.height)];
+    [_meOrderListViewController.view setFrame:CGRectOffset(_meManageViewController.view.frame, DEVICE_WIDTH*1, 0)];
+    [_meCommissionViewController.view setFrame:CGRectOffset(_meCommissionViewController.view.frame, DEVICE_WIDTH*2, 0)];
+    [_meManageViewController.view setFrame:CGRectOffset(_meManageViewController.view.frame, DEVICE_WIDTH*3, 0)];
     
     [_scrollView setContentSize:CGSizeMake(4*DEVICE_WIDTH, _scrollView.frame.size.height)];
     
-    [_scrollView addSubview:_meOrderListViewController.view];
     [_scrollView addSubview:_meAttentionViewController.view];
+    [_scrollView addSubview:_meOrderListViewController.view];
     [_scrollView addSubview:_meManageViewController.view];
     [_scrollView addSubview:_meCommissionViewController.view];
     [_scrollView setDelegate:self];

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "GlobalHeader.h"
 
-@interface MeCommissionViewController : UIViewController
+@interface MeCommissionViewController : baseLoadViewController<UIViewControllerLoadViewDelegate>
 {
     UITableViewCell* _cell;
     UserDetailModel* _model;

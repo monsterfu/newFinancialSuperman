@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "GlobalHeader.h"
 
-@interface MeAttentionViewController : UIViewController<searchListViewCell>
+@interface MeAttentionViewController : baseLoadViewController<searchListViewCell,UIViewControllerLoadViewDelegate>
 {
     searchListViewCell* _cell;
     attentionProductModel* _attetionModel;

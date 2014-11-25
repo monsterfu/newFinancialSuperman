@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GlobalHeader.h"
 
-@interface MeManageViewController : UIViewController
+@interface MeManageViewController : baseLoadViewController<UIViewControllerLoadViewDelegate>
 {
     UITableViewCell* _cell;
 }

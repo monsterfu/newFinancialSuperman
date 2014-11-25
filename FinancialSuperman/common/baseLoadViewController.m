@@ -34,7 +34,7 @@
 }
 */
 
--(void)startLoadView:(UIView*)view controller:(UIViewController*)controller;
+-(void)startLoadView:(UIView*)view
 {
     _loadViewController = nil;
     if (_loadViewController == nil) {
@@ -49,7 +49,7 @@
     [_loadViewController.indicatorView startAnimating];
     [_loadViewController.label setText:@"正在加载中..."];
     [_loadViewController.view addGestureRecognizer:_loadViewController.gestureRecognizer];
-    [_loadViewController setDelegate:controller];
+    [_loadViewController setDelegate:self];
 }
 -(void)endLoadView
 {

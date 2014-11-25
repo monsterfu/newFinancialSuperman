@@ -15,7 +15,7 @@
 //cagegory
 #import "UIColor+getColor.h"
 #import "UIButtonImageOrder+reversal.h"
-#import "UIViewController+loadView.h"
+//#import "UIViewController+loadView.h"
 
 #import "UIButtonImageOrder.h"
 //customer views
@@ -23,6 +23,9 @@
 #import "DDProgressView.h"
 #import "searchCustomSegmentView.h"
 
+//commonViewController
+#import "baseLoadViewController.h"
+#import "baseLoadTableTableViewController.h"
 //viewController
 #import "LoginViewController.h"
 #import "baseInfoTableViewController.h"

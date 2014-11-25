@@ -148,9 +148,9 @@
                     [_dataArray addObject:_orderProductModel];
                     if ([_orderProductModel.order_type isEqualToString:order_type_booking]) {
                         [_statusOrderedArray addObject:_orderProductModel];
-                    }else if ([_orderProductModel.status_reason isEqualToString:order_type_contract]) {
+                    }else if ([_orderProductModel.order_type isEqualToString:order_type_contract]) {
                         [_statusContractedArray addObject:_orderProductModel];
-                    }else if ([_orderProductModel.status_reason isEqualToString:order_type_prepay]) {
+                    }else if ([_orderProductModel.order_type isEqualToString:order_type_prepay]) {
                         [_statusPayedArray addObject:_orderProductModel];
                     }
                 }

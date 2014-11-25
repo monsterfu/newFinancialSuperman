@@ -1,5 +1,5 @@
 //
-//  baseLoadViewController.h
+//  baseLoadTableTableViewController.h
 //  FinancialSuperman
 //
 //  Created by Monster on 14-11-25.
@@ -8,9 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "loadViewContoller.h"
-
-
-@interface baseLoadViewController : UIViewController
+@interface baseLoadTableTableViewController : UITableViewController
 {
     loadViewContoller* _loadViewController;
 }

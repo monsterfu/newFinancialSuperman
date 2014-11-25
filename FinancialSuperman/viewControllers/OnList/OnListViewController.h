@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "GlobalHeader.h"
 
-@interface OnListViewController : UITableViewController<EGORefreshTableHeaderDelegate,EGORefreshTableHeaderDelegate,UIViewControllerLoadViewDelegate,OnlistViewCellDelegate>
+@interface OnListViewController : baseLoadTableTableViewController<EGORefreshTableHeaderDelegate,EGORefreshTableHeaderDelegate,UIViewControllerLoadViewDelegate,OnlistViewCellDelegate>
 {
     OnlistViewCell* _cell;
     ProductOneParamModel* _productOneModel;
