@@ -231,6 +231,7 @@
 		B113B63A1A2427ED00F0A04C /* orderProductModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B113B6391A2427ED00F0A04C /* orderProductModel.m */; };
 		B113B63F1A244EF600F0A04C /* orderListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B113B63E1A244EF600F0A04C /* orderListViewCell.m */; };
 		B113B6421A2467CE00F0A04C /* UserDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B113B6411A2467CE00F0A04C /* UserDetailModel.m */; };
+		B113B6451A2481B500F0A04C /* baseLoadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B113B6441A2481B500F0A04C /* baseLoadViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -550,6 +551,8 @@
 		B113B63E1A244EF600F0A04C /* orderListViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = orderListViewCell.m; path = views/orderListViewCell.m; sourceTree = "<group>"; };
 		B113B6401A2467CE00F0A04C /* UserDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserDetailModel.h; path = Model/UserDetailModel.h; sourceTree = "<group>"; };
 		B113B6411A2467CE00F0A04C /* UserDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserDetailModel.m; path = Model/UserDetailModel.m; sourceTree = "<group>"; };
+		B113B6431A2481B500F0A04C /* baseLoadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = baseLoadViewController.h; path = common/baseLoadViewController.h; sourceTree = "<group>"; };
+		B113B6441A2481B500F0A04C /* baseLoadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = baseLoadViewController.m; path = common/baseLoadViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -601,6 +604,8 @@
 			children = (
 				640C71071A15F21B0091BE8F /* LoginObject.h */,
 				640C71081A15F21B0091BE8F /* LoginObject.m */,
+				B113B6431A2481B500F0A04C /* baseLoadViewController.h */,
+				B113B6441A2481B500F0A04C /* baseLoadViewController.m */,
 			);
 			name = common;
 			sourceTree = "<group>";
@@ -1438,6 +1443,7 @@
 				64702B1C1A10805B00850E32 /* HttpRequest.m in Sources */,
 				64702B061A107C1A00850E32 /* ASIS3BucketObject.m in Sources */,
 				643AB1621A01386600171976 /* CommonNavigationController.m in Sources */,
+				B113B6451A2481B500F0A04C /* baseLoadViewController.m in Sources */,
 				640C71191A16076C0091BE8F /* textFieldTableViewCell.m in Sources */,
 				64702AFD1A107C1A00850E32 /* ASICloudFilesContainer.m in Sources */,
 				643AB16D1A013C3500171976 /* OnListViewController.m in Sources */,
