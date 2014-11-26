@@ -13,13 +13,13 @@
 
 - (void)awakeFromNib {
     // Initialization code
-    NSLog(@"awakeFromNib");
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
     
     self.percentView.layer.cornerRadius = 5;
+    self.layer.cornerRadius = 5;
 }
 
 -(void)setAttentionModel:(attentionProductModel *)attentionModel

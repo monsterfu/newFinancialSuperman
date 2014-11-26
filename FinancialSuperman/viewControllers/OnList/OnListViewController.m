@@ -221,7 +221,7 @@
         }
         
     }else{
-        [ProgressHUD showError:@"获取失败，请检查网络连接是否正常!"];
+        [ProgressHUD showError:@"数据出错！"];
         if (request.tag == TAG_Product_Focus) {
             _focusButton.selected = (!_focusButton.selected)?(YES):(NO);
         }else if (request.tag == TAG_ProductAll)

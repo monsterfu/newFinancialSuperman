@@ -72,7 +72,7 @@
         [USER_DEFAULT synchronize];
     }else{
         [countdownTimer invalidate];
-        [ProgressHUD showError:@"获取失败，请检查网络连接是否正常!"];
+        [ProgressHUD showError:@"数据出错！"];
         countNum = 60;
         [checkCodeButton setSelected:NO];
         checkCodeButton.titleLabel.text = @"获取验证码";

@@ -35,10 +35,11 @@
 @property(nonatomic, assign)NSUInteger display;
 @property(nonatomic, retain)NSString* exit_rate;
 @property(nonatomic, retain)NSString* expected_return_rate;
-@property(nonatomic, retain)NSString* expected_return_rate1;
-@property(nonatomic, retain)NSString* expected_return_rate2;
-@property(nonatomic, retain)NSString* expected_return_rate3;
-@property(nonatomic, retain)NSString* expected_return_rate4;
+@property(nonatomic, assign)float expected_return_ratef;
+@property(nonatomic, retain)NSString* expected_return_oneRate;
+@property(nonatomic, retain)NSString* expected_return_twoRate;
+@property(nonatomic, retain)NSString* expected_return_threeRate;
+@property(nonatomic, retain)NSString* expected_return_fourRate;
 @property(nonatomic, retain)NSString* found_character;
 @property(nonatomic, retain)NSString* foundation_date;
 @property(nonatomic, retain)NSString* fund_cumulative_net;

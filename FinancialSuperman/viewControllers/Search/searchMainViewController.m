@@ -22,12 +22,17 @@
     
     
     _dataArray = [NSMutableArray array];
+    _allProductArray = [NSMutableArray array];
+    _xinTuoProductArray = [NSMutableArray array];
+    _ziguanProductArray = [NSMutableArray array];
+    _simuProductArray = [NSMutableArray array];
     
     _searchCustomSegementButton = _amountButton;
     _amountButton.normalOrder = YES;
     _periodButton.normalOrder = YES;
     _earningButton.normalOrder = YES;
     _commissionButton.normalOrder = YES;
+    _selectProductType = ProductTypeEnumValue_All;
     
     [self startLoadView:_tableView];
     
@@ -244,8 +249,22 @@
         [HttpRequest attentionRequest:[NSMutableDictionary dictionaryWithObjects:@[[USER_DEFAULT objectForKey:KEY_TOKEN_INFO],focusStr,productid] forKeys:@[@"token",@"action",@"product_id"]] delegate:self finishSel:@selector(GetResult:) failSel:@selector(GetErr:) tag:TAG_Product_Focus];
     }
 }
+#pragma mark - sort
+
+
 #pragma mark - touch
 - (IBAction)segmentedControlTouch:(UISegmentedControl *)sender {
+    if (sender.selectedSegmentIndex == 0) {
+        _dataArray = _allProductArray;
+    }else if (sender.selectedSegmentIndex == 1) {
+        _dataArray = _xinTuoProductArray;
+    }else if (sender.selectedSegmentIndex == 2) {
+        _dataArray = _ziguanProductArray;
+    }else{
+        _dataArray = _simuProductArray;
+    }
+    _selectProductType = sender.selectedSegmentIndex;
+    [_tableView reloadData];
 }
 
 - (IBAction)filterButtonTouched:(UIBarButtonItem *)sender {
@@ -254,6 +273,7 @@
 
 //
 - (IBAction)amountButtonTouched:(UIButtonImageOrder *)sender {
+    BOOL ascending = YES;
     if (_searchCustomSegementButton != sender) {
         if (sender.selected == NO) {
             sender.selected = YES;
@@ -262,13 +282,16 @@
             _searchCustomSegementButton = sender;
         }
     }else{
-        [sender reversal];
-        
+        ascending = [sender reversal];
     }
-    
+    NSMutableArray* _sortArray = _dataArray;
+    _dataArray = [_sortArray sortwithkey:@"investment_amount" ascending:ascending];
+    [self.tableView scrollsToTop];
+    [self.tableView reloadData];
 }
 
 - (IBAction)periodButtonTouched:(UIButtonImageOrder *)sender {
+    BOOL ascending = YES;
     if (_searchCustomSegementButton != sender) {
         if (sender.selected == NO) {
             sender.selected = YES;
@@ -277,11 +300,16 @@
             _searchCustomSegementButton = sender;
         }
     }else{
-        [sender reversal];
+        ascending = [sender reversal];
     }
+    NSMutableArray* _sortArray = _dataArray;
+    _dataArray = [_sortArray sortwithkey:@"investment_cycle" ascending:ascending];
+    [self.tableView scrollsToTop];
+    [self.tableView reloadData];
 }
 
 - (IBAction)earningButtonTouched:(UIButtonImageOrder *)sender {
+    BOOL ascending = YES;
     if (_searchCustomSegementButton != sender) {
         if (sender.selected == NO) {
             sender.selected = YES;
@@ -290,11 +318,17 @@
             _searchCustomSegementButton = sender;
         }
     }else{
-        [sender reversal];
+        ascending = [sender reversal];
     }
+    
+    NSMutableArray* _sortArray = _dataArray;
+    _dataArray = [_sortArray sortwithkey:@"expected_return_ratef" ascending:ascending];
+    [self.tableView scrollsToTop];
+    [self.tableView reloadData];
 }
 
 - (IBAction)commissionButtonTouched:(UIButtonImageOrder *)sender {
+    BOOL ascending = YES;
     if (_searchCustomSegementButton != sender) {
         if (sender.selected == NO) {
             sender.selected = YES;
@@ -303,8 +337,13 @@
             _searchCustomSegementButton = sender;
         }
     }else{
-        [sender reversal];
+        ascending = [sender reversal];
     }
+    
+    NSMutableArray* _sortArray = _dataArray;
+    _dataArray = [_sortArray sortwithkey:@"return_rate" ascending:ascending];
+    [self.tableView scrollsToTop];
+    [self.tableView reloadData];
 }
 
 #pragma mark http result
@@ -318,6 +357,8 @@
         [self mistakeLoadView];
     }
 }
+
+
 -(void) GetResult:(ASIHTTPRequest *)request
 {
     NSData *responseData = [request responseData];
@@ -338,19 +379,39 @@
         }else if (request.tag == TAG_ProductAll){
             [self endLoadView];
             
-            [_dataArray removeAllObjects];
+            [_allProductArray removeAllObjects];
+            [_xinTuoProductArray removeAllObjects];
+            [_ziguanProductArray removeAllObjects];
+            [_simuProductArray removeAllObjects];
             
             NSMutableArray* productArry = [dictionary objectForKey:@"products"];
             for (id dic in productArry) {
                 _productOneModel = [[ProductOneParamModel alloc]initWithDictionary:dic];
-                [_dataArray addObject:_productOneModel];
+                [_allProductArray addObject:_productOneModel];
+                if ([_productOneModel.product_type isEqualToString:@"信托"]) {
+                    [_xinTuoProductArray addObject:_productOneModel];
+                }else if ([_productOneModel.product_type isEqualToString:@"资管"]) {
+                    [_ziguanProductArray addObject:_productOneModel];
+                }else if ([_productOneModel.product_type isEqualToString:@"私募"]) {
+                    [_simuProductArray addObject:_productOneModel];
+                }
             }
+            if (_selectProductType == ProductTypeEnumValue_All) {
+                _dataArray = _allProductArray;
+            }else if (_selectProductType == ProductTypeEnumValue_Xintuo) {
+                _dataArray = _xinTuoProductArray;
+            }else if (_selectProductType == ProductTypeEnumValue_Ziguan) {
+                _dataArray = _ziguanProductArray;
+            }else if (_selectProductType == ProductTypeEnumValue_Simu) {
+                _dataArray = _simuProductArray;
+            }
+            
             [self.tableView reloadData];
             [_refreshHeaderView egoRefreshScrollViewDataSourceDidFinishedLoading:self.tableView];
             [self doneLoadingTableViewData];
         }
     }else{
-        [ProgressHUD showError:@"获取失败，请检查网络连接是否正常!"];
+        [ProgressHUD showError:@"数据出错！"];
         if (request.tag == TAG_Product_Focus) {
             _focusButton.selected = (!_focusButton.selected)?(YES):(NO);
         }else if (request.tag == TAG_ProductAll)

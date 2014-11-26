@@ -23,6 +23,9 @@
     _statusContractedArray = [NSMutableArray array];
     _statusPayedArray = [NSMutableArray array];
     
+    UIView* footView = [UIView new];
+    footView.backgroundColor = [UIColor clearColor];
+    [_tableView setTableFooterView:footView];
     
     if ([USER_DEFAULT boolForKey:KEY_ISLOGIN_INFO]) {
         [self updateOrderList];
@@ -76,17 +79,21 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     _cell = [tableView dequeueReusableCellWithIdentifier:@"orderListCellIdentifier" forIndexPath:indexPath];
     if (indexPath.section == 0) {
-        UILabel* nameLabel = (UILabel*)[_cell viewWithTag:1];
-        UILabel* countLabel = (UILabel*)[_cell viewWithTag:2];
-        UILabel* timeLabel = (UILabel*)[_cell viewWithTag:3];
-        UILabel* orderLabel = (UILabel*)[_cell viewWithTag:4];
         _orderProductModel =  [_statusOrderedArray objectAtIndex:indexPath.row];
-        nameLabel.text = _orderProductModel.product_name;
-        countLabel.text = [NSString stringWithFormat:@"%@万",_orderProductModel.product_price];
-        timeLabel.text = _orderProductModel.add_time;
-        orderLabel.text = _orderProductModel.customer_name;
+    }else if (indexPath.section == 1){
+        _orderProductModel =  [_statusContractedArray objectAtIndex:indexPath.row];
+    }else if (indexPath.section == 2){
+       _orderProductModel =  [_statusPayedArray objectAtIndex:indexPath.row];
     }
     
+    UILabel* nameLabel = (UILabel*)[_cell viewWithTag:1];
+    UILabel* countLabel = (UILabel*)[_cell viewWithTag:2];
+    UILabel* timeLabel = (UILabel*)[_cell viewWithTag:3];
+    UILabel* orderLabel = (UILabel*)[_cell viewWithTag:4];
+    nameLabel.text = _orderProductModel.product_name;
+    countLabel.text = [NSString stringWithFormat:@"%@万",_orderProductModel.product_price];
+    timeLabel.text = _orderProductModel.add_time;
+    orderLabel.text = _orderProductModel.customer_name;
     return _cell;
 }
 

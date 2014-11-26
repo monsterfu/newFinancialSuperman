@@ -11,5 +11,5 @@
 #import "UIButtonImageOrder.h"
 
 @interface UIButtonImageOrder (reversal)
--(void)reversal;
+-(BOOL)reversal;
 @end

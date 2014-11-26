@@ -155,7 +155,7 @@
             [ProgressHUD showError:[dictionary objectForKey:@"message"]];
         }
     }else{
-        [ProgressHUD showError:@"获取失败，请检查网络连接是否正常!"];
+        [ProgressHUD showError:@"数据出错！"];
     }
 }
 

@@ -30,10 +30,11 @@
 @synthesize display;
 @synthesize exit_rate;
 @synthesize expected_return_rate;
-@synthesize expected_return_rate1;
-@synthesize expected_return_rate2;
-@synthesize expected_return_rate3;
-@synthesize expected_return_rate4;
+@synthesize expected_return_ratef;
+@synthesize expected_return_oneRate;
+@synthesize expected_return_twoRate;
+@synthesize expected_return_threeRate;
+@synthesize expected_return_fourRate;
 @synthesize found_character;
 @synthesize foundation_date;
 @synthesize fund_cumulative_net;
@@ -121,10 +122,12 @@
         display  = [[dictionary objectForKey:@"display"]intValue];
         exit_rate  = [dictionary objectForKey:@"exit_rate"];
         expected_return_rate  = [dictionary objectForKey:@"expected_return_rate"];
-        expected_return_rate1  = [dictionary objectForKey:@"expected_return_rate1"];
-        expected_return_rate2  = [dictionary objectForKey:@"expected_return_rate2"];
-        expected_return_rate3  = [dictionary objectForKey:@"expected_return_rate3"];
-        expected_return_rate4  = [dictionary objectForKey:@"expected_return_rate4"];
+        expected_return_ratef = [expected_return_rate floatValue];
+        expected_return_oneRate  = [dictionary objectForKey:@"expected_return_rate1"];
+        expected_return_twoRate  = [dictionary objectForKey:@"expected_return_rate2"];
+        expected_return_threeRate  = [dictionary objectForKey:@"expected_return_rate3"];
+        expected_return_fourRate  = [dictionary objectForKey:@"expected_return_rate4"];
+        NSLog(@"expected_return_rate:%@",expected_return_rate);
         found_character  = [dictionary objectForKey:@"found_character"];
         foundation_date  = [dictionary objectForKey:@"foundation_date"];
         fund_cumulative_net  = [dictionary objectForKey:@"fund_cumulative_net"];
@@ -171,8 +174,10 @@
         
         float inside_sales_t = [inside_sales floatValue];
         float total_amount_t = [total_amount floatValue];
-        if (total_amount_t == 0) {
-            remainPercent = 0.5;
+        if (total_amount_t == 0||inside_sales_t == 0) {
+            remainPercent = 0;
+        }else if(inside_sales_t >= total_amount_t){
+            remainPercent = 1;
         }else{
             remainPercent = inside_sales_t/total_amount_t;
         }

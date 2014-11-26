@@ -45,6 +45,11 @@
     [self.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName,nil]];
     
     [self setNeedsStatusBarAppearanceUpdate];
+    
+//    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] init];
+//    [backItem setImage:[UIImage imageNamed:@"navi_custom_back_btn_normal"]];
+//    self.navigationItem.backBarButtonItem = backItem;
+//    backItem.title = @"1";
 }
 
 - (void)didReceiveMemoryWarning

@@ -42,7 +42,6 @@
 #pragma mark - NotificationCenter_userbeLogin
 -(void)updateUserDetail
 {
-    return;
     [self startLoadView:_tableView];
     [HttpRequest personDetailRequest:[NSMutableDictionary dictionaryWithObjects:@[[USER_DEFAULT objectForKey:KEY_TOKEN_INFO]] forKeys:@[@"token"]] delegate:self finishSel:@selector(GetResult:) failSel:@selector(GetErr:) tag:TAG_PersonDetail];
 }
@@ -103,33 +102,6 @@
             }else{
                 NSMutableDictionary* dic = [dictionary objectForKey:@"user"];
                 _model = [[UserDetailModel alloc]initWithDictionary:dic];
-                
-//                NSMutableArray* productArry = [dictionary objectForKey:@"user"];
-//                for (id dic in productArry) {
-//                    _orderProductModel = [[orderProductModel alloc]initWithDictionary:dic];
-//                    [_dataArray addObject:_orderProductModel];
-//                    if ([_orderProductModel.status_reason isEqualToString:@""]) {
-//                        [_statusOrderedArray addObject:_orderProductModel];
-//                    }else if ([_orderProductModel.status_reason isEqualToString:@""]) {
-//                        [_statusContractedArray addObject:_orderProductModel];
-//                    }else if ([_orderProductModel.status_reason isEqualToString:@""]) {
-//                        [_statusPayedArray addObject:_orderProductModel];
-//                    }
-//                }
-//                if (_dataArray.count) {
-//                    [_emptylabel removeFromSuperview];
-//                    _emptylabel = nil;
-//                    [self.tableView reloadData];
-//                }else{
-//                    if (_emptylabel == nil) {
-//                        _emptylabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 80, DEVICE_WIDTH, 40)];
-//                        _emptylabel.backgroundColor = [UIColor clearColor];
-//                        _emptylabel.textAlignment = NSTextAlignmentCenter;
-//                        _emptylabel.text = @"亲，您还没有预约的产品~";
-//                        _emptylabel.textColor = [UIColor grayColor];
-//                    }
-//                    [_tableView addSubview:_emptylabel];
-//                }
                 [self endLoadView];
             }
         }else if (request.tag == TAG_Product_Focus){

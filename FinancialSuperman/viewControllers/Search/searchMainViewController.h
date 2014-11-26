@@ -9,6 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "GlobalHeader.h"
 
+typedef enum : NSUInteger {
+    ProductTypeEnumValue_All,
+    ProductTypeEnumValue_Xintuo,
+    ProductTypeEnumValue_Ziguan,
+    ProductTypeEnumValue_Simu,
+} ProductTypeEnum;
+
+
 @interface searchMainViewController : baseLoadViewController<UITableViewDataSource,UITableViewDelegate,EGORefreshTableHeaderDelegate,EGORefreshTableHeaderDelegate,UIViewControllerLoadViewDelegate,searchListViewCell>
 {
     searchListViewCell* _cell;
@@ -21,6 +29,12 @@
     
     UIButton* _focusButton;
     
+    NSMutableArray* _allProductArray;
+    NSMutableArray* _xinTuoProductArray;
+    NSMutableArray* _ziguanProductArray;
+    NSMutableArray* _simuProductArray;
+    
+    ProductTypeEnum _selectProductType;
 }
 
 @property (weak, nonatomic) IBOutlet UIView *productTypeView;

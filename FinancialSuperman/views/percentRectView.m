@@ -15,6 +15,9 @@
 -(void)animationRectWithColor:(UIColor *)color percent:(CGFloat)percent
 {
     process = percent;
+    if (process > 1) {
+        process = 1.0;
+    }
     
     [self setNeedsDisplay];
     

@@ -10,6 +10,8 @@
 
 #define BUTTON_WIDTH   (80)
 
+#define TABController_Height    (40)
+
 @interface MeMainViewController () <DKScrollingTabControllerDelegate>
 
 @end
@@ -26,7 +28,7 @@
     [leftTabController didMoveToParentViewController:self];
     [self.view addSubview:leftTabController.view];
     
-    leftTabController.view.frame = CGRectMake(0, 0, BUTTON_WIDTH*5, 40);
+    leftTabController.view.frame = CGRectMake(0, 0, BUTTON_WIDTH*5, TABController_Height);
     
     leftTabController.view.backgroundColor = [UIColor whiteColor];
     leftTabController.buttonPadding = 20;
@@ -64,10 +66,10 @@
     
     _controllerArry = @[_meAttentionViewController,_meOrderListViewController,_meCommissionViewController,_meManageViewController];
     
-    [_meAttentionViewController.view setFrame:CGRectOffset(CGRectMake(0, 0, _scrollView.frame.size.width, _scrollView.frame.size.height), DEVICE_WIDTH*0, 0)];
-    [_meOrderListViewController.view setFrame:CGRectOffset(_meManageViewController.view.frame, DEVICE_WIDTH*1, 0)];
-    [_meCommissionViewController.view setFrame:CGRectOffset(_meCommissionViewController.view.frame, DEVICE_WIDTH*2, 0)];
-    [_meManageViewController.view setFrame:CGRectOffset(_meManageViewController.view.frame, DEVICE_WIDTH*3, 0)];
+    [_meAttentionViewController.view setFrame:CGRectOffset(CGRectMake(0, 0, _scrollView.frame.size.width, _scrollView.frame.size.height), DEVICE_WIDTH*0, TABController_Height)];
+    [_meOrderListViewController.view setFrame:CGRectOffset(CGRectMake(0, 0, _scrollView.frame.size.width, _scrollView.frame.size.height), DEVICE_WIDTH*1, TABController_Height)];
+    [_meCommissionViewController.view setFrame:CGRectOffset(CGRectMake(0, 0, _scrollView.frame.size.width, _scrollView.frame.size.height), DEVICE_WIDTH*2, TABController_Height)];
+    [_meManageViewController.view setFrame:CGRectOffset(CGRectMake(0, 0, _scrollView.frame.size.width, _scrollView.frame.size.height), DEVICE_WIDTH*3, TABController_Height)];
     
     [_scrollView setContentSize:CGSizeMake(4*DEVICE_WIDTH, _scrollView.frame.size.height)];
     

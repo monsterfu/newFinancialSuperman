@@ -39,7 +39,9 @@
     [self.tabBar setSelectedImageTintColor:[UIColor getColor:@"F89D40"]];
     [self.tabBar setBackgroundColor:[UIColor whiteColor]];
 //    [self.navigationController setNavigationBarHidden:YES];
-    
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] init];
+    [backItem setBackButtonBackgroundImage:[UIImage imageNamed:@"navi_custom_back_btn_normal"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    self.navigationItem.backBarButtonItem = backItem;
 }
 
 - (void)didReceiveMemoryWarning

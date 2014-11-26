@@ -11,14 +11,16 @@
 #define DEGREES_TO_RADIANS(angle) ((angle) / 180.0 * M_PI)
 
 @implementation UIButtonImageOrder (reversal)
--(void)reversal
+-(BOOL)reversal
 {
     if (self.normalOrder) {
         self.imageView.transform=CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(180.0));
         self.normalOrder = NO;
+        
     }else{
         self.imageView.transform=CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(0.0));
         self.normalOrder = YES;
     }
+    return self.normalOrder;
 }
 @end
