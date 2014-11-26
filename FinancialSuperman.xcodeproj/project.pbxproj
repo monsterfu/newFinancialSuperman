@@ -233,6 +233,7 @@
 		B113B6421A2467CE00F0A04C /* UserDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B113B6411A2467CE00F0A04C /* UserDetailModel.m */; };
 		B113B6451A2481B500F0A04C /* baseLoadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B113B6441A2481B500F0A04C /* baseLoadViewController.m */; };
 		B113B6481A24866700F0A04C /* baseLoadTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B113B6471A24866700F0A04C /* baseLoadTableTableViewController.m */; };
+		B1ED85911A25DC68005F97E8 /* processView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1ED85901A25DC68005F97E8 /* processView.m */; };
 		B1FCCC451A2586750052A90A /* NSMutableArray+Sort.m in Sources */ = {isa = PBXBuildFile; fileRef = B1FCCC441A2586750052A90A /* NSMutableArray+Sort.m */; };
 /* End PBXBuildFile section */
 
@@ -557,6 +558,8 @@
 		B113B6441A2481B500F0A04C /* baseLoadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = baseLoadViewController.m; path = common/baseLoadViewController.m; sourceTree = "<group>"; };
 		B113B6461A24866700F0A04C /* baseLoadTableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = baseLoadTableTableViewController.h; path = common/baseLoadTableTableViewController.h; sourceTree = "<group>"; };
 		B113B6471A24866700F0A04C /* baseLoadTableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = baseLoadTableTableViewController.m; path = common/baseLoadTableTableViewController.m; sourceTree = "<group>"; };
+		B1ED858F1A25DC68005F97E8 /* processView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = processView.h; path = views/processView.h; sourceTree = "<group>"; };
+		B1ED85901A25DC68005F97E8 /* processView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = processView.m; path = views/processView.m; sourceTree = "<group>"; };
 		B1FCCC431A2586750052A90A /* NSMutableArray+Sort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+Sort.h"; path = "category/NSMutableArray+sort/NSMutableArray+Sort.h"; sourceTree = "<group>"; };
 		B1FCCC441A2586750052A90A /* NSMutableArray+Sort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+Sort.m"; path = "category/NSMutableArray+sort/NSMutableArray+Sort.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -945,6 +948,8 @@
 			children = (
 				640C710D1A15FCDF0091BE8F /* personcenterCells */,
 				640C70E11A15A5840091BE8F /* DDProgressView.h */,
+				B1ED858F1A25DC68005F97E8 /* processView.h */,
+				B1ED85901A25DC68005F97E8 /* processView.m */,
 				640C70E21A15A5840091BE8F /* DDProgressView.m */,
 				643AB16F1A01400A00171976 /* percentRectView.h */,
 				643AB1701A01400A00171976 /* percentRectView.m */,
@@ -1496,6 +1501,7 @@
 				64702AF91A107C1A00850E32 /* ASIInputStream.m in Sources */,
 				643AB1741A0143B500171976 /* OnlistViewCell.m in Sources */,
 				64B6C77A1A06641B00F251D4 /* MeAttentionViewController.m in Sources */,
+				B1ED85911A25DC68005F97E8 /* processView.m in Sources */,
 				6417B8501A04C5080060E236 /* searchCustomSegmentView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
