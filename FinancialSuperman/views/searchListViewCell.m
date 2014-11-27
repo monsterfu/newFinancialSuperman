@@ -79,7 +79,7 @@
 
 - (IBAction)focusButtonTouched:(UIButton *)sender {
     
-    if (![USERDEFAULT boolForKey:KEY_ISLOGIN_INFO])
+    if (![USER_DEFAULT boolForKey:KEY_ISLOGIN_INFO])
     {
         if (self.delegate&&[self.delegate respondsToSelector:@selector(searchListCellIsFucus:productid:)]) {
             [self.delegate searchListCellIsFucus:sender productid:_productId];

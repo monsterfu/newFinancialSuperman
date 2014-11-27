@@ -10,13 +10,16 @@
 #import "GlobalHeader.h"
 
 
-@interface productDetailViewController : UIViewController
+@interface productDetailViewController : UIViewController<UIAlertViewDelegate>
 {
     NSMutableArray* _headerTitleArray;
     NSMutableArray* _baseInfoTitleArray;
     
     baseInfoTableViewController* _baseInfoViewController;
     orderViewController* _orderViewController;
+    
+    UIAlertView* _emailAlertView;
+    UITextField* _emailTextField;
 }
 
 @property(nonatomic, retain)ProductOneParamModel* productOne;

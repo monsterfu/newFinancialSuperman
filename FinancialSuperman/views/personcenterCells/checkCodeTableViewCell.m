@@ -33,7 +33,7 @@
     sender.titleLabel.text = [NSString stringWithFormat:@"重新获取(%lu)",(unsigned long)countNum];
     countdownTimer = [NSTimer timerWithTimeInterval:1.0f target:self selector:@selector(countDownAction) userInfo:nil repeats:YES];
     [[NSRunLoop currentRunLoop]addTimer:countdownTimer forMode:NSRunLoopCommonModes];
-    [HttpRequest fetchCheckCodeRequest:[NSMutableDictionary dictionaryWithObjects:@[[USERDEFAULT objectForKey:KEY_APPKEY_INFO],[NSNumber numberWithInteger:0],_userNameTextField.text] forKeys:@[@"appkey",@"debug",@"phone"]] delegate:self finishSel:@selector(GetResult:) failSel:@selector(GetErr:) tag:TAG_ProductAll];
+    [HttpRequest fetchCheckCodeRequest:[NSMutableDictionary dictionaryWithObjects:@[[USER_DEFAULT objectForKey:KEY_APPKEY_INFO],[NSNumber numberWithInteger:0],_userNameTextField.text] forKeys:@[@"appkey",@"debug",@"phone"]] delegate:self finishSel:@selector(GetResult:) failSel:@selector(GetErr:) tag:TAG_ProductAll];
 }
 -(void)countDownAction
 {

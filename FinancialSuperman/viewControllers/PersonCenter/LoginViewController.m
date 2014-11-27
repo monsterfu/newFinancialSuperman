@@ -147,6 +147,7 @@
             [USER_DEFAULT removeObjectForKey:KEY_PASSWORD_INFO];
             [USER_DEFAULT setObject:[dictionary objectForKey:@"token"] forKey:KEY_TOKEN_INFO];
             [USER_DEFAULT setBool:YES forKey:KEY_ISLOGIN_INFO];
+            [USER_DEFAULT setObject:_usrNameTextfield.text forKey:KEY_USERNAME_INFO];
             [USER_DEFAULT setObject:_paswordTextfield.text forKey:KEY_PASSWORD_INFO];
             [USER_DEFAULT synchronize];
             [[NSNotificationCenter defaultCenter]postNotificationName:NSNotificationCenter_userbeLogin object:nil];

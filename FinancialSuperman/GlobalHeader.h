@@ -77,7 +77,7 @@
 #define ORDER_API               @"?c=productAPI&m=booking"              //预约产品
 #define ORDER_LIST_API          @"?c=productAPI&m=bookings_json"        //预约产品列表
 #define USER_DETAIL_API         @"?c=userAPI&m=user_detail"
-
+#define EMAIL_API               @"?c=productAPI&m=share_product"        //email
 
 #define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
 #define IOS7 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7 ?YES:NO)
@@ -85,8 +85,7 @@
 #define DEVICE_HEIGHT  [UIScreen mainScreen].bounds.size.height
 #define USER_DEFAULT [NSUserDefaults standardUserDefaults]
 #define APP_BACKGROUND_COLOR  [UIColor colorWithRed:0 green:222/255.0 blue:111/255.0 alpha:1.0]
-//缺省保存
-#define USERDEFAULT  [NSUserDefaults standardUserDefaults]
+
 
 //弧度、角度转换
 #define DEGREES_TO_RADIANS(angle) ((angle) / 180.0 * M_PI)
@@ -118,7 +117,7 @@
 #define KEY_ISLOGIN_INFO                    @"key_islogin_info"             //是否已经登陆
 #define KEY_ISLOGIN_WHEN_EXIT_INFO          @"key_islogin_when_exit_info"   //用于记录上次退出时是否是登陆状态方便这次
 #define KEY_APPKEY_INFO                     @"key_appkey_info"              //appkey
-
+#define KEY_EMAIL_ADDRESS_INFO              @"key_email_address_info"       //用户邮件地址
 
 #define NSNotificationCenter_dismissRecordChange                @"NSNotificationCenter_dismissRecordChange"
 #define NSNotificationCenter_userbeLogin                        @"NSNotificationCenter_userbeLogin"
@@ -130,7 +129,7 @@
 #define TAG_Product_FocusList       4003
 #define TAG_Product_Order           4004
 #define TAG_Product_OrderList       4005
-
+#define TAG_Email_Product           4006
 
 
 #define TAG_PersonCenter_Register    5000

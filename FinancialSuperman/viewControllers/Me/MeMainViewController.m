@@ -85,7 +85,7 @@
         [_personButtonItem setEnabled:NO];
     }
     
-    if (![USERDEFAULT boolForKey:KEY_ISLOGIN_INFO]) {
+    if (![USER_DEFAULT boolForKey:KEY_ISLOGIN_INFO]) {
         _remindLoginViewController  = [storyBoard instantiateViewControllerWithIdentifier:@"RemindLoginVCIdentifier"];
         _remindLoginViewController.delegate = self;
         [self.view addSubview:_remindLoginViewController.view];

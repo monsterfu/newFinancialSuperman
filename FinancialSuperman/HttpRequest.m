@@ -96,6 +96,12 @@
     
     [self Request:[NSString stringWithFormat:@"%@%@",Test2_Server,USER_DETAIL_API] postdate:infoDic tag:tag delegate:delegate finishSel:finishSel failSel:failSel];
 }
+
+//将产品发邮件给客户
++(void)emailRequest:(NSMutableDictionary*)infoDic delegate:(id)delegate finishSel:(SEL)finishSel failSel:(SEL)failSel tag:(NSUInteger)tag{
+    
+    [self Request:[NSString stringWithFormat:@"%@%@",Test2_Server,EMAIL_API] postdate:infoDic tag:tag delegate:delegate finishSel:finishSel failSel:failSel];
+}
 @end
 
 

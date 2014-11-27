@@ -19,18 +19,18 @@
     // Override point for customization after application launch.
     
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
-    NSString* userName = [USERDEFAULT objectForKey:KEY_USERNAME_INFO];
-    NSString* passWord = [USERDEFAULT objectForKey:KEY_PASSWORD_INFO];
+    NSString* userName = [USER_DEFAULT objectForKey:KEY_USERNAME_INFO];
+    NSString* passWord = [USER_DEFAULT objectForKey:KEY_PASSWORD_INFO];
     
-    [USERDEFAULT setBool:NO forKey:KEY_ISLOGIN_INFO];
+    [USER_DEFAULT setBool:NO forKey:KEY_ISLOGIN_INFO];
     
     if (userName && passWord&&[USER_DEFAULT boolForKey:KEY_ISLOGIN_WHEN_EXIT_INFO]) {
         [HttpRequest userLoginRequest:[LoginModel stanceWithUserName:userName password:passWord captcha:@""] delegate:self finishSel:@selector(GetResult:) failSel:@selector(GetErr:) tag:TAG_ProductAll];
     }
     
     //目前此项暂时写死
-    if ([USERDEFAULT objectForKey:KEY_APPKEY_INFO] == nil) {
-        [USERDEFAULT setObject:@"licai670a083b7b2738d8285b89da2ed82" forKey:KEY_APPKEY_INFO];
+    if ([USER_DEFAULT objectForKey:KEY_APPKEY_INFO] == nil) {
+        [USER_DEFAULT setObject:@"licai670a083b7b2738d8285b89da2ed82" forKey:KEY_APPKEY_INFO];
     }
     
     

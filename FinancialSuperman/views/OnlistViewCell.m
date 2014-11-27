@@ -13,7 +13,7 @@
 
 - (IBAction)focusButtonTouch:(UIButton *)sender {
     
-    if (![USERDEFAULT boolForKey:KEY_ISLOGIN_INFO])
+    if (![USER_DEFAULT boolForKey:KEY_ISLOGIN_INFO])
     {
         if (self.delegate&&[self.delegate respondsToSelector:@selector(onlistViewCellIsFucus:product:)]) {
             [self.delegate onlistViewCellIsFucus:sender product:_productOneModel];

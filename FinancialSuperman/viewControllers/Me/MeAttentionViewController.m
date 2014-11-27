@@ -76,7 +76,7 @@
 #pragma mark -- CellDelegate
 -(void)searchListCellIsFucus:(UIButton*)sender productid:(NSString *)productid
 {
-    if (![USERDEFAULT boolForKey:KEY_ISLOGIN_INFO]) {
+    if (![USER_DEFAULT boolForKey:KEY_ISLOGIN_INFO]) {
         [self.navigationController.tabBarController performSegueWithIdentifier:@"userLoginIdentifier" sender:nil];
     }else{
         _focusButton = sender;

@@ -40,8 +40,9 @@
     [self.tabBar setBackgroundColor:[UIColor whiteColor]];
 //    [self.navigationController setNavigationBarHidden:YES];
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc] init];
-    [backItem setBackButtonBackgroundImage:[UIImage imageNamed:@"navi_custom_back_btn_normal"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    [backItem setBackButtonBackgroundImage:[UIImage imageNamed:@"navi_custom_back_btn_normal.png"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefaultPrompt];
     self.navigationItem.backBarButtonItem = backItem;
+    backItem.title = @" ";
 }
 
 - (void)didReceiveMemoryWarning
