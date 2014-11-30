@@ -164,6 +164,11 @@
 		643BBD861A02670100D151E4 /* searchListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 643BBD851A02670100D151E4 /* searchListViewCell.m */; };
 		643BBD891A026B4300D151E4 /* SearchListCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 643BBD881A026B4300D151E4 /* SearchListCellModel.m */; };
 		643BBD8C1A02958E00D151E4 /* productDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 643BBD8B1A02958E00D151E4 /* productDetailViewController.m */; };
+		643DD2391A2B6434000E352A /* AlbumReadAllArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 643DD2381A2B6434000E352A /* AlbumReadAllArrow@2x.png */; };
+		643DD23C1A2B74F7000E352A /* EmotionEditorAdd@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 643DD23A1A2B74F7000E352A /* EmotionEditorAdd@2x.png */; };
+		643DD23D1A2B74F7000E352A /* EmotionEditorAddHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 643DD23B1A2B74F7000E352A /* EmotionEditorAddHL@2x.png */; };
+		643DD2401A2B76E2000E352A /* share_card_body.png in Resources */ = {isa = PBXBuildFile; fileRef = 643DD23E1A2B76E2000E352A /* share_card_body.png */; };
+		643DD2411A2B76E2000E352A /* share_card_body@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 643DD23F1A2B76E2000E352A /* share_card_body@2x.png */; };
 		645E04B51A1B8D0200D9E495 /* navi_recommend_btn_user_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 645E04B31A1B8D0200D9E495 /* navi_recommend_btn_user_normal.png */; };
 		645E04B61A1B8D0200D9E495 /* navi_recommend_btn_user_press.png in Resources */ = {isa = PBXBuildFile; fileRef = 645E04B41A1B8D0200D9E495 /* navi_recommend_btn_user_press.png */; };
 		64702AF31A107C1A00850E32 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 64702A9C1A107C1A00850E32 /* ASIAuthenticationDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -228,6 +233,7 @@
 		64C8085A1A21D1DC0037ED25 /* product_detail_email_btn_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 64C808591A21D1DC0037ED25 /* product_detail_email_btn_normal.png */; };
 		64C8085D1A21D32A0037ED25 /* navi_custom_email_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 64C8085B1A21D32A0037ED25 /* navi_custom_email_normal@2x.png */; };
 		64C8085E1A21D32A0037ED25 /* navi_custom_email_press@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 64C8085C1A21D32A0037ED25 /* navi_custom_email_press@2x.png */; };
+		64C84EAC1A2AD916007574AA /* NSMutableAttributedString+customer.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C84EAB1A2AD916007574AA /* NSMutableAttributedString+customer.m */; };
 		B113B63A1A2427ED00F0A04C /* orderProductModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B113B6391A2427ED00F0A04C /* orderProductModel.m */; };
 		B113B63F1A244EF600F0A04C /* orderListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B113B63E1A244EF600F0A04C /* orderListViewCell.m */; };
 		B113B6421A2467CE00F0A04C /* UserDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B113B6411A2467CE00F0A04C /* UserDetailModel.m */; };
@@ -448,6 +454,11 @@
 		643BBD881A026B4300D151E4 /* SearchListCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchListCellModel.m; path = Model/SearchListCellModel.m; sourceTree = "<group>"; };
 		643BBD8A1A02958E00D151E4 /* productDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = productDetailViewController.h; path = viewControllers/Search/productDetailViewController.h; sourceTree = "<group>"; };
 		643BBD8B1A02958E00D151E4 /* productDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = productDetailViewController.m; path = viewControllers/Search/productDetailViewController.m; sourceTree = "<group>"; };
+		643DD2381A2B6434000E352A /* AlbumReadAllArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlbumReadAllArrow@2x.png"; sourceTree = "<group>"; };
+		643DD23A1A2B74F7000E352A /* EmotionEditorAdd@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "EmotionEditorAdd@2x.png"; sourceTree = "<group>"; };
+		643DD23B1A2B74F7000E352A /* EmotionEditorAddHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "EmotionEditorAddHL@2x.png"; sourceTree = "<group>"; };
+		643DD23E1A2B76E2000E352A /* share_card_body.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share_card_body.png; sourceTree = "<group>"; };
+		643DD23F1A2B76E2000E352A /* share_card_body@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share_card_body@2x.png"; sourceTree = "<group>"; };
 		645E04B31A1B8D0200D9E495 /* navi_recommend_btn_user_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navi_recommend_btn_user_normal.png; sourceTree = "<group>"; };
 		645E04B41A1B8D0200D9E495 /* navi_recommend_btn_user_press.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navi_recommend_btn_user_press.png; sourceTree = "<group>"; };
 		64702A9B1A107C1A00850E32 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
@@ -548,6 +559,8 @@
 		64C808591A21D1DC0037ED25 /* product_detail_email_btn_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = product_detail_email_btn_normal.png; sourceTree = "<group>"; };
 		64C8085B1A21D32A0037ED25 /* navi_custom_email_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navi_custom_email_normal@2x.png"; sourceTree = "<group>"; };
 		64C8085C1A21D32A0037ED25 /* navi_custom_email_press@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navi_custom_email_press@2x.png"; sourceTree = "<group>"; };
+		64C84EAA1A2AD916007574AA /* NSMutableAttributedString+customer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+customer.h"; sourceTree = "<group>"; };
+		64C84EAB1A2AD916007574AA /* NSMutableAttributedString+customer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+customer.m"; sourceTree = "<group>"; };
 		B113B6381A2427ED00F0A04C /* orderProductModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = orderProductModel.h; path = Model/orderProductModel.h; sourceTree = "<group>"; };
 		B113B6391A2427ED00F0A04C /* orderProductModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = orderProductModel.m; path = Model/orderProductModel.m; sourceTree = "<group>"; };
 		B113B63D1A244EF600F0A04C /* orderListViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = orderListViewCell.h; path = views/orderListViewCell.h; sourceTree = "<group>"; };
@@ -771,6 +784,7 @@
 		643AB08F1A01357C00171976 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				643DD2331A2B6279000E352A /* me */,
 				64702B6C1A10F88900850E32 /* refreshIcon */,
 				643AB0901A01357C00171976 /* bg_cell_mini.png */,
 				64B7D4BE1A223D6C0035E60F /* navi_custom_back_btn_hgihlight.png */,
@@ -916,6 +930,7 @@
 		643AB1651A01390C00171976 /* category */ = {
 			isa = PBXGroup;
 			children = (
+				64C84EA91A2AD916007574AA /* NSMutableAttributedString+custom */,
 				64702B351A10925300850E32 /* UIController+loadView */,
 				6417B8511A04CA7D0060E236 /* UIButtonImageOrder+reversal */,
 				643AB1661A01390C00171976 /* UIColor+getColor */,
@@ -1014,6 +1029,18 @@
 				6418BE4A1A1CEE4D00F5B353 /* orderViewController.m */,
 			);
 			name = Search;
+			sourceTree = "<group>";
+		};
+		643DD2331A2B6279000E352A /* me */ = {
+			isa = PBXGroup;
+			children = (
+				643DD23E1A2B76E2000E352A /* share_card_body.png */,
+				643DD23F1A2B76E2000E352A /* share_card_body@2x.png */,
+				643DD23A1A2B74F7000E352A /* EmotionEditorAdd@2x.png */,
+				643DD23B1A2B74F7000E352A /* EmotionEditorAddHL@2x.png */,
+				643DD2381A2B6434000E352A /* AlbumReadAllArrow@2x.png */,
+			);
+			path = me;
 			sourceTree = "<group>";
 		};
 		64702A9A1A107C1A00850E32 /* AsiHttp */ = {
@@ -1187,6 +1214,15 @@
 			path = refreshIcon;
 			sourceTree = "<group>";
 		};
+		64C84EA91A2AD916007574AA /* NSMutableAttributedString+custom */ = {
+			isa = PBXGroup;
+			children = (
+				64C84EAA1A2AD916007574AA /* NSMutableAttributedString+customer.h */,
+				64C84EAB1A2AD916007574AA /* NSMutableAttributedString+customer.m */,
+			);
+			path = "NSMutableAttributedString+custom";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1283,13 +1319,17 @@
 				640C70F21A15E32C0091BE8F /* trade_confirm_btn_highlighted.png in Resources */,
 				643AB1411A01357C00171976 /* icon_ranking_normal.png in Resources */,
 				642A16D61A1DCFFD0022DC51 /* seting_confirm_btn_normal.png in Resources */,
+				643DD23C1A2B74F7000E352A /* EmotionEditorAdd@2x.png in Resources */,
 				643AB1161A01357C00171976 /* icon_follow@3x.png in Resources */,
 				643AB12A1A01357C00171976 /* icon_more_normal@2x.png in Resources */,
 				643AB13C1A01357C00171976 /* icon_radio_normal@2x.png in Resources */,
 				640C70F41A15E32C0091BE8F /* user_confirm_btn_highlighted.png in Resources */,
 				64C8085D1A21D32A0037ED25 /* navi_custom_email_normal@2x.png in Resources */,
+				643DD23D1A2B74F7000E352A /* EmotionEditorAddHL@2x.png in Resources */,
 				643AB0FB1A01357C00171976 /* btn_operate@3x.png in Resources */,
+				643DD2391A2B6434000E352A /* AlbumReadAllArrow@2x.png in Resources */,
 				643AB0741A01316900171976 /* Main.storyboard in Resources */,
+				643DD2401A2B76E2000E352A /* share_card_body.png in Resources */,
 				64702B7C1A1108CA00850E32 /* timeline_new_status_background@2x.png in Resources */,
 				643AB12E1A01357C00171976 /* icon_more_selected@3x.png in Resources */,
 				64B7D4C11A223D6C0035E60F /* navi_custom_back_btn_normal.png in Resources */,
@@ -1338,6 +1378,7 @@
 				643AB1441A01357C00171976 /* icon_ranking_selected.png in Resources */,
 				643AB12D1A01357C00171976 /* icon_more_selected@2x.png in Resources */,
 				640C70F51A15E32C0091BE8F /* user_confirm_btn_normal.png in Resources */,
+				643DD2411A2B76E2000E352A /* share_card_body@2x.png in Resources */,
 				643AB1401A01357C00171976 /* icon_radio_selected@3x.png in Resources */,
 				643AB10A1A01357C00171976 /* icon_chat@3x.png in Resources */,
 				64702B7B1A1108CA00850E32 /* timeline_new_status_background.png in Resources */,
@@ -1440,6 +1481,7 @@
 				B113B63F1A244EF600F0A04C /* orderListViewCell.m in Sources */,
 				643BBD891A026B4300D151E4 /* SearchListCellModel.m in Sources */,
 				64702B081A107C1A00850E32 /* ASIS3ObjectRequest.m in Sources */,
+				64C84EAC1A2AD916007574AA /* NSMutableAttributedString+customer.m in Sources */,
 				64702B621A10B17800850E32 /* EGORefreshTableHeaderView.m in Sources */,
 				64702B3E1A10993F00850E32 /* loadViewContoller.m in Sources */,
 				64702B391A10938800850E32 /* UIViewController+loadView.m in Sources */,
@@ -1624,8 +1666,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Bin Huang (7NXMGFBRJD)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Bin Huang (7NXMGFBRJD)";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -1636,7 +1678,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "c57ae710-9f59-4b93-9ac2-9501f2d4c67e";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1645,8 +1687,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Bin Huang (7NXMGFBRJD)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Bin Huang (7NXMGFBRJD)";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -1657,7 +1699,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "c57ae710-9f59-4b93-9ac2-9501f2d4c67e";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

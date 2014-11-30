@@ -42,10 +42,12 @@
         
         [self.productTitle setText:model.baseInfo.product_name];
         [self.numLabel setText:[NSString stringWithFormat:@"%@",model.investment_amount]];
-        [self.startNum setText:[NSString stringWithFormat:@"%@",model.investment_amount]];
-        [self.productPeriod setText:[NSString stringWithFormat:@"%@",model.investment_cycle]];
-        [self.prospectiveEarningsPercent setText:[NSString stringWithFormat:@"%@%%",model.expected_return_rate]];
-        [self.commissionPercent setText:[NSString stringWithFormat:@"%@%%",model.return_rate]];
+        
+        [self.startNum setAttributedText:[NSMutableAttributedString instanceupStr:model.investment_amount downStr:@"万起" upColor:[UIColor getColor:@"FF5B5B"] downColor:[UIColor getColor:@"AAAAAA"] upFont:[UIFont systemFontOfSize:15.0f] downFont:[UIFont systemFontOfSize:13.0f]]];
+        [self.productPeriod setAttributedText:[NSMutableAttributedString instanceupStr:model.investment_cycle downStr:@"个月" upColor:[UIColor getColor:@"FF5B5B"] downColor:[UIColor getColor:@"AAAAAA"] upFont:[UIFont systemFontOfSize:15.0f] downFont:[UIFont systemFontOfSize:13.0f]]];
+        
+        [self.prospectiveEarningsPercent setAttributedText:[NSMutableAttributedString instanceupStr:model.expected_return_rate downStr:@"%" upColor:[UIColor getColor:@"FF5B5B"] downColor:[UIColor getColor:@"AAAAAA"] upFont:[UIFont systemFontOfSize:15.0f] downFont:[UIFont systemFontOfSize:13.0f]]];
+        [self.commissionPercent setAttributedText:[NSMutableAttributedString instanceupStr:model.return_rate downStr:@"%" upColor:[UIColor getColor:@"FF5B5B"] downColor:[UIColor getColor:@"AAAAAA"] upFont:[UIFont systemFontOfSize:15.0f] downFont:[UIFont systemFontOfSize:13.0f]]];
         [self.detailLabel setText:[NSString stringWithFormat:@"%@",model.comments]];
         
         float value = [model.expected_return_rate floatValue];

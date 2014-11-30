@@ -16,6 +16,7 @@
 #import "UIColor+getColor.h"
 #import "UIButtonImageOrder+reversal.h"
 #import "NSMutableArray+Sort.h"
+#import "NSMutableAttributedString+customer.h"
 
 #import "UIButtonImageOrder.h"
 //customer views

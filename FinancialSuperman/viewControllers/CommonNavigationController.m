@@ -46,10 +46,10 @@
     
     [self setNeedsStatusBarAppearanceUpdate];
     
-//    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] init];
-//    [backItem setImage:[UIImage imageNamed:@"navi_custom_back_btn_normal"]];
-//    self.navigationItem.backBarButtonItem = backItem;
-//    backItem.title = @"1";
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] init];
+    [backItem setBackButtonBackgroundImage:[UIImage imageNamed:@"navi_custom_back_btn_normal.png"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefaultPrompt];
+    self.navigationItem.backBarButtonItem = backItem;
+    backItem.title = @" ";
 }
 
 - (void)didReceiveMemoryWarning

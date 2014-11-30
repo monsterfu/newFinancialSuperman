@@ -56,11 +56,18 @@
     
     _productId = productOneModel.productId;
     
+   
+    
     [self.productLabel setText:_productOneModel.baseInfo.product_name];
-    [self.amountLabel setText:[NSString stringWithFormat:@"%@万起",_productOneModel.investment_amount]];
-    [self.limitLabel setText:[NSString stringWithFormat:@"%@个月",_productOneModel.investment_cycle]];
-    [self.earningsLabel setText:[NSString stringWithFormat:@"%@%%",_productOneModel.expected_return_rate]];
-    [self.commissionLabel setText:[NSString stringWithFormat:@"%@%%",_productOneModel.return_rate]];
+    
+    [self.amountLabel setAttributedText:[NSMutableAttributedString instanceupStr:_productOneModel.investment_amount downStr:@"万起" upColor:[UIColor blackColor] downColor:[UIColor getColor:@"787878"] upFont:[UIFont systemFontOfSize:17.0f] downFont:[UIFont systemFontOfSize:12.0f]]];
+    
+    [self.limitLabel setAttributedText:[NSMutableAttributedString instanceupStr:_productOneModel.investment_cycle downStr:@"个月" upColor:[UIColor blackColor] downColor:[UIColor getColor:@"787878"] upFont:[UIFont systemFontOfSize:17.0f] downFont:[UIFont systemFontOfSize:12.0f]]];
+    
+    [self.earningsLabel setAttributedText:[NSMutableAttributedString instanceupStr:_productOneModel.expected_return_rate downStr:@"%" upColor:[UIColor blackColor] downColor:[UIColor getColor:@"787878"] upFont:[UIFont systemFontOfSize:17.0f] downFont:[UIFont systemFontOfSize:12.0f]]];
+    
+    [self.commissionLabel setAttributedText:[NSMutableAttributedString instanceupStr:_productOneModel.return_rate downStr:@"%" upColor:[UIColor blackColor] downColor:[UIColor getColor:@"787878"] upFont:[UIFont systemFontOfSize:17.0f] downFont:[UIFont systemFontOfSize:12.0f]]];
+    
     [self.surplusPercentLabel setText:[NSString stringWithFormat:@"%.1f%%",_productOneModel.remainPercent*100]];
     [self.percentView animationRectWithColor:[UIColor getColor:@"F89D40"] percent:_productOneModel.remainPercent];
     

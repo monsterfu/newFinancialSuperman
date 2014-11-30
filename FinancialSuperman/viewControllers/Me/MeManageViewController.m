@@ -51,9 +51,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-        _cell = [tableView dequeueReusableCellWithIdentifier:@"manageTotalCellIdentifier" forIndexPath:indexPath];
+        _cell = [tableView dequeueReusableCellWithIdentifier:@"addBackCardCellIdentifier" forIndexPath:indexPath];
     }else{
-       _cell = [tableView dequeueReusableCellWithIdentifier:@"manageOtherCellIdentifier" forIndexPath:indexPath]; 
+       _cell = [tableView dequeueReusableCellWithIdentifier:@"addBackCardCellIdentifier" forIndexPath:indexPath]; 
     }
     return _cell;
 }

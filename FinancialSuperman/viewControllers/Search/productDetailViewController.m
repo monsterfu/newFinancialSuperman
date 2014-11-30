@@ -35,11 +35,20 @@
     UIBarButtonItem* emailButtonItem = [[UIBarButtonItem alloc]initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(emailButtonTouched)];
     [self.navigationItem setRightBarButtonItem:emailButtonItem];
     
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] init];
+    [backItem setBackButtonBackgroundImage:[UIImage imageNamed:@"navi_custom_back_btn_normal.png"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefaultPrompt];
+    self.navigationItem.backBarButtonItem = backItem;
+    backItem.title = @" ";
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)tapAction:(UITapGestureRecognizer *)sender {
+    
+    [_textField resignFirstResponder];
 }
 
 #pragma mark --
@@ -121,16 +130,71 @@
         }
         
     }else if(indexPath.section == 2){
-        
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"secotionThreeOneIdentifier" forIndexPath:indexPath];
-        UILabel* titleLabel = (UILabel*)[cell viewWithTag:1];
-        titleLabel.text = [_baseInfoTitleArray objectAtIndex:indexPath.row];
+        UITableViewCell *cell;
+        if (indexPath.row == 0) {
+            //发行规模（万元）
+            cell = [tableView dequeueReusableCellWithIdentifier:@"secotionThreeOneIdentifier" forIndexPath:indexPath];
+            UILabel* titleLabel = (UILabel*)[cell viewWithTag:1];
+            titleLabel.text = [_baseInfoTitleArray objectAtIndex:indexPath.row];
+            UILabel* contentLabel = (UILabel*)[cell viewWithTag:2];
+            [contentLabel setAttributedText:[NSMutableAttributedString instanceupStr:_productOne.baseInfo.fund_size downStr:@"万元" upColor:[UIColor grayColor] downColor:[UIColor grayColor] upFont:[UIFont systemFontOfSize:14.0f] downFont:[UIFont systemFontOfSize:14.0f]]];
+        }else if (indexPath.row == 1) {
+            //产品限期 buy_over_date
+            cell = [tableView dequeueReusableCellWithIdentifier:@"secotionThreeOneIdentifier" forIndexPath:indexPath];
+            UILabel* titleLabel = (UILabel*)[cell viewWithTag:1];
+            titleLabel.text = [_baseInfoTitleArray objectAtIndex:indexPath.row];
+            UILabel* contentLabel = (UILabel*)[cell viewWithTag:2];
+            [contentLabel setAttributedText:[NSMutableAttributedString instanceupStr:_productOne.buy_over_date downStr:@" " upColor:[UIColor grayColor] downColor:[UIColor grayColor] upFont:[UIFont systemFontOfSize:14.0f] downFont:[UIFont systemFontOfSize:14.0f]]];
+        }else if (indexPath.row == 2) {
+            //投资行业 investment_category
+            cell = [tableView dequeueReusableCellWithIdentifier:@"secotionThreeOneIdentifier" forIndexPath:indexPath];
+            UILabel* titleLabel = (UILabel*)[cell viewWithTag:1];
+            titleLabel.text = [_baseInfoTitleArray objectAtIndex:indexPath.row];
+            UILabel* contentLabel = (UILabel*)[cell viewWithTag:2];
+            [contentLabel setAttributedText:[NSMutableAttributedString instanceupStr:_productOne.baseInfo.investment_category downStr:@" " upColor:[UIColor grayColor] downColor:[UIColor grayColor] upFont:[UIFont systemFontOfSize:14.0f] downFont:[UIFont systemFontOfSize:14.0f]]];
+        }else if (indexPath.row == 3) {
+            //项目所属 location
+            cell = [tableView dequeueReusableCellWithIdentifier:@"secotionThreeOneIdentifier" forIndexPath:indexPath];
+            UILabel* titleLabel = (UILabel*)[cell viewWithTag:1];
+            titleLabel.text = [_baseInfoTitleArray objectAtIndex:indexPath.row];
+            UILabel* contentLabel = (UILabel*)[cell viewWithTag:2];
+            [contentLabel setAttributedText:[NSMutableAttributedString instanceupStr:_productOne.baseInfo.location downStr:@" " upColor:[UIColor grayColor] downColor:[UIColor grayColor] upFont:[UIFont systemFontOfSize:14.0f] downFont:[UIFont systemFontOfSize:14.0f]]];
+        }else if (indexPath.row == 4) {
+            //发行机构 issuer
+            cell = [tableView dequeueReusableCellWithIdentifier:@"secotionThreeOneIdentifier" forIndexPath:indexPath];
+            UILabel* titleLabel = (UILabel*)[cell viewWithTag:1];
+            titleLabel.text = [_baseInfoTitleArray objectAtIndex:indexPath.row];
+            UILabel* contentLabel = (UILabel*)[cell viewWithTag:2];
+            [contentLabel setAttributedText:[NSMutableAttributedString instanceupStr:_productOne.baseInfo.issuer downStr:@" " upColor:[UIColor grayColor] downColor:[UIColor grayColor] upFont:[UIFont systemFontOfSize:14.0f] downFont:[UIFont systemFontOfSize:14.0f]]];
+        }else if (indexPath.row == 5) {
+            //发行日期 buy_begin_date
+            cell = [tableView dequeueReusableCellWithIdentifier:@"secotionThreeOneIdentifier" forIndexPath:indexPath];
+            UILabel* titleLabel = (UILabel*)[cell viewWithTag:1];
+            titleLabel.text = [_baseInfoTitleArray objectAtIndex:indexPath.row];
+            UILabel* contentLabel = (UILabel*)[cell viewWithTag:2];
+            [contentLabel setAttributedText:[NSMutableAttributedString instanceupStr:_productOne.buy_begin_date downStr:@" " upColor:[UIColor grayColor] downColor:[UIColor grayColor] upFont:[UIFont systemFontOfSize:14.0f] downFont:[UIFont systemFontOfSize:14.0f]]];
+        }else if (indexPath.row == 6) {
+            //募集进度
+            cell = [tableView dequeueReusableCellWithIdentifier:@"secotionThreeTwoIdentifier" forIndexPath:indexPath];
+            UILabel* titleLabel = (UILabel*)[cell viewWithTag:1];
+            titleLabel.text = [_baseInfoTitleArray objectAtIndex:indexPath.row];
+            UILabel* contentLabel = (UILabel*)[cell viewWithTag:3];
+            [contentLabel setAttributedText:[NSMutableAttributedString instanceupStr:_productOne.baseInfo.complete_percent downStr:@" " upColor:[UIColor grayColor] downColor:[UIColor grayColor] upFont:[UIFont systemFontOfSize:14.0f] downFont:[UIFont systemFontOfSize:14.0f]]];
+            percentRectView* _percentView = (percentRectView*)[cell viewWithTag:2];
+            [_percentView animationRectWithColor:[UIColor getColor:@"F89D40"] percent:0.4];
+        }else{
+            //说明
+            cell = [tableView dequeueReusableCellWithIdentifier:@"secotionThreeThreeIdentifier" forIndexPath:indexPath];
+            UILabel* titleLabel = (UILabel*)[cell viewWithTag:1];
+            titleLabel.text = _productOne.descriptions;
+        }
         
         
         return cell;
     }else{
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"secotionThreeThreeIdentifier" forIndexPath:indexPath];
-    
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"secotionFourThreeIdentifier" forIndexPath:indexPath];
+        UILabel* titleLabel = (UILabel*)[cell viewWithTag:1];
+        titleLabel.text = _productOne.comments;
         return cell;
     }
 }

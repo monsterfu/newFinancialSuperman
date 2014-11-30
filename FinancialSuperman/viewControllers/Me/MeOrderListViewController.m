@@ -71,9 +71,24 @@
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    UILabel* label = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, DEVICE_WIDTH, 30)];
-    label.text =  @"sssss";
-    return label;
+    _cell = [tableView dequeueReusableCellWithIdentifier:@"orderListHeaderCellIdentifier"];
+    UILabel* label1 = (UILabel*)[_cell viewWithTag:1];
+    UILabel* label2 = (UILabel*)[_cell viewWithTag:2];
+    UILabel* label3 = (UILabel*)[_cell viewWithTag:3];
+//    UILabel* label4 = (UILabel*)[_cell viewWithTag:4];
+    if (section == 0) {
+        label1.textColor = [UIColor getColor:@"F79C40"];
+    }
+    if (section == 1) {
+        label1.textColor = [UIColor blackColor];
+        label2.textColor = [UIColor getColor:@"F79C40"];
+    }
+    if (section == 2) {
+        label1.textColor = [UIColor blackColor];
+        label2.textColor = [UIColor blackColor];
+        label3.textColor = [UIColor getColor:@"F79C40"];
+    }
+    return _cell.contentView;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -91,7 +106,7 @@
     UILabel* timeLabel = (UILabel*)[_cell viewWithTag:3];
     UILabel* orderLabel = (UILabel*)[_cell viewWithTag:4];
     nameLabel.text = _orderProductModel.product_name;
-    countLabel.text = [NSString stringWithFormat:@"%@万",_orderProductModel.product_price];
+    [countLabel setAttributedText:[NSMutableAttributedString instanceupStr:_orderProductModel.product_price downStr:@"万" upColor:[UIColor lightGrayColor] downColor:[UIColor lightGrayColor] upFont:[UIFont systemFontOfSize:13.0f] downFont:[UIFont systemFontOfSize:11.0f]]];
     timeLabel.text = _orderProductModel.add_time;
     orderLabel.text = _orderProductModel.customer_name;
     return _cell;

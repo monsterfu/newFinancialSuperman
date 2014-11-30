@@ -47,7 +47,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "260"
             endingLineNumber = "260"
-            landmarkName = "-amountButtonTouched:"
+            landmarkName = "-segmentedControlTouch:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -63,7 +63,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "275"
             endingLineNumber = "275"
-            landmarkName = "-periodButtonTouched:"
+            landmarkName = "-amountButtonTouched:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -191,7 +191,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "247"
             endingLineNumber = "247"
-            landmarkName = "-segmentedControlTouch:"
+            landmarkName = "-searchListCellIsFucus:productid:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -455,22 +455,6 @@
             timestampString = "438453495.380545"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
-            landmarkName = "-egoRefreshTableHeaderDidTriggerRefresh:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FinancialSuperman/viewControllers/OnList/OnListViewController.m"
-            timestampString = "438453495.380545"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
             startingLineNumber = "59"
             endingLineNumber = "59"
             landmarkName = "-reloadTableViewDataSource"
@@ -489,7 +473,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "331"
             endingLineNumber = "331"
-            landmarkName = "-GetResult:"
+            landmarkName = "-commissionButtonTouched:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -506,6 +490,22 @@
             startingLineNumber = "43"
             endingLineNumber = "43"
             landmarkName = "-countDownAction"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FinancialSuperman/viewControllers/Search/searchMainViewController.m"
+            timestampString = "439018697.043513"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
+            landmarkName = "-updateUI"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
