@@ -82,6 +82,9 @@
     }
     
     self.statusImage.image = [UIImage imageNamed:imageName];
+    
+    BOOL focus = ([_productOneModel.is_focus isEqualToString:@"0"])?(NO):(YES);
+    [self.focusButton setSelected:focus];
 }
 
 - (IBAction)focusButtonTouched:(UIButton *)sender {

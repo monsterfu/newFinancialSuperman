@@ -22,7 +22,10 @@
 @property(nonatomic, retain)NSString* phone;
 @property(nonatomic, retain)NSString* province;
 @property(nonatomic, retain)NSString* role;
-@property(nonatomic, retain)NSString* total_income;
+@property(nonatomic, retain)NSString* total_income;     //累计佣金
+@property(nonatomic, retain)NSString* expect_income;    //累计佣金
+@property(nonatomic, retain)NSString* returned_count;   //累计佣金的订单数
+@property(nonatomic, retain)NSString* returning_count;  //预计佣金的订单数
 
 
 - (id)initWithDictionary:(NSDictionary *)dictionary;

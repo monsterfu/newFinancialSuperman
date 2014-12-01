@@ -9,11 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "GlobalHeader.h"
 
-@interface MeCommissionViewController : baseLoadViewController<UIViewControllerLoadViewDelegate>
+@interface MeCommissionViewController : baseLoadViewController<UIViewControllerLoadViewDelegate,SKSTableViewDelegate>
 {
+    orderProductModel* _orderProductModel;
     UITableViewCell* _cell;
     UserDetailModel* _model;
+    NSMutableArray* _statusReturnedArray;               //已合同
+    NSMutableArray* _statusReturninArray;               //已付款
 }
 
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet SKSTableView *tableView;
 @end

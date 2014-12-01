@@ -230,6 +230,13 @@
 {
     return 38;
 }
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 3) {
+        return 65;
+    }
+    return 44;
+}
 #pragma - HeaderView DetailButtonTouch
 -(void)detailTouched
 {

@@ -58,6 +58,7 @@
 @synthesize investment_risk;
 @synthesize investment_team;
 @synthesize is_cash_bill;
+@synthesize is_focus;
 @synthesize is_structured;
 @synthesize last_update_date;
 @synthesize management_rate;
@@ -152,6 +153,7 @@
         investment_risk  = [dictionary objectForKey:@"investment_risk"];
         investment_team  = [dictionary objectForKey:@"investment_team"];
         is_cash_bill  = [dictionary objectForKey:@"is_cash_bill"];
+        is_focus = [dictionary objectForKey:@"is_focus"];
         is_structured  = [dictionary objectForKey:@"is_structured"];
         
         last_update_date  = [dictionary objectForKey:@"last_update_date"];

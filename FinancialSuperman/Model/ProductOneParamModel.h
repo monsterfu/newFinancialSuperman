@@ -63,6 +63,7 @@
 @property(nonatomic, retain)NSString* investment_risk;
 @property(nonatomic, retain)NSString* investment_team;
 @property(nonatomic, retain)NSString* is_cash_bill;
+@property(nonatomic, retain)NSString* is_focus;
 @property(nonatomic, retain)NSString* is_structured;
 @property(nonatomic, retain)NSString* last_update_date;
 @property(nonatomic, retain)NSString* management_rate;

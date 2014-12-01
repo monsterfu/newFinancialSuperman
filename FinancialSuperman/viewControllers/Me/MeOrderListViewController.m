@@ -31,6 +31,8 @@
         [self updateOrderList];
     }
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(updateOrderList) name:NSNotificationCenter_userbeLogin object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(updateOrderList) name:NSNotificationCenter_userOrderProduct object:nil];
+    
 }
 
 - (void)didReceiveMemoryWarning {

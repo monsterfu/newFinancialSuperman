@@ -22,6 +22,9 @@
 @synthesize province;
 @synthesize role;
 @synthesize total_income;
+@synthesize expect_income;
+@synthesize returned_count;
+@synthesize returning_count;
 
 - (id)initWithDictionary:(NSDictionary *)dictionary
 {
@@ -41,6 +44,9 @@
         province  = [dictionary objectForKey:@"province"];
         role  = [dictionary objectForKey:@"role"];
         total_income  = [dictionary objectForKey:@"total_income"];
+        expect_income  = [dictionary objectForKey:@"expect_income"];
+        returning_count  = [dictionary objectForKey:@"returning_count"];
+        returned_count  = [dictionary objectForKey:@"returned_count"];
     }
     return self;
 }

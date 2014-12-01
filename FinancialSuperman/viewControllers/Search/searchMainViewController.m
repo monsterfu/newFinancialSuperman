@@ -59,6 +59,8 @@
         [_barView addSubview:label];
         [_barView setHidden:YES];
     }
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(refreshAction) name:NSNotificationCenter_userbeLogin object:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -75,6 +77,8 @@
 //        [vc setProductOne:_product];
 //    }
 }
+
+
 #pragma mark -
 #pragma mark UIViewControllerLoadViewDelegate
 -(void)refreshAction

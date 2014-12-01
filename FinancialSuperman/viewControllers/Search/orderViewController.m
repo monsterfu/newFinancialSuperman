@@ -128,6 +128,7 @@
                 [ProgressHUD dismiss];
                 UIAlertView* succussAlertView = [[UIAlertView alloc]initWithTitle:@"恭喜您!预约提交成功~" message:@"我们将在10分钟内为您审核预约信息，详询电话186-645-987-17" delegate:nil cancelButtonTitle:@"好，知道了" otherButtonTitles:nil, nil];
                 [succussAlertView show];
+                [[NSNotificationCenter defaultCenter]postNotificationName:NSNotificationCenter_userOrderProduct object:nil];
                 [self.navigationController popViewControllerAnimated:YES];
             }
         }

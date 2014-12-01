@@ -53,7 +53,8 @@
 
 //thrid-party view control
 #import "DKScrollingTabController.h"
-//#import "CBStoreHouseRefreshControl.h"
+#import "SKSTableView.h"
+#import "SKSTableViewCell.h"
 #import "EGORefreshTableHeaderView.h"
 #import "ProgressHUD.h"
 
@@ -94,17 +95,18 @@
 
 
 //订单状态
-#define order_type_booking      @"booking"      //预约
-#define order_type_contract       @"contract"   //合同
-#define order_type_prepay     @"prepay"         //打款
-#define order_type_return       @"return"       //返佣
-
+#define order_type_booking          @"booking"          //预约
+#define order_type_contract         @"contract"         //合同
+#define order_type_prepay           @"prepay"           //打款
+#define order_type_return           @"return"         //已返佣金
+#define order_type_returned         @"return_done"         //已返佣金
+#define order_type_returnin         @"return_in"        //待返佣金
 //色值
 
 #define BLUE_COLOR   [UIColor getColor:@"4A9DF5"]
 #define GREEN_COLOR  [UIColor getColor:@"B0D633"]
 #define RED_COLOR    [UIColor getColor:@"F16A9F"]
-
+#define COMMON_RED_COLOR    [UIColor getColor:@"F89D40"]
 
 
 #define KEY_DEVICE_INFO   @"key_device_info"
@@ -124,6 +126,7 @@
 #define NSNotificationCenter_userbeLogin                        @"NSNotificationCenter_userbeLogin"
 #define NSNotificationCenter_userbeLogout                       @"NSNotificationCenter_userbeLogout"
 #define NSNotificationCenter_userFocusProduct                   @"NSNotificationCenter_userFocusProduct"
+#define NSNotificationCenter_userOrderProduct                   @"NSNotificationCenter_userOrderProduct"
 
 #define TAG_ProductAll              4001
 #define TAG_Product_Focus           4002
