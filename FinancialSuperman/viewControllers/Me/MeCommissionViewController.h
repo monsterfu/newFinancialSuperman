@@ -15,6 +15,5 @@
     UserDetailModel* _model;
 }
 
-
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @end
