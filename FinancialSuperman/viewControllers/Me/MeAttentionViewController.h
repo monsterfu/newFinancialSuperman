@@ -15,7 +15,6 @@
     attentionProductModel* _attetionModel;
     
     UIButton* _focusButton;
-    
     UILabel* _emptylabel;
 }
 

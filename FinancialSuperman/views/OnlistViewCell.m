@@ -61,6 +61,9 @@
         }
         
         self.bgImageView.image = [UIImage imageNamed:imageName];
+        
+        BOOL focus = ([_productOneModel.is_focus isEqualToString:@"0"])?(NO):(YES);
+        [self.forcusButton setSelected:focus];
     }
 }
 @end

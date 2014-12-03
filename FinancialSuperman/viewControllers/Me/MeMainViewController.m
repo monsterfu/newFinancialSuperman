@@ -71,7 +71,7 @@
     [_meCommissionViewController.view setFrame:CGRectOffset(CGRectMake(0, 0, _scrollView.frame.size.width, _scrollView.frame.size.height), DEVICE_WIDTH*2, TABController_Height)];
     [_meManageViewController.view setFrame:CGRectOffset(CGRectMake(0, 0, _scrollView.frame.size.width, _scrollView.frame.size.height), DEVICE_WIDTH*3, TABController_Height)];
     
-    [_scrollView setContentSize:CGSizeMake(4*DEVICE_WIDTH, _scrollView.frame.size.height)];
+    [_scrollView setContentSize:CGSizeMake(4*DEVICE_WIDTH, 0)];
     
     [_scrollView addSubview:_meAttentionViewController.view];
     [_scrollView addSubview:_meOrderListViewController.view];

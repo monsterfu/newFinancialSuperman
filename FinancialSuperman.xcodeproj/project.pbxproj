@@ -1302,6 +1302,7 @@
 				TargetAttributes = {
 					643AB0611A01316900171976 = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = H6NR6KPK2Z;
 					};
 					643AB07D1A01316900171976 = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -1701,8 +1702,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Bin Huang (7NXMGFBRJD)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Bin Huang (7NXMGFBRJD)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: xin fu (H6NR6KPK2Z)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: xin fu (H6NR6KPK2Z)";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -1713,7 +1714,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c57ae710-9f59-4b93-9ac2-9501f2d4c67e";
+				PROVISIONING_PROFILE = "a8b6e7d6-6f0c-4dff-be64-d02821b7aab4";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1722,8 +1723,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Bin Huang (7NXMGFBRJD)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Bin Huang (7NXMGFBRJD)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: xin fu (H6NR6KPK2Z)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: xin fu (H6NR6KPK2Z)";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -1734,7 +1735,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c57ae710-9f59-4b93-9ac2-9501f2d4c67e";
+				PROVISIONING_PROFILE = "a8b6e7d6-6f0c-4dff-be64-d02821b7aab4";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

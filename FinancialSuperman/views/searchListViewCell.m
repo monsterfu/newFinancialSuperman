@@ -29,11 +29,17 @@
     _productId = attentionModel.product_id;
     
     [self.focusButton setSelected:YES];
+    
     [self.productLabel setText:_attentionModel.product_name];
-    [self.amountLabel setText:[NSString stringWithFormat:@"%@万起",_attentionModel.investment_amount]];
-    [self.limitLabel setText:[NSString stringWithFormat:@"%@个月",_attentionModel.investment_cycle]];
-    [self.earningsLabel setText:[NSString stringWithFormat:@"%@%%",_attentionModel.expected_return_rate]];
-    [self.commissionLabel setText:[NSString stringWithFormat:@"%@%%",_attentionModel.return_rate]];
+    
+    [self.amountLabel setAttributedText:[NSMutableAttributedString instanceupStr:_attentionModel.investment_amount downStr:@"万起" upColor:[UIColor blackColor] downColor:[UIColor getColor:@"787878"] upFont:[UIFont systemFontOfSize:17.0f] downFont:[UIFont systemFontOfSize:12.0f]]];
+    
+    [self.limitLabel setAttributedText:[NSMutableAttributedString instanceupStr:_attentionModel.investment_cycle downStr:@"个月" upColor:[UIColor blackColor] downColor:[UIColor getColor:@"787878"] upFont:[UIFont systemFontOfSize:17.0f] downFont:[UIFont systemFontOfSize:12.0f]]];
+    
+    [self.earningsLabel setAttributedText:[NSMutableAttributedString instanceupStr:_attentionModel.expected_return_rate downStr:@"%" upColor:[UIColor blackColor] downColor:[UIColor getColor:@"787878"] upFont:[UIFont systemFontOfSize:17.0f] downFont:[UIFont systemFontOfSize:12.0f]]];
+    
+    [self.commissionLabel setAttributedText:[NSMutableAttributedString instanceupStr:_attentionModel.return_rate downStr:@"%" upColor:[UIColor blackColor] downColor:[UIColor getColor:@"787878"] upFont:[UIFont systemFontOfSize:17.0f] downFont:[UIFont systemFontOfSize:12.0f]]];
+    
     [self.surplusPercentLabel setText:[NSString stringWithFormat:@"%.1f%%",_attentionModel.complete_percent*100]];
     [self.percentView animationRectWithColor:[UIColor getColor:@"F89D40"] percent:_attentionModel.complete_percent];
     
