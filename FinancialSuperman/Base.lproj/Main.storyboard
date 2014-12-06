@@ -12,7 +12,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="119" sectionHeaderHeight="22" sectionFooterHeight="22" id="eJU-zc-eyJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.92229593210000005" green="0.92229593210000005" blue="0.92229593210000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="sectionIndexBackgroundColor" red="0.92229593210000005" green="0.92229593210000005" blue="0.92229593210000005" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="onListViewCellIndentifier" rowHeight="119" id="0sB-Rd-FeY" customClass="OnlistViewCell">
@@ -1067,7 +1067,7 @@
         <!--我-->
         <scene sceneID="b6R-ME-ogV">
             <objects>
-                <viewController id="TLn-6J-Z2K" customClass="MeMainViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MeMainViewControllerID" id="TLn-6J-Z2K" customClass="MeMainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Xi3-jH-CWR"/>
                         <viewControllerLayoutGuide type="bottom" id="kSW-gA-Vg2"/>
@@ -1176,7 +1176,76 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xhd-8l-Jyz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="986" y="-809"/>
+            <point key="canvasLocation" x="986" y="-917"/>
+        </scene>
+        <!--Me Back Card Add View Controller-->
+        <scene sceneID="Tvt-oR-8HT">
+            <objects>
+                <viewController id="zzB-wL-RrJ" customClass="meBackCardAddViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uZk-Va-Raq"/>
+                        <viewControllerLayoutGuide type="bottom" id="jM7-uE-Xkw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="I7v-KC-wnP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="YAa-Ba-xEj">
+                                <rect key="frame" x="0.0" y="75" width="320" height="68"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="addCardCellIdentifier" rowHeight="34" id="fvm-Js-uqM">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fvm-Js-uqM" id="BCW-ff-VrZ">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="持卡人" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LpC-3C-NXY">
+                                                    <rect key="frame" x="8" y="6" width="72" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="刘巍" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O3J-Pr-qo5">
+                                                    <rect key="frame" x="88" y="2" width="197" height="30"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="zzB-wL-RrJ" id="oQi-fE-bxV"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="zzB-wL-RrJ" id="PNq-0C-sCb"/>
+                                    <outlet property="delegate" destination="zzB-wL-RrJ" id="sco-Zt-3Hm"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="请填写持卡人本人的银行卡和户名" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ptP-a0-EwE">
+                                <rect key="frame" x="16" y="46" width="288" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GDO-YK-DJg">
+                                <rect key="frame" x="16" y="151" width="288" height="30"/>
+                                <state key="normal" title="确认" backgroundImage="user_confirm_btn_normal.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="fZW-gO-6en"/>
+                    <connections>
+                        <outlet property="tableView" destination="YAa-Ba-xEj" id="l5Y-6o-OMD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RQR-yu-1EO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1339" y="-845"/>
         </scene>
         <!--Me Commission View Controller-->
         <scene sceneID="qzx-v0-QzA">
@@ -2310,7 +2379,7 @@
         <!--Common Tabbar View Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController id="49e-Tb-3d3" customClass="CommonTabbarViewController" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="CommonTabbarViewControllerID" id="49e-Tb-3d3" customClass="CommonTabbarViewController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="h3f-Nd-kBD"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <nil key="simulatedBottomBarMetrics"/>
@@ -2329,6 +2398,7 @@
                         <segue destination="qaj-8P-Oge" kind="push" identifier="searchDetailIdentifier" id="4WX-rV-AdC"/>
                         <segue destination="5Qf-hw-j1D" kind="push" identifier="userLoginIdentifier" id="EU7-uj-K2h"/>
                         <segue destination="Ao5-L1-iho" kind="push" identifier="meInfoViewIdentifier" id="bYg-x5-cAU"/>
+                        <segue destination="zzB-wL-RrJ" kind="push" identifier="addBankCardIdentifier" id="IGE-eL-Ov3"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>

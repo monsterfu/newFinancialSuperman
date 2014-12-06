@@ -63,6 +63,7 @@
     _meOrderListViewController  = [storyBoard instantiateViewControllerWithIdentifier:@"MeOrderListViewControllerIdentifier"];
     _meCommissionViewController = [storyBoard instantiateViewControllerWithIdentifier:@"meCommissionViewControllerIdentifier"];
     _meManageViewController = [storyBoard instantiateViewControllerWithIdentifier:@"meManageViewControllerIdentifier"];
+    _meManageViewController.delegate = self;
     
     _controllerArry = @[_meAttentionViewController,_meOrderListViewController,_meCommissionViewController,_meManageViewController];
     
@@ -157,5 +158,12 @@
 }
 - (IBAction)personButtonTouched:(UIBarButtonItem *)sender {
     [self.navigationController.tabBarController performSegueWithIdentifier:@"meInfoViewIdentifier" sender:nil];
+}
+
+#pragma mark --
+#pragma mark MeManageViewControllerDelegate
+-(void)MeManageViewController_AddNewCard
+{
+    [self.navigationController.tabBarController performSegueWithIdentifier:@"addBankCardIdentifier" sender:nil];
 }
 @end

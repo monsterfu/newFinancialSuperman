@@ -49,6 +49,9 @@
 
 //将产品发邮件给客户
 +(void)emailRequest:(NSMutableDictionary*)infoDic delegate:(id)delegate finishSel:(SEL)finishSel failSel:(SEL)failSel tag:(NSUInteger)tag;
+
+//银行卡相关操作
++(void)bankRequest:(NSMutableDictionary*)infoDic delegate:(id)delegate finishSel:(SEL)finishSel failSel:(SEL)failSel tag:(NSUInteger)tag;
 @end
 
 

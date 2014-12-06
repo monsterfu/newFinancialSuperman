@@ -9,11 +9,16 @@
 #import <UIKit/UIKit.h>
 #import "GlobalHeader.h"
 
+@protocol MeManageViewControllerDelegate <NSObject>
+-(void)MeManageViewController_AddNewCard;
+@end
+
 @interface MeManageViewController : baseLoadViewController<UIViewControllerLoadViewDelegate>
 {
     UITableViewCell* _cell;
 }
 
+@property (nonatomic, assign)id<MeManageViewControllerDelegate>delegate;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end

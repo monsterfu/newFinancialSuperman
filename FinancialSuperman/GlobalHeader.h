@@ -24,6 +24,9 @@
 #import "DDProgressView.h"
 #import "searchCustomSegmentView.h"
 
+//common
+#import "commonMethod.h"
+
 //commonViewController
 #import "baseLoadViewController.h"
 #import "baseLoadTableTableViewController.h"
@@ -31,6 +34,7 @@
 #import "LoginViewController.h"
 #import "baseInfoTableViewController.h"
 #import "orderViewController.h"
+#import "meBackCardAddViewController.h"
 
 //cell about
 #import "OnlistViewCell.h"
@@ -80,6 +84,7 @@
 #define ORDER_LIST_API          @"?c=productAPI&m=bookings_json"        //预约产品列表
 #define USER_DETAIL_API         @"?c=userAPI&m=user_detail"
 #define EMAIL_API               @"?c=productAPI&m=share_product"        //email
+#define BANK_API                @"?c=userAPI&m=bank_account"            //银行API
 
 #define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
 #define IOS7 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7 ?YES:NO)

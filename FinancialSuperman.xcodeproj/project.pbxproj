@@ -29,6 +29,9 @@
 		640C71191A16076C0091BE8F /* textFieldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 640C71181A16076C0091BE8F /* textFieldTableViewCell.m */; };
 		640C711E1A1661480091BE8F /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 640C711B1A1661480091BE8F /* ProgressHUD.bundle */; };
 		640C711F1A1661480091BE8F /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 640C711D1A1661480091BE8F /* ProgressHUD.m */; };
+		6410C5791A320074003B5407 /* meBackCardAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6410C5781A320074003B5407 /* meBackCardAddViewController.m */; };
+		6410C57D1A3209F9003B5407 /* NSString+BankNum.m in Sources */ = {isa = PBXBuildFile; fileRef = 6410C57C1A3209F9003B5407 /* NSString+BankNum.m */; };
+		6410C5801A321266003B5407 /* commonMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 6410C57F1A321266003B5407 /* commonMethod.m */; };
 		6417B8501A04C5080060E236 /* searchCustomSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6417B84F1A04C5080060E236 /* searchCustomSegmentView.m */; };
 		6417B8571A04CB2D0060E236 /* UIButtonImageOrder+reversal.m in Sources */ = {isa = PBXBuildFile; fileRef = 6417B8561A04CB2D0060E236 /* UIButtonImageOrder+reversal.m */; };
 		6417B85B1A04D0410060E236 /* UIButtonImageOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6417B85A1A04D0410060E236 /* UIButtonImageOrder.m */; };
@@ -292,6 +295,12 @@
 		640C711B1A1661480091BE8F /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
 		640C711C1A1661480091BE8F /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
 		640C711D1A1661480091BE8F /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
+		6410C5771A320074003B5407 /* meBackCardAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = meBackCardAddViewController.h; path = viewControllers/Me/meBackCardAddViewController.h; sourceTree = "<group>"; };
+		6410C5781A320074003B5407 /* meBackCardAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = meBackCardAddViewController.m; path = viewControllers/Me/meBackCardAddViewController.m; sourceTree = "<group>"; };
+		6410C57B1A3209F9003B5407 /* NSString+BankNum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+BankNum.h"; path = "NSString+BankNum/NSString+BankNum.h"; sourceTree = "<group>"; };
+		6410C57C1A3209F9003B5407 /* NSString+BankNum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+BankNum.m"; path = "NSString+BankNum/NSString+BankNum.m"; sourceTree = "<group>"; };
+		6410C57E1A321266003B5407 /* commonMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = commonMethod.h; path = common/commonMethod.h; sourceTree = "<group>"; };
+		6410C57F1A321266003B5407 /* commonMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = commonMethod.m; path = common/commonMethod.m; sourceTree = "<group>"; };
 		6417B84E1A04C5080060E236 /* searchCustomSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = searchCustomSegmentView.h; path = views/searchCustomSegmentView.h; sourceTree = "<group>"; };
 		6417B84F1A04C5080060E236 /* searchCustomSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = searchCustomSegmentView.m; path = views/searchCustomSegmentView.m; sourceTree = "<group>"; };
 		6417B8551A04CB2D0060E236 /* UIButtonImageOrder+reversal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIButtonImageOrder+reversal.h"; path = "UIButton+reversal/UIButtonImageOrder+reversal.h"; sourceTree = "<group>"; };
@@ -645,6 +654,8 @@
 				B113B6441A2481B500F0A04C /* baseLoadViewController.m */,
 				B113B6461A24866700F0A04C /* baseLoadTableTableViewController.h */,
 				B113B6471A24866700F0A04C /* baseLoadTableTableViewController.m */,
+				6410C57E1A321266003B5407 /* commonMethod.h */,
+				6410C57F1A321266003B5407 /* commonMethod.m */,
 			);
 			name = common;
 			sourceTree = "<group>";
@@ -671,6 +682,15 @@
 			);
 			name = ProgressHUD;
 			path = views/thirdParty/ProgressHUD;
+			sourceTree = "<group>";
+		};
+		6410C57A1A3209AD003B5407 /* NSString+BankNum */ = {
+			isa = PBXGroup;
+			children = (
+				6410C57B1A3209F9003B5407 /* NSString+BankNum.h */,
+				6410C57C1A3209F9003B5407 /* NSString+BankNum.m */,
+			);
+			name = "NSString+BankNum";
 			sourceTree = "<group>";
 		};
 		6417B8511A04CA7D0060E236 /* UIButtonImageOrder+reversal */ = {
@@ -705,6 +725,8 @@
 				6417B86D1A0547DF0060E236 /* MeCommissionViewController.m */,
 				6417B8691A0547670060E236 /* MeManageViewController.h */,
 				6417B86A1A0547670060E236 /* MeManageViewController.m */,
+				6410C5771A320074003B5407 /* meBackCardAddViewController.h */,
+				6410C5781A320074003B5407 /* meBackCardAddViewController.m */,
 			);
 			name = content;
 			sourceTree = "<group>";
@@ -943,6 +965,7 @@
 		643AB1651A01390C00171976 /* category */ = {
 			isa = PBXGroup;
 			children = (
+				6410C57A1A3209AD003B5407 /* NSString+BankNum */,
 				64C84EA91A2AD916007574AA /* NSMutableAttributedString+custom */,
 				64702B351A10925300850E32 /* UIController+loadView */,
 				6417B8511A04CA7D0060E236 /* UIButtonImageOrder+reversal */,
@@ -1523,12 +1546,15 @@
 				64702AF81A107C1A00850E32 /* ASIHTTPRequest.m in Sources */,
 				643BBD861A02670100D151E4 /* searchListViewCell.m in Sources */,
 				64702AF61A107C1A00850E32 /* ASIDownloadCache.m in Sources */,
+				6410C5801A321266003B5407 /* commonMethod.m in Sources */,
+				6410C5791A320074003B5407 /* meBackCardAddViewController.m in Sources */,
 				640C710C1A15F7A90091BE8F /* LoginModel.m in Sources */,
 				64702AFE1A107C1A00850E32 /* ASICloudFilesContainerRequest.m in Sources */,
 				6417B86E1A0547DF0060E236 /* MeCommissionViewController.m in Sources */,
 				64702AFC1A107C1A00850E32 /* ASICloudFilesCDNRequest.m in Sources */,
 				64702AF71A107C1A00850E32 /* ASIFormDataRequest.m in Sources */,
 				64702AFF1A107C1A00850E32 /* ASICloudFilesContainerXMLParserDelegate.m in Sources */,
+				6410C57D1A3209F9003B5407 /* NSString+BankNum.m in Sources */,
 				643AB1711A01400A00171976 /* percentRectView.m in Sources */,
 				643AB1771A01469000171976 /* OnListCellModel.m in Sources */,
 				64702B1C1A10805B00850E32 /* HttpRequest.m in Sources */,
@@ -1714,7 +1740,11 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+<<<<<<< Updated upstream
 				PROVISIONING_PROFILE = "a8b6e7d6-6f0c-4dff-be64-d02821b7aab4";
+=======
+				PROVISIONING_PROFILE = "74976493-9b65-4780-8dc0-aaa3ee965277";
+>>>>>>> Stashed changes
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1735,7 +1765,11 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+<<<<<<< Updated upstream
 				PROVISIONING_PROFILE = "a8b6e7d6-6f0c-4dff-be64-d02821b7aab4";
+=======
+				PROVISIONING_PROFILE = "74976493-9b65-4780-8dc0-aaa3ee965277";
+>>>>>>> Stashed changes
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

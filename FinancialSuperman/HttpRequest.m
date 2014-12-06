@@ -102,6 +102,12 @@
     
     [self Request:[NSString stringWithFormat:@"%@%@",Test2_Server,EMAIL_API] postdate:infoDic tag:tag delegate:delegate finishSel:finishSel failSel:failSel];
 }
+
+//银行卡相关操作
++(void)bankRequest:(NSMutableDictionary*)infoDic delegate:(id)delegate finishSel:(SEL)finishSel failSel:(SEL)failSel tag:(NSUInteger)tag{
+    
+    [self Request:[NSString stringWithFormat:@"%@%@",Test2_Server,BANK_API] postdate:infoDic tag:tag delegate:delegate finishSel:finishSel failSel:failSel];
+}
 @end
 
 
