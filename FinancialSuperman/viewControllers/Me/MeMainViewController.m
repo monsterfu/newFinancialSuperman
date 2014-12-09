@@ -64,6 +64,8 @@
     _meCommissionViewController = [storyBoard instantiateViewControllerWithIdentifier:@"meCommissionViewControllerIdentifier"];
     _meManageViewController = [storyBoard instantiateViewControllerWithIdentifier:@"meManageViewControllerIdentifier"];
     _meManageViewController.delegate = self;
+    _meAttentionViewController.delegate = self;
+    
     
     _controllerArry = @[_meAttentionViewController,_meOrderListViewController,_meCommissionViewController,_meManageViewController];
     
@@ -159,7 +161,12 @@
 - (IBAction)personButtonTouched:(UIBarButtonItem *)sender {
     [self.navigationController.tabBarController performSegueWithIdentifier:@"meInfoViewIdentifier" sender:nil];
 }
-
+#pragma mark --
+#pragma mark MeAttentionViewControllerDelegate
+-(void)MeAttentionViewController_CellSelected:(attentionProductModel*)attetionModel
+{
+    [self.navigationController.tabBarController performSegueWithIdentifier:@"searchDetailIdentifier" sender:attetionModel];
+}
 #pragma mark --
 #pragma mark MeManageViewControllerDelegate
 -(void)MeManageViewController_AddNewCard

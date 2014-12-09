@@ -85,6 +85,10 @@
 #define USER_DETAIL_API         @"?c=userAPI&m=user_detail"
 #define EMAIL_API               @"?c=productAPI&m=share_product"        //email
 #define BANK_API                @"?c=userAPI&m=bank_account"            //银行API
+#define PRODUCT_DETAIL_API      @"?c=productAPI&m=get_product_detail"   //产品详情
+
+
+
 
 #define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
 #define IOS7 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7 ?YES:NO)
@@ -139,6 +143,7 @@
 #define TAG_Product_Order           4004
 #define TAG_Product_OrderList       4005
 #define TAG_Email_Product           4006
+#define TAG_Product_Detail          4007
 
 
 #define TAG_PersonCenter_Register    5000

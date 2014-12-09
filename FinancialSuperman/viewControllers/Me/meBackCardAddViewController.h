@@ -11,9 +11,7 @@
 @interface meBackCardAddViewController : UIViewController<UITextFieldDelegate>
 {
     UITableViewCell* _cell;
-    
     NSArray* _titleArray;
-    
     UILabel* _titleLabel;
     UITextField* _nameTextField;
     UITextField* _cardTextField;

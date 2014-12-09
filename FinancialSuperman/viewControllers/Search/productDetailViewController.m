@@ -39,6 +39,15 @@
     [backItem setBackButtonBackgroundImage:[UIImage imageNamed:@"navi_custom_back_btn_normal.png"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefaultPrompt];
     self.navigationItem.backBarButtonItem = backItem;
     backItem.title = @" ";
+    if (_productOne == nil && _attentionOne) {
+        self.title = _attentionOne.product_name;        
+        [_tableView setHidden:YES];
+        [self startLoadView:self.view];
+        [HttpRequest productOneDetailRequest:[NSMutableDictionary dictionaryWithObjects:@[[USER_DEFAULT objectForKey:KEY_APPKEY_INFO],_attentionOne.product_id] forKeys:@[@"appkey",@"product_id"]] delegate:self finishSel:@selector(GetResult:) failSel:@selector(GetErr:) tag:TAG_Product_Detail];
+    }else{
+        
+        [_alreadyBookNumLabel setAttributedText:[NSMutableAttributedString instanceupStr:_productOne.booking_count downStr:@"人预约" upColor:COMMON_RED_COLOR downColor:[UIColor blackColor] upFont:[UIFont fontWithName:@"STHeitiSC-Light" size:19] downFont:[UIFont fontWithName:@"STHeitiSC-Light" size:14]]];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -305,13 +314,19 @@
     NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
     NSLog(@"dic is %@",dictionary);
     if(dictionary!=nil){
-        if([[dictionary objectForKey:@"code"] isEqualToString:@"1"])
-        {
-            [ProgressHUD showSuccess:@"邮件成功!"];
-            [USER_DEFAULT setObject:_emailTextField.text forKey:KEY_EMAIL_ADDRESS_INFO];
-            [USER_DEFAULT synchronize];
-        }else{
-            [ProgressHUD showError:[dictionary objectForKey:@"message"]];
+        if (request.tag == TAG_Email_Product) {
+            if([[dictionary objectForKey:@"code"] isEqualToString:@"1"])
+            {
+                [ProgressHUD showSuccess:@"邮件成功!"];
+                [USER_DEFAULT setObject:_emailTextField.text forKey:KEY_EMAIL_ADDRESS_INFO];
+                [USER_DEFAULT synchronize];
+            }else{
+                [ProgressHUD showError:[dictionary objectForKey:@"message"]];
+            }
+        }else if (request.tag == TAG_Product_Detail){
+            _productOne = [[ProductOneParamModel alloc]initWithDictionary:[dictionary objectForKey:@"product"]];
+            [self endLoadView];
+            [_tableView setHidden:NO];
         }
     }else{
         [ProgressHUD showError:@"数据出错！"];

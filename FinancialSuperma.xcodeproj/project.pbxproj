@@ -242,7 +242,6 @@
 		B10C26E91A2C6DC7005CFB36 /* SKSTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B10C26E21A2C6DC7005CFB36 /* SKSTableView.m */; };
 		B10C26EA1A2C6DC7005CFB36 /* SKSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B10C26E41A2C6DC7005CFB36 /* SKSTableViewCell.m */; };
 		B10C26EB1A2C6DC7005CFB36 /* SKSTableViewCellIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = B10C26E61A2C6DC7005CFB36 /* SKSTableViewCellIndicator.m */; };
-		B111DAC11A35491F00AD215B /* sec_session_sending_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B111DAC01A35491F00AD215B /* sec_session_sending_icon@2x.png */; };
 		B113B63A1A2427ED00F0A04C /* orderProductModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B113B6391A2427ED00F0A04C /* orderProductModel.m */; };
 		B113B63F1A244EF600F0A04C /* orderListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B113B63E1A244EF600F0A04C /* orderListViewCell.m */; };
 		B113B6421A2467CE00F0A04C /* UserDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B113B6411A2467CE00F0A04C /* UserDetailModel.m */; };
@@ -584,7 +583,6 @@
 		B10C26E41A2C6DC7005CFB36 /* SKSTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKSTableViewCell.m; sourceTree = "<group>"; };
 		B10C26E51A2C6DC7005CFB36 /* SKSTableViewCellIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKSTableViewCellIndicator.h; sourceTree = "<group>"; };
 		B10C26E61A2C6DC7005CFB36 /* SKSTableViewCellIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKSTableViewCellIndicator.m; sourceTree = "<group>"; };
-		B111DAC01A35491F00AD215B /* sec_session_sending_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sec_session_sending_icon@2x.png"; path = "me/sec_session_sending_icon@2x.png"; sourceTree = "<group>"; };
 		B113B6381A2427ED00F0A04C /* orderProductModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = orderProductModel.h; path = Model/orderProductModel.h; sourceTree = "<group>"; };
 		B113B6391A2427ED00F0A04C /* orderProductModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = orderProductModel.m; path = Model/orderProductModel.m; sourceTree = "<group>"; };
 		B113B63D1A244EF600F0A04C /* orderListViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = orderListViewCell.h; path = views/orderListViewCell.h; sourceTree = "<group>"; };
@@ -829,7 +827,6 @@
 				64C8085B1A21D32A0037ED25 /* navi_custom_email_normal@2x.png */,
 				64C8085C1A21D32A0037ED25 /* navi_custom_email_press@2x.png */,
 				64B7D4BC1A223C550035E60F /* user_login_user_cellphone_number_logo@2x.png */,
-				B111DAC01A35491F00AD215B /* sec_session_sending_icon@2x.png */,
 				64C808591A21D1DC0037ED25 /* product_detail_email_btn_normal.png */,
 				645E04B31A1B8D0200D9E495 /* navi_recommend_btn_user_normal.png */,
 				645E04B41A1B8D0200D9E495 /* navi_recommend_btn_user_press.png */,
@@ -1462,7 +1459,6 @@
 				643AB11F1A01357C00171976 /* icon_like_normal@3x.png in Resources */,
 				643AB1271A01357C00171976 /* icon_mine_selected@2x.png in Resources */,
 				643AB0FD1A01357C00171976 /* btn_orange@2x.png in Resources */,
-				B111DAC11A35491F00AD215B /* sec_session_sending_icon@2x.png in Resources */,
 				643AB10E1A01357C00171976 /* icon_filter_normal.png in Resources */,
 				643AB1321A01357C00171976 /* icon_now_2.png in Resources */,
 				64702B761A10F88900850E32 /* blueArrow@2x.png in Resources */,
@@ -1732,8 +1728,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iOS Development: xin fu (MC3BQTMFTZ)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iOS Development: xin fu (MC3BQTMFTZ)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: xin fu (H6NR6KPK2Z)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: xin fu (H6NR6KPK2Z)";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -1744,7 +1740,11 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b6b0b85e-55cf-46bc-ab59-bb7f963ac428";
+<<<<<<< Updated upstream
+				PROVISIONING_PROFILE = "a8b6e7d6-6f0c-4dff-be64-d02821b7aab4";
+=======
+				PROVISIONING_PROFILE = "74976493-9b65-4780-8dc0-aaa3ee965277";
+>>>>>>> Stashed changes
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1753,8 +1753,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iOS Development: xin fu (MC3BQTMFTZ)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iOS Development: xin fu (MC3BQTMFTZ)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: xin fu (H6NR6KPK2Z)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: xin fu (H6NR6KPK2Z)";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -1765,7 +1765,11 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b6b0b85e-55cf-46bc-ab59-bb7f963ac428";
+<<<<<<< Updated upstream
+				PROVISIONING_PROFILE = "a8b6e7d6-6f0c-4dff-be64-d02821b7aab4";
+=======
+				PROVISIONING_PROFILE = "74976493-9b65-4780-8dc0-aaa3ee965277";
+>>>>>>> Stashed changes
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

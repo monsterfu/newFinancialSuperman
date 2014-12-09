@@ -71,6 +71,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if (self.delegate&& [self.delegate respondsToSelector:@selector(MeAttentionViewController_CellSelected:)]) {
+        [self.delegate MeAttentionViewController_CellSelected:[_dataArray objectAtIndex:indexPath.row]];
+    }
     //@"productDetailViewControllerIdentifier"
     //    [self.navigationController.tabBarController performSegueWithIdentifier:@"searchDetailIdentifier" sender:nil];
 }

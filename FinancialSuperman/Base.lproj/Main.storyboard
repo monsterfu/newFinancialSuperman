@@ -715,11 +715,10 @@
                                     <outlet property="delegate" destination="qaj-8P-Oge" id="4cJ-lv-kSb"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已有158人预约" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XmO-1o-ZJ3">
-                                <rect key="frame" x="7" y="538" width="125" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="已有" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XmO-1o-ZJ3">
+                                <rect key="frame" x="7" y="538" width="30" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="KDG-OP-pJU"/>
-                                    <constraint firstAttribute="width" constant="125" id="WPl-U9-azJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -741,9 +740,14 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HiR-he-Q27">
-                                <rect key="frame" x="0.0" y="530" width="320" height="1"/>
                                 <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="saK-Yf-mib">
+                                <rect key="frame" x="37" y="538" width="97" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.94524515090000005" green="0.94524515090000005" blue="0.94524515090000005" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
@@ -764,6 +768,7 @@
                     <navigationItem key="navigationItem" id="qZu-L4-0KS"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="alreadyBookNumLabel" destination="saK-Yf-mib" id="wHc-h3-phO"/>
                         <outlet property="tableView" destination="dlW-7x-Yt2" id="ujj-u0-nHW"/>
                         <segue destination="Hof-TI-0PP" kind="push" identifier="baseInfoIdentifier" id="En8-kG-jiw"/>
                     </connections>
@@ -1680,7 +1685,7 @@
                                                     <color key="textColor" red="0.80313846982758619" green="0.80313846982758619" blue="0.80313846982758619" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AlbumReadAllArrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="hLe-8D-oDD">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sec_session_sending_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="hLe-8D-oDD">
                                                     <rect key="frame" x="56" y="8" width="25" height="8"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="已合同" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QIQ-dd-bLc">
@@ -1689,7 +1694,7 @@
                                                     <color key="textColor" red="0.80313846982758619" green="0.80313846982758619" blue="0.80313846982758619" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AlbumReadAllArrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="vi7-ny-x7B">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sec_session_sending_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="vi7-ny-x7B">
                                                     <rect key="frame" x="130" y="8" width="25" height="8"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="已打款" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5j-cG-DdX">
@@ -1698,7 +1703,7 @@
                                                     <color key="textColor" red="0.80313846982758619" green="0.80313846982758619" blue="0.80313846982758619" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AlbumReadAllArrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="yXJ-K5-Kxm">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sec_session_sending_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="yXJ-K5-Kxm">
                                                     <rect key="frame" x="206" y="8" width="25" height="8"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="已回佣" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQ9-nI-IEy">
@@ -2407,7 +2412,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="AlbumReadAllArrow.png" width="17" height="12"/>
         <image name="EmotionEditorAddHL.png" width="75" height="75"/>
         <image name="bg_cell_mini.png" width="302" height="102"/>
         <image name="btn_operate.png" width="93" height="30"/>
@@ -2427,6 +2431,7 @@
         <image name="icon_search_normal.png" width="23" height="23"/>
         <image name="icon_sort_down.png" width="14" height="16"/>
         <image name="icon_sort_up.png" width="14" height="15"/>
+        <image name="sec_session_sending_icon.png" width="13" height="10"/>
         <image name="seting_confirm_btn_normal.png" width="600" height="88"/>
         <image name="share_card_body.png" width="320" height="108"/>
         <image name="tips_ico_click.png" width="176" height="120"/>

@@ -9,6 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "GlobalHeader.h"
 
+
+@protocol MeAttentionViewControllerDelegate <NSObject>
+-(void)MeAttentionViewController_CellSelected:(attentionProductModel*)attetionModel;
+@end
+
 @interface MeAttentionViewController : baseLoadViewController<searchListViewCell,UIViewControllerLoadViewDelegate>
 {
     searchListViewCell* _cell;
@@ -18,6 +23,7 @@
     UILabel* _emptylabel;
 }
 
+@property (nonatomic, assign)id<MeAttentionViewControllerDelegate>delegate;
 @property (nonatomic, retain)NSMutableArray* dataArray;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 

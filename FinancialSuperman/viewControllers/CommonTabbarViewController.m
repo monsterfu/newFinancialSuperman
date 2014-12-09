@@ -61,9 +61,17 @@
     // Pass the selected object to the new view controller.
     if ([segue.identifier isEqualToString:@"searchDetailIdentifier"])
     {
-        ProductOneParamModel* _product = (ProductOneParamModel*)sender;
-        productDetailViewController *vc = (productDetailViewController *) segue.destinationViewController;
-        [vc setProductOne:_product];
+        if ([sender isKindOfClass:[ProductOneParamModel class]]) {
+            ProductOneParamModel* _product = (ProductOneParamModel*)sender;
+            productDetailViewController *vc = (productDetailViewController *) segue.destinationViewController;
+            [vc setProductOne:_product];
+            
+        }else if ([sender isKindOfClass:[attentionProductModel class]]){
+            attentionProductModel* _product = (attentionProductModel*)sender;
+            productDetailViewController *vc = (productDetailViewController *) segue.destinationViewController;
+            [vc setAttentionOne:_product];
+        }
+        
     }
 }
 

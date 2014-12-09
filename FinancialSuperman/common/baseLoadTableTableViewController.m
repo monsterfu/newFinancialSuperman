@@ -31,7 +31,6 @@
 
 -(void)startLoadView:(UIView*)view
 {
-    _loadViewController = nil;
     if (_loadViewController == nil) {
         UIStoryboard* storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         _loadViewController  = [storyBoard instantiateViewControllerWithIdentifier:@"loadViewControllerIdentifier"];

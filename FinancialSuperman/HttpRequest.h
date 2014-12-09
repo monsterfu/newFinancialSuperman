@@ -52,6 +52,9 @@
 
 //银行卡相关操作
 +(void)bankRequest:(NSMutableDictionary*)infoDic delegate:(id)delegate finishSel:(SEL)finishSel failSel:(SEL)failSel tag:(NSUInteger)tag;
+
+//获取某产品详细信息
++(void)productOneDetailRequest:(NSMutableDictionary*)infoDic delegate:(id)delegate finishSel:(SEL)finishSel failSel:(SEL)failSel tag:(NSUInteger)tag;
 @end
 
 

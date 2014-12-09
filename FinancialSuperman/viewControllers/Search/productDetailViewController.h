@@ -10,7 +10,7 @@
 #import "GlobalHeader.h"
 
 
-@interface productDetailViewController : UIViewController<UIAlertViewDelegate>
+@interface productDetailViewController : baseLoadViewController<UIAlertViewDelegate>
 {
     NSMutableArray* _headerTitleArray;
     NSMutableArray* _baseInfoTitleArray;
@@ -23,7 +23,11 @@
 }
 
 @property(nonatomic, retain)ProductOneParamModel* productOne;
+@property(nonatomic, retain)attentionProductModel* attentionOne;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (weak, nonatomic) IBOutlet UITextField *textField;
+
+//已预约人数
+@property (weak, nonatomic) IBOutlet UILabel *alreadyBookNumLabel;
 @end
