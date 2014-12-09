@@ -9,6 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "GlobalHeader.h"
 
+
+@protocol MeCommissionViewControllerDelegate <NSObject>
+-(void)MeCommissionViewController_CellSelected:(orderProductModel*)orderModel;
+@end
+
 @interface MeCommissionViewController : baseLoadViewController<UIViewControllerLoadViewDelegate,SKSTableViewDelegate>
 {
     orderProductModel* _orderProductModel;

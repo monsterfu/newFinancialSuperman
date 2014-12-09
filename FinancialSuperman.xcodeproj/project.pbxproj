@@ -242,6 +242,9 @@
 		B10C26E91A2C6DC7005CFB36 /* SKSTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B10C26E21A2C6DC7005CFB36 /* SKSTableView.m */; };
 		B10C26EA1A2C6DC7005CFB36 /* SKSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B10C26E41A2C6DC7005CFB36 /* SKSTableViewCell.m */; };
 		B10C26EB1A2C6DC7005CFB36 /* SKSTableViewCellIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = B10C26E61A2C6DC7005CFB36 /* SKSTableViewCellIndicator.m */; };
+		B10FB19C1A369F5600515148 /* product_trade_detail_title_btn_highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = B10FB19A1A369F5600515148 /* product_trade_detail_title_btn_highlight.png */; };
+		B10FB19D1A369F5600515148 /* product_trade_detail_title_btn_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = B10FB19B1A369F5600515148 /* product_trade_detail_title_btn_normal.png */; };
+		B10FB1A01A36A14B00515148 /* MeOrderDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B10FB19F1A36A14B00515148 /* MeOrderDetailViewController.m */; };
 		B111DAC11A35491F00AD215B /* sec_session_sending_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B111DAC01A35491F00AD215B /* sec_session_sending_icon@2x.png */; };
 		B113B63A1A2427ED00F0A04C /* orderProductModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B113B6391A2427ED00F0A04C /* orderProductModel.m */; };
 		B113B63F1A244EF600F0A04C /* orderListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B113B63E1A244EF600F0A04C /* orderListViewCell.m */; };
@@ -584,6 +587,10 @@
 		B10C26E41A2C6DC7005CFB36 /* SKSTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKSTableViewCell.m; sourceTree = "<group>"; };
 		B10C26E51A2C6DC7005CFB36 /* SKSTableViewCellIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKSTableViewCellIndicator.h; sourceTree = "<group>"; };
 		B10C26E61A2C6DC7005CFB36 /* SKSTableViewCellIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKSTableViewCellIndicator.m; sourceTree = "<group>"; };
+		B10FB19A1A369F5600515148 /* product_trade_detail_title_btn_highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = product_trade_detail_title_btn_highlight.png; sourceTree = "<group>"; };
+		B10FB19B1A369F5600515148 /* product_trade_detail_title_btn_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = product_trade_detail_title_btn_normal.png; sourceTree = "<group>"; };
+		B10FB19E1A36A14B00515148 /* MeOrderDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeOrderDetailViewController.h; path = viewControllers/Me/MeOrderDetailViewController.h; sourceTree = "<group>"; };
+		B10FB19F1A36A14B00515148 /* MeOrderDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeOrderDetailViewController.m; path = viewControllers/Me/MeOrderDetailViewController.m; sourceTree = "<group>"; };
 		B111DAC01A35491F00AD215B /* sec_session_sending_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sec_session_sending_icon@2x.png"; path = "me/sec_session_sending_icon@2x.png"; sourceTree = "<group>"; };
 		B113B6381A2427ED00F0A04C /* orderProductModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = orderProductModel.h; path = Model/orderProductModel.h; sourceTree = "<group>"; };
 		B113B6391A2427ED00F0A04C /* orderProductModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = orderProductModel.m; path = Model/orderProductModel.m; sourceTree = "<group>"; };
@@ -723,6 +730,8 @@
 				64B6C7791A06641B00F251D4 /* MeAttentionViewController.m */,
 				643B66251A238E5300F14AC5 /* MeOrderListViewController.h */,
 				643B66261A238E5300F14AC5 /* MeOrderListViewController.m */,
+				B10FB19E1A36A14B00515148 /* MeOrderDetailViewController.h */,
+				B10FB19F1A36A14B00515148 /* MeOrderDetailViewController.m */,
 				6417B86C1A0547DF0060E236 /* MeCommissionViewController.h */,
 				6417B86D1A0547DF0060E236 /* MeCommissionViewController.m */,
 				6417B8691A0547670060E236 /* MeManageViewController.h */,
@@ -826,6 +835,8 @@
 				643AB0901A01357C00171976 /* bg_cell_mini.png */,
 				64B7D4BE1A223D6C0035E60F /* navi_custom_back_btn_hgihlight.png */,
 				64B7D4BF1A223D6C0035E60F /* navi_custom_back_btn_normal.png */,
+				B10FB19A1A369F5600515148 /* product_trade_detail_title_btn_highlight.png */,
+				B10FB19B1A369F5600515148 /* product_trade_detail_title_btn_normal.png */,
 				64C8085B1A21D32A0037ED25 /* navi_custom_email_normal@2x.png */,
 				64C8085C1A21D32A0037ED25 /* navi_custom_email_press@2x.png */,
 				64B7D4BC1A223C550035E60F /* user_login_user_cellphone_number_logo@2x.png */,
@@ -1361,6 +1372,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B10FB19C1A369F5600515148 /* product_trade_detail_title_btn_highlight.png in Resources */,
 				643AB13B1A01357C00171976 /* icon_radio_normal.png in Resources */,
 				643AB1051A01357C00171976 /* cell_bg_3.png in Resources */,
 				643AB1101A01357C00171976 /* icon_filter_normal@3x.png in Resources */,
@@ -1500,6 +1512,7 @@
 				645E04B61A1B8D0200D9E495 /* navi_recommend_btn_user_press.png in Resources */,
 				643AB1351A01357C00171976 /* icon_now_3.png in Resources */,
 				64702B731A10F88900850E32 /* blackArrow.png in Resources */,
+				B10FB19D1A369F5600515148 /* product_trade_detail_title_btn_normal.png in Resources */,
 				643AB1461A01357C00171976 /* icon_ranking_selected@3x.png in Resources */,
 				643AB1491A01357C00171976 /* icon_rating@3x.png in Resources */,
 				643AB1251A01357C00171976 /* icon_mine_normal@3x.png in Resources */,
@@ -1583,6 +1596,7 @@
 				64702B091A107C1A00850E32 /* ASIS3Request.m in Sources */,
 				B10C26EB1A2C6DC7005CFB36 /* SKSTableViewCellIndicator.m in Sources */,
 				6417B8571A04CB2D0060E236 /* UIButtonImageOrder+reversal.m in Sources */,
+				B10FB1A01A36A14B00515148 /* MeOrderDetailViewController.m in Sources */,
 				643B66271A238E5300F14AC5 /* MeOrderListViewController.m in Sources */,
 				643BBD8C1A02958E00D151E4 /* productDetailViewController.m in Sources */,
 				64702AFA1A107C1A00850E32 /* ASINetworkQueue.m in Sources */,

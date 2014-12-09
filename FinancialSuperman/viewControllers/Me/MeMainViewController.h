@@ -14,7 +14,7 @@
 #import "MeAttentionViewController.h"
 #import "RemindLoginViewController.h"
 
-@interface MeMainViewController : UIViewController<UIScrollViewDelegate, RemindLoginDelage,MeManageViewControllerDelegate,MeAttentionViewControllerDelegate>
+@interface MeMainViewController : UIViewController<UIScrollViewDelegate, RemindLoginDelage,MeManageViewControllerDelegate,MeAttentionViewControllerDelegate,MeOrderListViewControllerDelegate>
 {
     DKScrollingTabController *leftTabController;
     

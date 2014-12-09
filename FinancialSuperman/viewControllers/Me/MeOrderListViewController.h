@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "GlobalHeader.h"
 
+@protocol MeOrderListViewControllerDelegate <NSObject>
+-(void)MeOrderListViewController_CellSelected:(orderProductModel*)orderModel;
+@end
+
 @interface MeOrderListViewController : baseLoadViewController<UIViewControllerLoadViewDelegate>
 {
     orderProductModel* _orderProductModel;
@@ -20,6 +24,7 @@
     NSMutableArray* _statusPayedArray;       //已付款
 }
 
+@property(nonatomic, assign)id<MeOrderListViewControllerDelegate>delegate;
 @property(nonatomic, retain)NSMutableArray* dataArray;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 

@@ -65,6 +65,7 @@
     _meManageViewController = [storyBoard instantiateViewControllerWithIdentifier:@"meManageViewControllerIdentifier"];
     _meManageViewController.delegate = self;
     _meAttentionViewController.delegate = self;
+    _meOrderListViewController.delegate = self;
     
     
     _controllerArry = @[_meAttentionViewController,_meOrderListViewController,_meCommissionViewController,_meManageViewController];
@@ -172,5 +173,11 @@
 -(void)MeManageViewController_AddNewCard
 {
     [self.navigationController.tabBarController performSegueWithIdentifier:@"addBankCardIdentifier" sender:nil];
+}
+#pragma mark --
+#pragma mark MeOrderListViewControllerDelegate
+-(void)MeOrderListViewController_CellSelected:(orderProductModel*)orderModel
+{
+    [self.navigationController.tabBarController performSegueWithIdentifier:@"orderDetailIdentifier" sender:orderModel];
 }
 @end

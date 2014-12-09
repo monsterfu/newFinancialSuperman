@@ -10,6 +10,7 @@
 #import "UIColor+getColor.h"
 #import "productDetailViewController.h"
 #import "ProductOneParamModel.h"
+#import "Me/MeOrderDetailViewController.h"
 
 @interface CommonTabbarViewController ()
 
@@ -72,6 +73,11 @@
             [vc setAttentionOne:_product];
         }
         
+    }else if ([segue.identifier isEqualToString:@"orderDetailIdentifier"])
+    {
+        orderProductModel* _product = (orderProductModel*)sender;
+        MeOrderDetailViewController*vc = (MeOrderDetailViewController *) segue.destinationViewController;
+        [vc setOrderProductModel:_product];
     }
 }
 

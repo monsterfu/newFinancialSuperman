@@ -115,7 +115,17 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //    [self.navigationController.tabBarController performSegueWithIdentifier:@"searchDetailIdentifier" sender:nil];
+    if (indexPath.section == 0) {
+        _orderProductModel =  [_statusOrderedArray objectAtIndex:indexPath.row];
+    }else if (indexPath.section == 1){
+        _orderProductModel =  [_statusContractedArray objectAtIndex:indexPath.row];
+    }else if (indexPath.section == 2){
+        _orderProductModel =  [_statusPayedArray objectAtIndex:indexPath.row];
+    }
+    
+    if (self.delegate&&[self.delegate respondsToSelector:@selector(MeOrderListViewController_CellSelected:)]) {
+        [self.delegate MeOrderListViewController_CellSelected:_orderProductModel];
+    }
 }
 
 /*
