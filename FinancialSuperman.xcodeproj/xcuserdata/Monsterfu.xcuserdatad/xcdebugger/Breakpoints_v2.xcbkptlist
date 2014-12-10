@@ -64,31 +64,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FinancialSuperman/viewControllers/Search/productDetailViewController.m"
-            timestampString = "439723255.70484"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "327"
-            endingLineNumber = "327"
-            landmarkName = "-GetResult:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FinancialSuperman/viewControllers/OnList/OnListViewController.m"
-            timestampString = "439723321.640894"
+            filePath = "FinancialSuperman/viewControllers/Search/productDetailViewController.m"
+            timestampString = "439889975.391475"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "210"
-            endingLineNumber = "210"
+            startingLineNumber = "329"
+            endingLineNumber = "329"
             landmarkName = "-GetResult:"
             landmarkType = "5">
          </BreakpointContent>

@@ -44,8 +44,9 @@
     //
     [self.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName,nil]];
     
-    [self setNeedsStatusBarAppearanceUpdate];
-    
+    if (IOS7) {
+        [self setNeedsStatusBarAppearanceUpdate];
+    }    
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc] init];
     [backItem setBackButtonBackgroundImage:[UIImage imageNamed:@"navi_custom_back_btn_normal.png"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefaultPrompt];
     self.navigationItem.backBarButtonItem = backItem;

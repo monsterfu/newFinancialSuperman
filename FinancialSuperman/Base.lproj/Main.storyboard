@@ -742,8 +742,12 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HiR-he-Q27">
                                 <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="saK-Yf-mib">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="saK-Yf-mib">
                                 <rect key="frame" x="37" y="538" width="97" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="9Z3-ZA-VKA"/>
+                                    <constraint firstAttribute="height" constant="21" id="MKg-sD-pAI"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -752,6 +756,7 @@
                         <color key="backgroundColor" red="0.94524515090000005" green="0.94524515090000005" blue="0.94524515090000005" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="saK-Yf-mib" secondAttribute="bottom" constant="9" id="CI9-pF-6p5"/>
                             <constraint firstAttribute="bottom" secondItem="dlW-7x-Yt2" secondAttribute="bottom" constant="38" id="EGi-kX-alL"/>
                             <constraint firstItem="XmO-1o-ZJ3" firstAttribute="leading" secondItem="LpC-Dz-bZc" secondAttribute="leading" constant="7" id="Eyd-wM-DQj"/>
                             <constraint firstItem="dlW-7x-Yt2" firstAttribute="top" secondItem="LpC-Dz-bZc" secondAttribute="top" id="F5o-TG-8gV"/>
@@ -759,6 +764,7 @@
                             <constraint firstAttribute="bottom" secondItem="XmO-1o-ZJ3" secondAttribute="bottom" constant="9" id="ZbW-cg-pp5"/>
                             <constraint firstAttribute="trailing" secondItem="dlW-7x-Yt2" secondAttribute="trailing" id="sRt-Gn-FAg"/>
                             <constraint firstAttribute="bottom" secondItem="ifg-fW-hiA" secondAttribute="bottom" constant="4" id="se6-yQ-D0x"/>
+                            <constraint firstItem="saK-Yf-mib" firstAttribute="leading" secondItem="LpC-Dz-bZc" secondAttribute="leading" constant="37" id="tVj-VV-7fP"/>
                             <constraint firstAttribute="trailing" secondItem="ifg-fW-hiA" secondAttribute="trailing" constant="16" id="xx9-u6-YXo"/>
                         </constraints>
                         <connections>

@@ -45,7 +45,6 @@
         [self startLoadView:self.view];
         [HttpRequest productOneDetailRequest:[NSMutableDictionary dictionaryWithObjects:@[[USER_DEFAULT objectForKey:KEY_APPKEY_INFO],_attentionOne.product_id] forKeys:@[@"appkey",@"product_id"]] delegate:self finishSel:@selector(GetResult:) failSel:@selector(GetErr:) tag:TAG_Product_Detail];
     }else{
-        
         [_alreadyBookNumLabel setAttributedText:[NSMutableAttributedString instanceupStr:_productOne.booking_count downStr:@"人预约" upColor:COMMON_RED_COLOR downColor:[UIColor blackColor] upFont:[UIFont fontWithName:@"STHeitiSC-Light" size:19] downFont:[UIFont fontWithName:@"STHeitiSC-Light" size:14]]];
     }
 }
@@ -327,6 +326,7 @@
             _productOne = [[ProductOneParamModel alloc]initWithDictionary:[dictionary objectForKey:@"product"]];
             [self endLoadView];
             [_tableView setHidden:NO];
+            [_alreadyBookNumLabel setAttributedText:[NSMutableAttributedString instanceupStr:_productOne.booking_count downStr:@"人预约" upColor:COMMON_RED_COLOR downColor:[UIColor blackColor] upFont:[UIFont fontWithName:@"STHeitiSC-Light" size:19] downFont:[UIFont fontWithName:@"STHeitiSC-Light" size:14]]];
         }
     }else{
         [ProgressHUD showError:@"数据出错！"];
