@@ -7,6 +7,7 @@
 //
 
 #import "MeOrderDetailViewController.h"
+#import "productDetailViewController.h"
 
 @interface MeOrderDetailViewController ()
 
@@ -29,6 +30,10 @@
     
     _titleArray = @[@"订单编号",@"预约日期",@"客户姓名",@"预约金额",@"年化收益",@"返佣金额",@"交易状态",@"状态原因",@"备注"];
     self.title = @"订单信息";
+    
+    UIView* _footView = [UIView new];
+    [_footView setBackgroundColor:[UIColor clearColor]];
+    [_tableView setTableFooterView:_footView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -68,7 +73,25 @@
         UILabel* titleLabel = (UILabel*)[_cell viewWithTag:1];
         titleLabel.text = [_titleArray objectAtIndex:indexPath.row - 1];
         UILabel* detailLabel = (UILabel*)[_cell viewWithTag:2];
-        detailLabel.text = _orderProductModel.product_name;
+        if (indexPath.row == 1) {
+            detailLabel.text = _orderProductModel.order_id;
+        }else if (indexPath.row == 2) {
+            detailLabel.text = _orderProductModel.add_time;
+        }else if (indexPath.row == 3) {
+            detailLabel.text = _orderProductModel.customer_name;
+        }else if (indexPath.row == 4) {
+            detailLabel.text = _orderProductModel.product_price;
+        }else if (indexPath.row == 5) {
+            detailLabel.text = _orderProductModel.return_commission;
+        }else if (indexPath.row == 6) {
+            detailLabel.text = _orderProductModel.expected_return;
+        }else if (indexPath.row == 7) {
+            detailLabel.text = _orderProductModel.order_status;
+        }else if (indexPath.row == 8) {
+            detailLabel.text = _orderProductModel.status_reason;
+        }else if (indexPath.row == 9) {
+            detailLabel.text = _orderProductModel.customer_comment;
+        }
     }
     return _cell;
 }
@@ -76,7 +99,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row == 0) {
-        
+        UIStoryboard* mainBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        productDetailViewController* vc = [mainBoard instantiateViewControllerWithIdentifier:@"productDetailViewControllerIdentifier"];
+        vc.orderProductOne = _orderProductModel;
+        [self.navigationController pushViewController:vc animated:YES];
     }
     
     

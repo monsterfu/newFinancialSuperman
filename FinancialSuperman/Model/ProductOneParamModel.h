@@ -8,12 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import "BaseInfoModel.h"
+#import "earnModel.h"
 
 @interface ProductOneParamModel : NSObject
-
+{
+    earnModel* _earnModel;
+}
 
 @property(nonatomic, retain)BaseInfoModel* baseInfo;
-
+@property(nonatomic, retain)NSMutableArray* earnModelArray;
 
 @property(nonatomic, retain)NSString* account_bank;
 @property(nonatomic, retain)NSString* account_id;

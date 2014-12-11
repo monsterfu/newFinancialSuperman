@@ -8,6 +8,7 @@
 
 #import "ProductOneParamModel.h"
 
+
 @implementation ProductOneParamModel
 @synthesize baseInfo;
 @synthesize account_bank;
@@ -84,6 +85,12 @@
     {
         baseInfo = [[BaseInfoModel alloc]init];
         
+        NSMutableArray* productArry = [dictionary objectForKey:@"returns"];
+        _earnModelArray = [NSMutableArray array];
+        for (id dic in productArry) {
+            _earnModel = [[earnModel alloc]initWithDictionary:dic];
+            [_earnModelArray addObject:_earnModel];
+        }
         baseInfo.account_name  = [dictionary objectForKey:@"account_name"];
         baseInfo.complete_percent  = [dictionary objectForKey:@"complete_percent"];
         baseInfo.financiers  = [dictionary objectForKey:@"financiers"];

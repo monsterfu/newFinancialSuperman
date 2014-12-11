@@ -14,7 +14,10 @@
 @end
 
 @implementation searchMainViewController
-
+-(void)viewDidDisappear:(BOOL)animated
+{
+    _barView.hidden = YES;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.

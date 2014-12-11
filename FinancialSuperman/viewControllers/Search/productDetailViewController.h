@@ -20,10 +20,13 @@
     
     UIAlertView* _emailAlertView;
     UITextField* _emailTextField;
+    
+    NSString* _productId;
 }
 
 @property(nonatomic, retain)ProductOneParamModel* productOne;
 @property(nonatomic, retain)attentionProductModel* attentionOne;
+@property(nonatomic, retain)orderProductModel* orderProductOne;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (weak, nonatomic) IBOutlet UITextField *textField;

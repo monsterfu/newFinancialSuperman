@@ -54,6 +54,7 @@
 #import "attentionProductModel.h"
 #import "orderProductModel.h"
 #import "UserDetailModel.h"
+#import "earnModel.h"
 
 //thrid-party view control
 #import "DKScrollingTabController.h"

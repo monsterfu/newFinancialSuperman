@@ -13,6 +13,7 @@
 {
     UITableViewCell* _cell;
     NSArray* _titleArray;
+    NSMutableArray* _contentArray;
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;

@@ -45,6 +45,7 @@
 		641B70E31A173AD300F2341F /* protocolTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 641B70E21A173AD300F2341F /* protocolTextViewController.m */; };
 		642A16D61A1DCFFD0022DC51 /* seting_confirm_btn_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 642A16D51A1DCFFD0022DC51 /* seting_confirm_btn_normal.png */; };
 		642A16D91A1DD3CF0022DC51 /* MeInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 642A16D81A1DD3CF0022DC51 /* MeInfoViewController.m */; };
+		643637251A39DD0500E7289C /* earnModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 643637241A39DD0500E7289C /* earnModel.m */; };
 		643AB0681A01316900171976 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 643AB0671A01316900171976 /* main.m */; };
 		643AB06B1A01316900171976 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 643AB06A1A01316900171976 /* AppDelegate.m */; };
 		643AB0741A01316900171976 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 643AB0721A01316900171976 /* Main.storyboard */; };
@@ -330,6 +331,8 @@
 		642A16D51A1DCFFD0022DC51 /* seting_confirm_btn_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = seting_confirm_btn_normal.png; sourceTree = "<group>"; };
 		642A16D71A1DD3CF0022DC51 /* MeInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeInfoViewController.h; path = viewControllers/Me/MeInfoViewController.h; sourceTree = "<group>"; };
 		642A16D81A1DD3CF0022DC51 /* MeInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeInfoViewController.m; path = viewControllers/Me/MeInfoViewController.m; sourceTree = "<group>"; };
+		643637231A39DD0500E7289C /* earnModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = earnModel.h; path = Model/earnModel.h; sourceTree = "<group>"; };
+		643637241A39DD0500E7289C /* earnModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = earnModel.m; path = Model/earnModel.m; sourceTree = "<group>"; };
 		643AB0621A01316900171976 /* FinancialSuperman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinancialSuperman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		643AB0661A01316900171976 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		643AB0671A01316900171976 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -1033,6 +1036,8 @@
 		643AB1781A01469700171976 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				643637231A39DD0500E7289C /* earnModel.h */,
+				643637241A39DD0500E7289C /* earnModel.m */,
 				6418BE461A1CC50400F5B353 /* personModel.h */,
 				6418BE471A1CC50400F5B353 /* personModel.m */,
 				B113B6401A2467CE00F0A04C /* UserDetailModel.h */,
@@ -1603,6 +1608,7 @@
 				643AB06B1A01316900171976 /* AppDelegate.m in Sources */,
 				640C711F1A1661480091BE8F /* ProgressHUD.m in Sources */,
 				64702B071A107C1A00850E32 /* ASIS3BucketRequest.m in Sources */,
+				643637251A39DD0500E7289C /* earnModel.m in Sources */,
 				64702AF51A107C1A00850E32 /* ASIDataDecompressor.m in Sources */,
 				64702AF41A107C1A00850E32 /* ASIDataCompressor.m in Sources */,
 				643BBD831A02662200D151E4 /* searchMainViewController.m in Sources */,

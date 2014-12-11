@@ -13,7 +13,10 @@
 
 @implementation OnListViewController
 
-
+-(void)viewDidDisappear:(BOOL)animated
+{
+    _barView.hidden = YES;
+}
 -(void)viewDidLoad
 {
     _dataArray = [NSMutableArray array];

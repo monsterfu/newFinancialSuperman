@@ -39,11 +39,17 @@
     [backItem setBackButtonBackgroundImage:[UIImage imageNamed:@"navi_custom_back_btn_normal.png"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefaultPrompt];
     self.navigationItem.backBarButtonItem = backItem;
     backItem.title = @" ";
-    if (_productOne == nil && _attentionOne) {
-        self.title = _attentionOne.product_name;        
+    if (_productOne == nil) {
+        if (_attentionOne) {
+            self.title = _attentionOne.product_name;
+            _productId = _attentionOne.product_id;
+        }else if(_orderProductOne){
+            self.title = _orderProductOne.product_name;
+            _productId = _orderProductOne.product_id;
+        }
         [_tableView setHidden:YES];
         [self startLoadView:self.view];
-        [HttpRequest productOneDetailRequest:[NSMutableDictionary dictionaryWithObjects:@[[USER_DEFAULT objectForKey:KEY_APPKEY_INFO],_attentionOne.product_id] forKeys:@[@"appkey",@"product_id"]] delegate:self finishSel:@selector(GetResult:) failSel:@selector(GetErr:) tag:TAG_Product_Detail];
+        [HttpRequest productOneDetailRequest:[NSMutableDictionary dictionaryWithObjects:@[[USER_DEFAULT objectForKey:KEY_APPKEY_INFO],_productId] forKeys:@[@"appkey",@"product_id"]] delegate:self finishSel:@selector(GetResult:) failSel:@selector(GetErr:) tag:TAG_Product_Detail];
     }else{
         
         [_alreadyBookNumLabel setAttributedText:[NSMutableAttributedString instanceupStr:_productOne.booking_count downStr:@"人预约" upColor:COMMON_RED_COLOR downColor:[UIColor blackColor] upFont:[UIFont fontWithName:@"STHeitiSC-Light" size:19] downFont:[UIFont fontWithName:@"STHeitiSC-Light" size:14]]];
