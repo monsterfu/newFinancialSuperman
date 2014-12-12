@@ -48,7 +48,6 @@
 		643637251A39DD0500E7289C /* earnModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 643637241A39DD0500E7289C /* earnModel.m */; };
 		643AB0681A01316900171976 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 643AB0671A01316900171976 /* main.m */; };
 		643AB06B1A01316900171976 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 643AB06A1A01316900171976 /* AppDelegate.m */; };
-		643AB0741A01316900171976 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 643AB0721A01316900171976 /* Main.storyboard */; };
 		643AB0761A01316900171976 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 643AB0751A01316900171976 /* Images.xcassets */; };
 		643AB0791A01316900171976 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 643AB0771A01316900171976 /* LaunchScreen.xib */; };
 		643AB0851A01316A00171976 /* FinancialSupermanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 643AB0841A01316A00171976 /* FinancialSupermanTests.m */; };
@@ -252,6 +251,8 @@
 		B113B6421A2467CE00F0A04C /* UserDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B113B6411A2467CE00F0A04C /* UserDetailModel.m */; };
 		B113B6451A2481B500F0A04C /* baseLoadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B113B6441A2481B500F0A04C /* baseLoadViewController.m */; };
 		B113B6481A24866700F0A04C /* baseLoadTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B113B6471A24866700F0A04C /* baseLoadTableTableViewController.m */; };
+		B117CBB31A3ABC44000A38E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B117CBB21A3ABC44000A38E6 /* Main.storyboard */; };
+		B13D4AD11A3ABE0A0093A6B9 /* bankCardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B13D4AD01A3ABE0A0093A6B9 /* bankCardModel.m */; };
 		B1ED85911A25DC68005F97E8 /* processView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1ED85901A25DC68005F97E8 /* processView.m */; };
 		B1FCCC451A2586750052A90A /* NSMutableArray+Sort.m in Sources */ = {isa = PBXBuildFile; fileRef = B1FCCC441A2586750052A90A /* NSMutableArray+Sort.m */; };
 /* End PBXBuildFile section */
@@ -338,7 +339,6 @@
 		643AB0671A01316900171976 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		643AB0691A01316900171976 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		643AB06A1A01316900171976 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		643AB0731A01316900171976 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		643AB0751A01316900171976 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		643AB0781A01316900171976 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		643AB07E1A01316900171976 /* FinancialSupermanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinancialSupermanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -605,6 +605,9 @@
 		B113B6441A2481B500F0A04C /* baseLoadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = baseLoadViewController.m; path = common/baseLoadViewController.m; sourceTree = "<group>"; };
 		B113B6461A24866700F0A04C /* baseLoadTableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = baseLoadTableTableViewController.h; path = common/baseLoadTableTableViewController.h; sourceTree = "<group>"; };
 		B113B6471A24866700F0A04C /* baseLoadTableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = baseLoadTableTableViewController.m; path = common/baseLoadTableTableViewController.m; sourceTree = "<group>"; };
+		B117CBB21A3ABC44000A38E6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		B13D4ACF1A3ABE0A0093A6B9 /* bankCardModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bankCardModel.h; path = Model/bankCardModel.h; sourceTree = "<group>"; };
+		B13D4AD01A3ABE0A0093A6B9 /* bankCardModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = bankCardModel.m; path = Model/bankCardModel.m; sourceTree = "<group>"; };
 		B1ED858F1A25DC68005F97E8 /* processView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = processView.h; path = views/processView.h; sourceTree = "<group>"; };
 		B1ED85901A25DC68005F97E8 /* processView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = processView.m; path = views/processView.m; sourceTree = "<group>"; };
 		B1FCCC431A2586750052A90A /* NSMutableArray+Sort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+Sort.h"; path = "category/NSMutableArray+sort/NSMutableArray+Sort.h"; sourceTree = "<group>"; };
@@ -779,7 +782,7 @@
 				643AB16E1A013FD900171976 /* views */,
 				643AB15C1A01383100171976 /* viewControllers */,
 				643AB1651A01390C00171976 /* category */,
-				643AB0721A01316900171976 /* Main.storyboard */,
+				B117CBB21A3ABC44000A38E6 /* Main.storyboard */,
 				643AB0751A01316900171976 /* Images.xcassets */,
 				643AB0771A01316900171976 /* LaunchScreen.xib */,
 				643AB0651A01316900171976 /* Supporting Files */,
@@ -1036,6 +1039,8 @@
 		643AB1781A01469700171976 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B13D4ACF1A3ABE0A0093A6B9 /* bankCardModel.h */,
+				B13D4AD01A3ABE0A0093A6B9 /* bankCardModel.m */,
 				643637231A39DD0500E7289C /* earnModel.h */,
 				643637241A39DD0500E7289C /* earnModel.m */,
 				6418BE461A1CC50400F5B353 /* personModel.h */,
@@ -1402,7 +1407,6 @@
 				643DD23D1A2B74F7000E352A /* EmotionEditorAddHL@2x.png in Resources */,
 				643AB0FB1A01357C00171976 /* btn_operate@3x.png in Resources */,
 				643DD2391A2B6434000E352A /* AlbumReadAllArrow@2x.png in Resources */,
-				643AB0741A01316900171976 /* Main.storyboard in Resources */,
 				643DD2401A2B76E2000E352A /* share_card_body.png in Resources */,
 				64702B7C1A1108CA00850E32 /* timeline_new_status_background@2x.png in Resources */,
 				643AB12E1A01357C00171976 /* icon_more_selected@3x.png in Resources */,
@@ -1494,6 +1498,7 @@
 				640C70E51A15C7670091BE8F /* product_detail_email_btn_down.png in Resources */,
 				643AB1131A01357C00171976 /* icon_filter_selected@3x.png in Resources */,
 				643AB0F61A01357C00171976 /* bg_cell_mini.png in Resources */,
+				B117CBB31A3ABC44000A38E6 /* Main.storyboard in Resources */,
 				643AB14B1A01357C00171976 /* icon_search_normal@2x.png in Resources */,
 				640C70ED1A15E1AD0091BE8F /* user_login_user_password_logo.png in Resources */,
 				643AB1211A01357C00171976 /* icon_like_selected@2x.png in Resources */,
@@ -1586,6 +1591,7 @@
 				B113B6451A2481B500F0A04C /* baseLoadViewController.m in Sources */,
 				640C71191A16076C0091BE8F /* textFieldTableViewCell.m in Sources */,
 				64702AFD1A107C1A00850E32 /* ASICloudFilesContainer.m in Sources */,
+				B13D4AD11A3ABE0A0093A6B9 /* bankCardModel.m in Sources */,
 				643AB16D1A013C3500171976 /* OnListViewController.m in Sources */,
 				640C71161A1607240091BE8F /* checkCodeTableViewCell.m in Sources */,
 				643AB1691A01390C00171976 /* UIColor+getColor.m in Sources */,
@@ -1653,14 +1659,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		643AB0721A01316900171976 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				643AB0731A01316900171976 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		643AB0771A01316900171976 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (

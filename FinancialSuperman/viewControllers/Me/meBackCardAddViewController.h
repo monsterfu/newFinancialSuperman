@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "bankCardModel.h"
+
 @interface meBackCardAddViewController : UIViewController<UITextFieldDelegate>
 {
     UITableViewCell* _cell;
@@ -18,5 +20,8 @@
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic, retain)bankCardModel* cardModel;
+
+@property (weak, nonatomic) IBOutlet UIButton *button;
 
 @end

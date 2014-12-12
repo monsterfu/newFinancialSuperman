@@ -11,11 +11,14 @@
 
 @protocol MeManageViewControllerDelegate <NSObject>
 -(void)MeManageViewController_AddNewCard;
+-(void)MeManageViewController_ReadCard:(bankCardModel*)cardModel;
 @end
 
 @interface MeManageViewController : baseLoadViewController<UIViewControllerLoadViewDelegate>
 {
     UITableViewCell* _cell;
+    NSMutableArray* _cardListArray;
+    bankCardModel* _bankCardModel;
 }
 
 @property (nonatomic, assign)id<MeManageViewControllerDelegate>delegate;

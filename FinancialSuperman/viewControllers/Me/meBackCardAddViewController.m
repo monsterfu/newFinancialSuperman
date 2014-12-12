@@ -28,8 +28,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     _titleArray = @[@"持卡人", @"卡号"];
-    
     self.title = @"添加银行卡";
+    
 }
 
 - (void)didReceiveMemoryWarning {

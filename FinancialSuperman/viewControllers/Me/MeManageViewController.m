@@ -18,6 +18,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    _cardListArray = [NSMutableArray array];
+    
     UIView* _footView = [UIView new];
     [_footView setBackgroundColor:[UIColor clearColor]];
     [self.tableView setTableFooterView:_footView];
@@ -58,19 +60,28 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 1;
+    return [_cardListArray count] + 1;
 }
 
-//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    if (indexPath.row == 0) {
-//        return 42;
-//    }
-//}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row != [_cardListArray count]) {
+        return 114;
+    }
+    return 36;
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section == 0) {
-        _cell = [tableView dequeueReusableCellWithIdentifier:@"addBackCardCellIdentifier" forIndexPath:indexPath];
+    if (indexPath.row != [_cardListArray count]) {
+        _cell = [tableView dequeueReusableCellWithIdentifier:@"bankCardCellOneIdentifier" forIndexPath:indexPath];
+        UILabel* banknameLabel = (UILabel*)[_cell viewWithTag:1];
+        UILabel* numLabel = (UILabel*)[_cell viewWithTag:2];
+        UILabel* nameLabel = (UILabel*)[_cell viewWithTag:3];
+        _bankCardModel = [_cardListArray objectAtIndex:indexPath.row];
+        [banknameLabel setText:_bankCardModel.account_bank];
+        [numLabel setText:_bankCardModel.account_masked_number];
+        [nameLabel setText:_bankCardModel.account_name];
+        [banknameLabel setText:_bankCardModel.account_bank];
     }else{
        _cell = [tableView dequeueReusableCellWithIdentifier:@"addBackCardCellIdentifier" forIndexPath:indexPath]; 
     }
@@ -79,9 +90,17 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (self.delegate&&[self.delegate respondsToSelector:@selector(MeManageViewController_AddNewCard)]) {
-        [self.delegate MeManageViewController_AddNewCard];
+    if (indexPath.row != [_cardListArray count])
+    {
+        if (self.delegate&&[self.delegate respondsToSelector:@selector(MeManageViewController_AddNewCard)]) {
+            [self.delegate MeManageViewController_AddNewCard];
+        }
+    }else{
+        if (self.delegate&&[self.delegate respondsToSelector:@selector(MeManageViewController_ReadCard:)]) {
+            [self.delegate MeManageViewController_ReadCard:_bankCardModel = [_cardListArray objectAtIndex:indexPath.row]];
+        }
     }
+    
 }
 
 #pragma mark http result
@@ -100,9 +119,13 @@
     NSLog(@"dic is %@",dictionary);
     if(dictionary!=nil){
         if (request.tag == TAG_PersonBankCard) {
-            if(![[dictionary objectForKey:@"code"] isEqualToString:@"1"])
-            {
-                
+            NSMutableArray* productArry = [dictionary objectForKey:@"accounts"];
+            [_cardListArray removeAllObjects];
+            for (id dic in productArry) {
+                _bankCardModel = [[bankCardModel alloc]initWithDictionary:dic];
+                [_cardListArray addObject:_bankCardModel];
+                [self endLoadView];
+                [_tableView reloadData];
             }
         }
     }else{

@@ -78,6 +78,11 @@
         orderProductModel* _product = (orderProductModel*)sender;
         MeOrderDetailViewController*vc = (MeOrderDetailViewController *) segue.destinationViewController;
         [vc setOrderProductModel:_product];
+    }else if ([segue.identifier isEqualToString:@"addBankCardIdentifier"])
+    {
+        bankCardModel* _product = (bankCardModel*)sender;
+        meBackCardAddViewController*vc = (meBackCardAddViewController *) segue.destinationViewController;
+        [vc setCardModel:_product];
     }
 }
 

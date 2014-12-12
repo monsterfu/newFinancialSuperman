@@ -170,6 +170,10 @@
 }
 #pragma mark --
 #pragma mark MeManageViewControllerDelegate
+-(void)MeManageViewController_ReadCard:(bankCardModel *)cardModel
+{
+    [self.navigationController.tabBarController performSegueWithIdentifier:@"addBankCardIdentifier" sender:cardModel];
+}
 -(void)MeManageViewController_AddNewCard
 {
     [self.navigationController.tabBarController performSegueWithIdentifier:@"addBankCardIdentifier" sender:nil];
