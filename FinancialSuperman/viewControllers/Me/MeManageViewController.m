@@ -21,6 +21,11 @@
     UIView* _footView = [UIView new];
     [_footView setBackgroundColor:[UIColor clearColor]];
     [self.tableView setTableFooterView:_footView];
+    
+    if ([USER_DEFAULT boolForKey:KEY_ISLOGIN_INFO]) {
+        [self updateUserBankCardList];
+    }
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(updateUserBankCardList) name:NSNotificationCenter_userbeLogin object:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,6 +42,14 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark - NotificationCenter_userbeLogin
+-(void)updateUserBankCardList
+{
+    [self startLoadView:_tableView];
+    [HttpRequest bankRequest:[NSMutableDictionary dictionaryWithObjects:@[[USER_DEFAULT objectForKey:KEY_TOKEN_INFO],@"list"] forKeys:@[@"token",@"action"]] delegate:self finishSel:@selector(GetResult:) failSel:@selector(GetErr:) tag:TAG_PersonBankCard];
+}
+
 #pragma mark - Table view data source
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
@@ -68,6 +81,33 @@
 {
     if (self.delegate&&[self.delegate respondsToSelector:@selector(MeManageViewController_AddNewCard)]) {
         [self.delegate MeManageViewController_AddNewCard];
+    }
+}
+
+#pragma mark http result
+-(void) GetErr:(ASIHTTPRequest *)request
+{
+    [ProgressHUD showError:@"获取失败，请检查网络连接是否正常!"];
+    [self mistakeLoadView];
+}
+-(void) GetResult:(ASIHTTPRequest *)request
+{
+    NSData *responseData = [request responseData];
+    NSString*pageSource = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+    NSLog(@"pageSource:%@",pageSource);
+    NSError *error;
+    NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
+    NSLog(@"dic is %@",dictionary);
+    if(dictionary!=nil){
+        if (request.tag == TAG_PersonBankCard) {
+            if(![[dictionary objectForKey:@"code"] isEqualToString:@"1"])
+            {
+                
+            }
+        }
+    }else{
+        [ProgressHUD showError:@"数据出错！"];
+        [self mistakeLoadView];
     }
 }
 @end

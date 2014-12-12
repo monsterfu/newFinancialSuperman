@@ -151,7 +151,7 @@
 #define TAG_PersonCenter_CheckCode   5001
 #define TAG_PersonCenter_Login       5002
 #define TAG_PersonDetail             5003
-
+#define TAG_PersonBankCard           5004
 
 
 #endif

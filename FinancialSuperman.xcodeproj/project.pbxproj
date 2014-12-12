@@ -1764,7 +1764,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b6b0b85e-55cf-46bc-ab59-bb7f963ac428";
+				PROVISIONING_PROFILE = "6a0c8bd4-9111-480d-8a9c-415040b49166";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1785,7 +1785,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b6b0b85e-55cf-46bc-ab59-bb7f963ac428";
+				PROVISIONING_PROFILE = "6a0c8bd4-9111-480d-8a9c-415040b49166";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
