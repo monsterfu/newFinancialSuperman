@@ -10,7 +10,7 @@
 #import "GlobalHeader.h"
 
 
-@interface productDetailViewController : baseLoadViewController<UIAlertViewDelegate>
+@interface productDetailViewController : baseLoadViewController<UIAlertViewDelegate,UITextFieldDelegate>
 {
     NSMutableArray* _headerTitleArray;
     NSMutableArray* _baseInfoTitleArray;
@@ -22,6 +22,14 @@
     UITextField* _emailTextField;
     
     NSString* _productId;
+    
+    UILabel* _amountLabel;
+    UILabel* _returnedLabel;
+    UILabel* _expectedLabel;
+    
+    UITextField* _eartextField;
+    UITextField* _yearEarnTextField;
+    UITextField* _returnTextField;
 }
 
 @property(nonatomic, retain)ProductOneParamModel* productOne;

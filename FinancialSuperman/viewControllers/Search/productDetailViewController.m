@@ -8,6 +8,9 @@
 
 #import "productDetailViewController.h"
 
+
+#define HEADER_CELL_HEIGHT   (30)
+
 @interface productDetailViewController ()
 
 @end
@@ -36,6 +39,9 @@
     UIBarButtonItem* emailButtonItem = [[UIBarButtonItem alloc]initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(emailButtonTouched)];
     [self.navigationItem setRightBarButtonItem:emailButtonItem];
     
+    UITapGestureRecognizer* _tapGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapAtView:)];
+    [self.tableView addGestureRecognizer:_tapGestureRecognizer];
+    
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc] init];
     [backItem setBackButtonBackgroundImage:[UIImage imageNamed:@"navi_custom_back_btn_normal.png"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefaultPrompt];
     self.navigationItem.backBarButtonItem = backItem;
@@ -61,7 +67,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)tapAction:(UITapGestureRecognizer *)sender {
+- (IBAction)tapAtView:(UITapGestureRecognizer *)sender {
     
     [_textField resignFirstResponder];
 }
@@ -112,7 +118,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
     if (section == 0) {
-        return 4;
+        return 1 + _productOne.earnModelArray.count;
     }else if(section == 1){
         return 3;
     }else if(section == 2){
@@ -130,17 +136,34 @@
             return cell;
         }else{
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"secotionOneTwoIdentifier" forIndexPath:indexPath];
+            
+            UILabel* _amountLabel = (UILabel*)[cell viewWithTag:1];
+            UILabel* _returnedLabel = (UILabel*)[cell viewWithTag:3];
+            UILabel* _expectedLabel = (UILabel*)[cell viewWithTag:2];
+            
+            
+            earnModel* earnOne =[_productOne.earnModelArray objectAtIndex:indexPath.row - 1];
+            
+            [_returnedLabel setAttributedText:[NSMutableAttributedString instanceupStr:earnOne.return_rate downStr:@"%" upColor:[UIColor getColor:@"373737"] downColor:[UIColor getColor:@"373737"] upFont:[UIFont boldSystemFontOfSize:13.0f] downFont:[UIFont systemFontOfSize:13.0f]]];
+            [_expectedLabel setAttributedText:[NSMutableAttributedString instanceupStr:earnOne.expected_rate downStr:@"%" upColor:[UIColor getColor:@"373737"] downColor:[UIColor getColor:@"373737"] upFont:[UIFont boldSystemFontOfSize:13.0f] downFont:[UIFont systemFontOfSize:13.0f]]];
+            [_amountLabel setAttributedText:[NSMutableAttributedString instanceupStr:[NSString stringWithFormat:@"%@-%@",earnOne.amount1,earnOne.amount2] downStr:[NSString stringWithFormat:@"(含%@)",earnOne.amount3] upColor:[UIColor getColor:@"373737"] downColor:[UIColor getColor:@"A1A1A1"] upFont:[UIFont boldSystemFontOfSize:13.0f] downFont:[UIFont systemFontOfSize:13.0f]]];
+            
             return cell;
         }
     }else if(indexPath.section == 1){
         if (indexPath.row == 0) {
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"secotionTwoOneIdentifier" forIndexPath:indexPath];
+            _eartextField = (UITextField*)[cell viewWithTag:3];
+            _eartextField.delegate = self;
+            
             return cell;
         }else if (indexPath.row == 1) {
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"secotionTwoTwoIdentifier" forIndexPath:indexPath];
+            _yearEarnTextField = (UITextField*)[cell viewWithTag:3];
             return cell;
         }else{
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"secotionTwoThreeIdentifier" forIndexPath:indexPath];
+            _returnTextField = (UITextField*)[cell viewWithTag:3];
             return cell;
         }
         
@@ -215,18 +238,23 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [_eartextField resignFirstResponder];
 //    [self performSegueWithIdentifier:@"pushIdentifier" sender:nil];
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return HEADER_CELL_HEIGHT;
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    UIView* view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, DEVICE_WIDTH, 38)];
-    UILabel* label = [[UILabel alloc]initWithFrame:CGRectMake(15, 0, DEVICE_WIDTH/3, 38)];
+    UIView* view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, DEVICE_WIDTH, HEADER_CELL_HEIGHT)];
+    UILabel* label = [[UILabel alloc]initWithFrame:CGRectMake(15, 0, DEVICE_WIDTH/3, HEADER_CELL_HEIGHT)];
     label.text = [_headerTitleArray objectAtIndex:section];
     label.font = [UIFont boldSystemFontOfSize:14];
-    [view setBackgroundColor:[UIColor blackColor]];//[UIColor getColor:@"EBEBEB"]
+    [view setBackgroundColor:[UIColor getColor:@"EBEBEB"]];//[UIColor getColor:@"EBEBEB"]
     [view addSubview:label];
     if (section == 2) {
-        UIImageView* detailImageView = [[UIImageView alloc]initWithFrame:CGRectMake(DEVICE_WIDTH - 20 - 10, 10, 20, 20)];
+        UIImageView* detailImageView = [[UIImageView alloc]initWithFrame:CGRectMake(DEVICE_WIDTH - 20 - 10, (HEADER_CELL_HEIGHT-20)/2, 20, 20)];
         [detailImageView setImage:[UIImage imageNamed:@"icon_in"]];
         [view addSubview:detailImageView];
         
@@ -234,10 +262,6 @@
         [view addGestureRecognizer:_headerTap];
     }
     return view;
-}
--(float)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-{
-    return 38;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -285,7 +309,11 @@
  }
  */
 
-
+#pragma mark - UITextFieldDelegate
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    
+}
  #pragma mark - Navigation
  
  // In a storyboard-based application, you will often want to do a little preparation before navigation
