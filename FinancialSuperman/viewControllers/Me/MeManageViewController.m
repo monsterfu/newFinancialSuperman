@@ -28,6 +28,8 @@
         [self updateUserBankCardList];
     }
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(updateUserBankCardList) name:NSNotificationCenter_userbeLogin object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(addUserBankCardList:) name:NSNotificationCenter_userBankCardChangedAdd object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(removeUserBankCardList:) name:NSNotificationCenter_userBankCardChangedRemove object:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -44,6 +46,18 @@
     // Pass the selected object to the new view controller.
 }
 */
+#pragma mark - NSNotificationCenter_userBankCardChangedAdd
+-(void)addUserBankCardList:(NSNotification *)notification
+{
+    [_cardListArray addObject:notification.object];
+    [_tableView reloadData];
+}
+#pragma mark - NSNotificationCenter_userBankCardChangedRemove
+-(void)removeUserBankCardList:(NSNotification *)notification
+{
+    [_cardListArray removeObject:notification.object];
+    [_tableView reloadData];
+}
 
 #pragma mark - NotificationCenter_userbeLogin
 -(void)updateUserBankCardList
@@ -90,14 +104,14 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row != [_cardListArray count])
+    if (indexPath.row == [_cardListArray count])
     {
         if (self.delegate&&[self.delegate respondsToSelector:@selector(MeManageViewController_AddNewCard)]) {
             [self.delegate MeManageViewController_AddNewCard];
         }
     }else{
         if (self.delegate&&[self.delegate respondsToSelector:@selector(MeManageViewController_ReadCard:)]) {
-            [self.delegate MeManageViewController_ReadCard:_bankCardModel = [_cardListArray objectAtIndex:indexPath.row]];
+            [self.delegate MeManageViewController_ReadCard:[_cardListArray objectAtIndex:indexPath.row]];
         }
     }
     

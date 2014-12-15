@@ -213,33 +213,27 @@
         return cell;
     }
 }
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    return [_headerTitleArray objectAtIndex:section];
-}
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 //    [self performSegueWithIdentifier:@"pushIdentifier" sender:nil];
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
+    UIView* view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, DEVICE_WIDTH, 38)];
+    UILabel* label = [[UILabel alloc]initWithFrame:CGRectMake(15, 0, DEVICE_WIDTH/3, 38)];
+    label.text = [_headerTitleArray objectAtIndex:section];
+    label.font = [UIFont boldSystemFontOfSize:14];
+    [view setBackgroundColor:[UIColor blackColor]];//[UIColor getColor:@"EBEBEB"]
+    [view addSubview:label];
     if (section == 2) {
-        UIView* view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, DEVICE_WIDTH, 38)];
-        UILabel* label = [[UILabel alloc]initWithFrame:CGRectMake(15, 0, DEVICE_WIDTH/3, 38)];
-        label.text = @"基本信息";
-        label.font = [UIFont boldSystemFontOfSize:14];
-        [view addSubview:label];
-        
         UIImageView* detailImageView = [[UIImageView alloc]initWithFrame:CGRectMake(DEVICE_WIDTH - 20 - 10, 10, 20, 20)];
         [detailImageView setImage:[UIImage imageNamed:@"icon_in"]];
         [view addSubview:detailImageView];
-        [view setBackgroundColor:[UIColor getColor:@"EBEBEB"]];
         
         UITapGestureRecognizer* _headerTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(detailTouched)];
         [view addGestureRecognizer:_headerTap];
-        return view;
     }
-    return nil;
+    return view;
 }
 -(float)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {

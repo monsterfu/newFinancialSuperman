@@ -27,9 +27,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    _titleArray = @[@"持卡人", @"卡号"];
-    self.title = @"添加银行卡";
+    _titleArray = @[@"持卡人", @"卡号", @"银行"];
     
+    _isAdd = (_cardModel)?(NO):(YES);
+    
+    if (_isAdd) {
+        self.title = @"添加银行卡";
+        _cardModel = [[bankCardModel alloc]init];
+        _cardModel.account_name = @" ";
+        _cardModel.account_number = @" ";
+        _cardModel.account_bank = @" ";
+    }else{
+        self.title = @"银行卡";
+        [_button setTitle:@"解除银行卡" forState:UIControlStateNormal];
+        [_button setTitle:@"解除银行卡" forState:UIControlStateHighlighted];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -54,7 +66,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 2;
+    return 3;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -70,9 +82,18 @@
     if (indexPath.row == 0) {
         _nameTextField = (UITextField*)[_cell viewWithTag:2];
         _nameTextField.keyboardType = UIKeyboardTypeDefault;
-    }else{
+        _nameTextField.text = _cardModel.account_name;
+        _nameTextField.enabled = _isAdd;
+    }else if(indexPath.row == 1){
         _cardTextField = (UITextField*)[_cell viewWithTag:2];
         _cardTextField.keyboardType = UIKeyboardTypeNumberPad;
+        _cardTextField.text = _cardModel.account_number;
+        _cardTextField.enabled = _isAdd;
+    }else if(indexPath.row == 2){
+        _bankTextField = (UITextField*)[_cell viewWithTag:2];
+        _bankTextField.keyboardType = UIKeyboardTypeNumberPad;
+        _bankTextField.text = _cardModel.account_bank;
+        _bankTextField.enabled = _isAdd;
     }
     return _cell;
 }
@@ -128,4 +149,44 @@
 }
 
 
+- (IBAction)buttonTouched:(UIButton *)sender {
+    
+    _cardModel.account_bank = _bankTextField.text;
+    _cardModel.account_name = _nameTextField.text;
+    _cardModel.account_number = _cardTextField.text;
+    
+    NSString* action;
+    
+    action = _isAdd?(@"add"):(@"cancel");
+    
+    [HttpRequest bankRequest:[NSMutableDictionary dictionaryWithObjects:@[[USER_DEFAULT objectForKey:KEY_TOKEN_INFO],action,_cardTextField.text,_nameTextField.text,_bankTextField.text] forKeys:@[@"token",@"action",@"account_number",@"account_name",@"account_bank"]] delegate:self finishSel:@selector(GetResult:) failSel:@selector(GetErr:) tag:TAG_PersonBankCard];
+}
+
+#pragma mark http result
+-(void) GetErr:(ASIHTTPRequest *)request
+{
+    [ProgressHUD showError:@"获取失败，请检查网络连接是否正常!"];
+    [self mistakeLoadView];
+}
+-(void) GetResult:(ASIHTTPRequest *)request
+{
+    NSData *responseData = [request responseData];
+    NSString*pageSource = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+    NSLog(@"pageSource:%@",pageSource);
+    NSError *error;
+    NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
+    NSLog(@"dic is %@",dictionary);
+    if(dictionary!=nil){
+        if(![[dictionary objectForKey:@"code"] isEqualToString:@"1"]){
+            [ProgressHUD showError:[dictionary objectForKey:@"message"]];
+        }else{
+            NSString* notistr = (_isAdd)?(NSNotificationCenter_userBankCardChangedAdd):(NSNotificationCenter_userBankCardChangedRemove);
+            [[NSNotificationCenter defaultCenter]postNotificationName:notistr object:_cardModel];
+            [self.navigationController popViewControllerAnimated:YES];
+        }
+    }else{
+        [ProgressHUD showError:@"数据出错！"];
+        [self mistakeLoadView];
+    }
+}
 @end

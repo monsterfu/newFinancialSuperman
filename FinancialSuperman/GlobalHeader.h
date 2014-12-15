@@ -133,11 +133,13 @@
 #define KEY_APPKEY_INFO                     @"key_appkey_info"              //appkey
 #define KEY_EMAIL_ADDRESS_INFO              @"key_email_address_info"       //用户邮件地址
 
-#define NSNotificationCenter_dismissRecordChange                @"NSNotificationCenter_dismissRecordChange"
-#define NSNotificationCenter_userbeLogin                        @"NSNotificationCenter_userbeLogin"
-#define NSNotificationCenter_userbeLogout                       @"NSNotificationCenter_userbeLogout"
-#define NSNotificationCenter_userFocusProduct                   @"NSNotificationCenter_userFocusProduct"
-#define NSNotificationCenter_userOrderProduct                   @"NSNotificationCenter_userOrderProduct"
+#define NSNotificationCenter_dismissRecordChange                    @"NSNotificationCenter_dismissRecordChange"
+#define NSNotificationCenter_userbeLogin                            @"NSNotificationCenter_userbeLogin"
+#define NSNotificationCenter_userbeLogout                           @"NSNotificationCenter_userbeLogout"
+#define NSNotificationCenter_userFocusProduct                       @"NSNotificationCenter_userFocusProduct"
+#define NSNotificationCenter_userOrderProduct                       @"NSNotificationCenter_userOrderProduct"
+#define NSNotificationCenter_userBankCardChangedAdd                 @"NSNotificationCenter_userBankCardChangedAdd"
+#define NSNotificationCenter_userBankCardChangedRemove              @"NSNotificationCenter_userBankCardChangedRemove"
 
 #define TAG_ProductAll              4001
 #define TAG_Product_Focus           4002

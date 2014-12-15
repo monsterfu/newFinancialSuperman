@@ -1220,7 +1220,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="YAa-Ba-xEj">
-                                <rect key="frame" x="0.0" y="75" width="320" height="68"/>
+                                <rect key="frame" x="0.0" y="75" width="320" height="102"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="addCardCellIdentifier" rowHeight="34" id="fvm-Js-uqM">
@@ -1236,7 +1236,7 @@
                                                     <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="刘巍" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O3J-Pr-qo5">
-                                                    <rect key="frame" x="88" y="2" width="197" height="30"/>
+                                                    <rect key="frame" x="88" y="3" width="232" height="30"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                     <connections>
@@ -1259,10 +1259,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GDO-YK-DJg">
-                                <rect key="frame" x="16" y="151" width="288" height="30"/>
+                                <rect key="frame" x="16" y="182" width="288" height="30"/>
                                 <state key="normal" title="确认" backgroundImage="user_confirm_btn_normal.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonTouched:" destination="zzB-wL-RrJ" eventType="touchUpInside" id="ewp-15-L4W"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
@@ -1275,7 +1278,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RQR-yu-1EO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2547" y="-829"/>
+            <point key="canvasLocation" x="-2547" y="-830"/>
         </scene>
         <!--Me Commission View Controller-->
         <scene sceneID="qzx-v0-QzA">

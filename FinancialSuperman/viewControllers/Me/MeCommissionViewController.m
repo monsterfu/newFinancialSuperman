@@ -128,7 +128,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //    [self.navigationController.tabBarController performSegueWithIdentifier:@"searchDetailIdentifier" sender:nil];
+    if (indexPath.row == 0) {
+        _orderProductModel =  [_statusReturnedArray objectAtIndex:indexPath.subRow];
+    }else{
+        _orderProductModel =  [_statusReturninArray objectAtIndex:indexPath.subRow];
+    }
+    [self.navigationController.tabBarController performSegueWithIdentifier:@"searchDetailIdentifier" sender:_orderProductModel];
 }
 
 #pragma mark -
