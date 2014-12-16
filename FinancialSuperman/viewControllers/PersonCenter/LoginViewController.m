@@ -182,7 +182,6 @@
             [self.navigationController popViewControllerAnimated:YES];
             _inputNum = 0;
         }else{
-            
             _inputNum ++;
             if (_inputNum == 5) {
                 CGRect frame = _tableView.frame;
