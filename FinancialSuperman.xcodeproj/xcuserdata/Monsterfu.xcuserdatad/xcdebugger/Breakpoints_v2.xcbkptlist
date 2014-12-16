@@ -67,12 +67,12 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FinancialSuperman/viewControllers/Search/productDetailViewController.m"
-            timestampString = "440328331.403983"
+            filePath = "FinancialSuperman/viewControllers/PersonCenter/LoginViewController.m"
+            timestampString = "440407908.99308"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "323"
-            endingLineNumber = "323"
+            startingLineNumber = "170"
+            endingLineNumber = "170"
             landmarkName = "-GetResult:"
             landmarkType = "5">
          </BreakpointContent>
@@ -83,29 +83,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FinancialSuperman/viewControllers/Me/meBackCardAddViewController.m"
-            timestampString = "440323683.125553"
+            filePath = "FinancialSuperman/viewControllers/PersonCenter/LoginViewController.m"
+            timestampString = "440407912.137284"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FinancialSuperman/viewControllers/CommonTabbarViewController.m"
-            timestampString = "440323734.453028"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
-            landmarkName = "-prepareForSegue:sender:"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
+            landmarkName = "-GetResult:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

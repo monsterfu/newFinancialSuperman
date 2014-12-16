@@ -91,7 +91,7 @@
         _cardTextField.enabled = _isAdd;
     }else if(indexPath.row == 2){
         _bankTextField = (UITextField*)[_cell viewWithTag:2];
-        _bankTextField.keyboardType = UIKeyboardTypeNumberPad;
+        _bankTextField.keyboardType = UIKeyboardTypeDefault;
         _bankTextField.text = _cardModel.account_bank;
         _bankTextField.enabled = _isAdd;
     }
@@ -107,7 +107,9 @@
 }
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
-    
+    if (textField != _cardTextField) {
+        return YES;
+    }
     NSString *text = [textField text];
     
     NSCharacterSet *characterSet = [NSCharacterSet characterSetWithCharactersInString:@"0123456789\b"];

@@ -18,9 +18,13 @@
     
     UITextField* _usrNameTextfield;
     UITextField* _paswordTextfield;
+    UITextField* _checkCodeTextfield;
+    
+    NSUInteger _inputNum;               //密码输错次数
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+- (IBAction)checkButtonTouch:(UIButton *)sender;
 
 
 - (IBAction)LoginTouch:(UIButton *)sender;

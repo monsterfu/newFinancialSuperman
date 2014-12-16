@@ -128,12 +128,20 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row == 0) {
-        _orderProductModel =  [_statusReturnedArray objectAtIndex:indexPath.subRow];
-    }else{
-        _orderProductModel =  [_statusReturninArray objectAtIndex:indexPath.subRow];
-    }
-    [self.navigationController.tabBarController performSegueWithIdentifier:@"searchDetailIdentifier" sender:_orderProductModel];
+//    NSLog(@"indexPath.subRow,indexPath.row:%ld,%ld",(long)indexPath.subRow,(long)indexPath.row);
+//    if (indexPath.row == 0) {
+//        SKSTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+//        if (cell.isExpanded) {
+//            return;
+//        }
+//    }
+//    
+//    if (indexPath.row > 0 && indexPath.row <= [_statusReturnedArray count]) {
+//        _orderProductModel =  [_statusReturnedArray objectAtIndex:indexPath.row-1];
+//    }else{
+//        _orderProductModel =  [_statusReturninArray objectAtIndex:indexPath.row-1 - [_statusReturnedArray count]];
+//    }
+//    [self.navigationController.tabBarController performSegueWithIdentifier:@"searchDetailIdentifier" sender:_orderProductModel];
 }
 
 #pragma mark -

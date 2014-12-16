@@ -33,6 +33,12 @@
     self.title = @"登陆";
     _tapGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapAction)];
     [self.view addGestureRecognizer:_tapGestureRecognizer];
+    
+    CGRect frame = _tableView.frame;
+    frame.size.height = 60;
+    [_tableView setFrame:frame];
+    
+    _inputNum = 0;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -54,7 +60,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 2;
+    return 3;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -62,15 +68,22 @@
         _cell = [tableView dequeueReusableCellWithIdentifier:@"userNameCellIdentifier" forIndexPath:indexPath];
         _usrNameTextfield = (UITextField*)[_cell viewWithTag:2];
         _usrNameTextfield.text = [USER_DEFAULT objectForKey:KEY_USERNAME_INFO];
-    }else{
+    }else if(indexPath.row == 1){
         _cell = [tableView dequeueReusableCellWithIdentifier:@"passWordCellIdentifier" forIndexPath:indexPath];
         _paswordTextfield = (UITextField*)[_cell viewWithTag:2];
         _paswordTextfield.text = [USER_DEFAULT objectForKey:KEY_PASSWORD_INFO];
+    }else{
+        _cell = [tableView dequeueReusableCellWithIdentifier:@"codeWordCellIdentifier" forIndexPath:indexPath];
+        _checkCodeTextfield = (UITextField*)[_cell viewWithTag:1];
+        
     }
     _cell.textField.tag = indexPath.row;
     _cell.textField.delegate = self;
     _cell.tag = indexPath.row;
     return _cell;
+}
+
+- (IBAction)checkButtonTouch:(UIButton *)sender {
 }
 
 - (IBAction)LoginTouch:(UIButton *)sender {
@@ -84,6 +97,13 @@
         [ProgressHUD showError:@"密码长度不得少于8位！"];
         return;
     }
+    if (_inputNum >= 5) {
+        if(_checkCodeTextfield.text.length < 6){
+            [ProgressHUD showError:@"请输入验证码"];
+            return;
+        }
+    }
+    
     [ProgressHUD show:@"登录中,请稍候..."];
     [HttpRequest userLoginRequest:[LoginModel stanceWithUserName:_usrNameTextfield.text password:_paswordTextfield.text captcha:@""] delegate:self finishSel:@selector(GetResult:) failSel:@selector(GetErr:) tag:TAG_PersonCenter_Login];
 
@@ -116,6 +136,14 @@
             return NO;
         }else{
             return YES;
+        }
+    }else if (textField == _checkCodeTextfield){
+        if (_inputNum >= 5) {
+            if(range.location>6){
+                return NO;
+            }else{
+                return YES;
+            }
         }
     }
     return YES;
@@ -152,11 +180,31 @@
             [USER_DEFAULT synchronize];
             [[NSNotificationCenter defaultCenter]postNotificationName:NSNotificationCenter_userbeLogin object:nil];
             [self.navigationController popViewControllerAnimated:YES];
+            _inputNum = 0;
+        }else{
+            
+            _inputNum ++;
+            if (_inputNum == 5) {
+                CGRect frame = _tableView.frame;
+                frame.size.height = 256;
+                [_tableView setFrame:frame];
+                UIAlertView* alertView = [[UIAlertView alloc]initWithTitle:@"提示" message:@"连续5次输错密码，继续登录需要验证码" delegate:nil cancelButtonTitle:@"好" otherButtonTitles:nil, nil];
+                [alertView show];
+            }else{
+                [ProgressHUD showError:[dictionary objectForKey:@"message"]];
+            }
+        }
+    }else{
+        _inputNum ++;
+        if (_inputNum == 5) {
+            CGRect frame = _tableView.frame;
+            frame.size.height = 256;
+            [_tableView setFrame:frame];
+            UIAlertView* alertView = [[UIAlertView alloc]initWithTitle:@"提示" message:@"连续5次输错密码，继续登录需要验证码" delegate:nil cancelButtonTitle:@"好" otherButtonTitles:nil, nil];
+            [alertView show];
         }else{
             [ProgressHUD showError:[dictionary objectForKey:@"message"]];
         }
-    }else{
-        [ProgressHUD showError:@"数据出错！"];
     }
 }
 

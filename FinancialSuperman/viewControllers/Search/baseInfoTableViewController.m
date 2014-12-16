@@ -150,12 +150,26 @@
             break;
     }
     if ([str isEqualToString:@""]) {
-        return 60;
+        return MIX_CELL_HEIGHT;
     }
-    CGSize size = CGSizeMake(209, 20000.0f);//注：这个宽：300 是你要显示的宽度既固定的宽度，高度可以依照自己的需求而定
-    NSDictionary * tdic = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont systemFontOfSize:14.0f], NSFontAttributeName,nil];
-        size =[str boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin |NSStringDrawingUsesFontLeading attributes:tdic context:nil].size;
-    return (MIX_CELL_HEIGHT > size.height)?(MIX_CELL_HEIGHT):(size.height + MIX_CELL_HEIGHT - 16);
+    CGSize size = CGSizeMake(209, 0);//注：这个宽：300 是你要显示的宽度既固定的宽度，高度可以依照自己的需求而定
+    CGSize newSize = [self boundingRectWithSize:size str:str];
+    return newSize.height + 22;
+}
+
+- (CGSize)boundingRectWithSize:(CGSize)size str:(NSString*)str
+{
+    NSDictionary *attribute = @{NSFontAttributeName:[UIFont systemFontOfSize:14.0f]};
+    
+    CGSize retSize = [str boundingRectWithSize:size
+                                             options:
+                      NSStringDrawingTruncatesLastVisibleLine |
+                      NSStringDrawingUsesLineFragmentOrigin |
+                      NSStringDrawingUsesFontLeading
+                                          attributes:attribute
+                                             context:nil].size;
+    
+    return retSize;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"baseInfoCell" forIndexPath:indexPath];
@@ -242,7 +256,7 @@
             break;
         case 15:
         {
-            _contentTextView.text = @"珠海市土地储备中心成立于2003年，主要职能是在市土地专门管理委员会监督、指导下，代表珠海市人民政府，依照本市土地利用总体规划和城市规模，实施收购、储备、拆迁、平整，以供应和调整各类建设用地需求，有独立的法人地位，也是珠海市城区范围唯一有土地储备资质的机构。";//_baseInfo.financiers;
+            _contentTextView.text = _baseInfo.financiers;
         }
             break;
         case 16:
@@ -263,7 +277,7 @@
     oldFram.size.height = size.height;
 //    _contentTextView.bounds = oldFram;
     UILabel* labely = [[UILabel alloc]initWithFrame:oldFram];
-    labely.numberOfLines = 100;
+    labely.numberOfLines = 0;
     labely.tag = 7;
     if ([_contentTextView.text isEqual:@""]) {
         labely.text = @"-";
