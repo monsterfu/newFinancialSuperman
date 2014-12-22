@@ -72,8 +72,25 @@
     frame.origin = CGPointMake((_barView.frame.size.width - frame.size.width)/2, (_barView.frame.size.height - frame.size.height)/2);
     label.frame = frame;
     
-    
-    [self performSelector:@selector(updateUI) withObject:nil afterDelay:0.1];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        _barView.hidden = NO;
+        [UIView animateWithDuration:0.6 animations:^{
+            CGRect frame = _barView.frame;
+            frame.origin.y = 5;
+            _barView.frame = frame;
+        } completion:^(BOOL finished){
+            if (finished) {
+                [UIView animateWithDuration:0.6 delay:1.0 options:UIViewAnimationOptionAllowAnimatedContent animations:^{
+                    CGRect frame = _barView.frame;
+                    frame.origin.y = -120;
+                    _barView.frame = frame;
+                } completion:^(BOOL finished){
+                    _barView.hidden = YES;
+                }];
+            }
+        }];
+    });
+//    [self performSelector:@selector(updateUI) withObject:nil afterDelay:0.1];
     
     _reloading = NO;
 }
@@ -122,6 +139,7 @@
             }];
         }
     }];
+    
 }
 - (BOOL)egoRefreshTableHeaderDataSourceIsLoading:(EGORefreshTableHeaderView*)view{
     return _reloading; // should return if data source model is reloading
@@ -163,7 +181,7 @@
     if (![USER_DEFAULT boolForKey:KEY_ISLOGIN_INFO]) {
         [self.navigationController.tabBarController performSegueWithIdentifier:@"userLoginIdentifier" sender:nil];
     }else{
-        [self.navigationController.tabBarController performSegueWithIdentifier:@"searchDetailIdentifier" sender:[_dataArray objectAtIndex:indexPath.row]];
+        [self.navigationController.tabBarController performSegueWithIdentifier:@"OnlistDetailIdentifier" sender:[_dataArray objectAtIndex:indexPath.row]];
     }
 }
 

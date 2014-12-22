@@ -88,7 +88,7 @@
 #define EMAIL_API               @"?c=productAPI&m=share_product"        //email
 #define BANK_API                @"?c=userAPI&m=bank_account"            //银行API
 #define PRODUCT_DETAIL_API      @"?c=productAPI&m=get_product_detail"   //产品详情
-
+#define PRODUCT_SIMUTABLE_API   @"?c=productAPI&m=get_fund_values"      //获取私募净值表
 
 
 

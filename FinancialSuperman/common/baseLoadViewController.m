@@ -37,6 +37,8 @@
 
 -(void)startLoadView:(UIView*)view
 {
+    [_loadViewController.view removeGestureRecognizer:_loadViewController.gestureRecognizer];
+    [_loadViewController.view removeFromSuperview];
     _loadViewController = nil;
     if (_loadViewController == nil) {
         UIStoryboard* storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];

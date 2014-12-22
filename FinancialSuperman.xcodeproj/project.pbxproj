@@ -172,6 +172,7 @@
 		643DD23D1A2B74F7000E352A /* EmotionEditorAddHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 643DD23B1A2B74F7000E352A /* EmotionEditorAddHL@2x.png */; };
 		643DD2401A2B76E2000E352A /* share_card_body.png in Resources */ = {isa = PBXBuildFile; fileRef = 643DD23E1A2B76E2000E352A /* share_card_body.png */; };
 		643DD2411A2B76E2000E352A /* share_card_body@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 643DD23F1A2B76E2000E352A /* share_card_body@2x.png */; };
+		644A70961A454AE000A39922 /* OnListDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 644A70951A454AE000A39922 /* OnListDetailViewController.m */; };
 		645E04B51A1B8D0200D9E495 /* navi_recommend_btn_user_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 645E04B31A1B8D0200D9E495 /* navi_recommend_btn_user_normal.png */; };
 		645E04B61A1B8D0200D9E495 /* navi_recommend_btn_user_press.png in Resources */ = {isa = PBXBuildFile; fileRef = 645E04B41A1B8D0200D9E495 /* navi_recommend_btn_user_press.png */; };
 		64702AF31A107C1A00850E32 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 64702A9C1A107C1A00850E32 /* ASIAuthenticationDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -233,6 +234,7 @@
 		64B7D4BD1A223C550035E60F /* user_login_user_cellphone_number_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 64B7D4BC1A223C550035E60F /* user_login_user_cellphone_number_logo@2x.png */; };
 		64B7D4C01A223D6C0035E60F /* navi_custom_back_btn_hgihlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 64B7D4BE1A223D6C0035E60F /* navi_custom_back_btn_hgihlight.png */; };
 		64B7D4C11A223D6C0035E60F /* navi_custom_back_btn_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 64B7D4BF1A223D6C0035E60F /* navi_custom_back_btn_normal.png */; };
+		64C5805F1A486E2F0050F1D6 /* OnListDetailHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C5805E1A486E2F0050F1D6 /* OnListDetailHeaderCell.m */; };
 		64C8085A1A21D1DC0037ED25 /* product_detail_email_btn_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 64C808591A21D1DC0037ED25 /* product_detail_email_btn_normal.png */; };
 		64C8085D1A21D32A0037ED25 /* navi_custom_email_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 64C8085B1A21D32A0037ED25 /* navi_custom_email_normal@2x.png */; };
 		64C8085E1A21D32A0037ED25 /* navi_custom_email_press@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 64C8085C1A21D32A0037ED25 /* navi_custom_email_press@2x.png */; };
@@ -480,6 +482,8 @@
 		643DD23B1A2B74F7000E352A /* EmotionEditorAddHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "EmotionEditorAddHL@2x.png"; sourceTree = "<group>"; };
 		643DD23E1A2B76E2000E352A /* share_card_body.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share_card_body.png; sourceTree = "<group>"; };
 		643DD23F1A2B76E2000E352A /* share_card_body@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share_card_body@2x.png"; sourceTree = "<group>"; };
+		644A70941A454AE000A39922 /* OnListDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OnListDetailViewController.h; path = viewControllers/OnList/OnListDetailViewController.h; sourceTree = "<group>"; };
+		644A70951A454AE000A39922 /* OnListDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OnListDetailViewController.m; path = viewControllers/OnList/OnListDetailViewController.m; sourceTree = "<group>"; };
 		645E04B31A1B8D0200D9E495 /* navi_recommend_btn_user_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navi_recommend_btn_user_normal.png; sourceTree = "<group>"; };
 		645E04B41A1B8D0200D9E495 /* navi_recommend_btn_user_press.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navi_recommend_btn_user_press.png; sourceTree = "<group>"; };
 		64702A9B1A107C1A00850E32 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
@@ -577,6 +581,8 @@
 		64B7D4BC1A223C550035E60F /* user_login_user_cellphone_number_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user_login_user_cellphone_number_logo@2x.png"; sourceTree = "<group>"; };
 		64B7D4BE1A223D6C0035E60F /* navi_custom_back_btn_hgihlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navi_custom_back_btn_hgihlight.png; sourceTree = "<group>"; };
 		64B7D4BF1A223D6C0035E60F /* navi_custom_back_btn_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navi_custom_back_btn_normal.png; sourceTree = "<group>"; };
+		64C5805D1A486E2F0050F1D6 /* OnListDetailHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OnListDetailHeaderCell.h; path = views/OnListDetailHeaderCell.h; sourceTree = "<group>"; };
+		64C5805E1A486E2F0050F1D6 /* OnListDetailHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OnListDetailHeaderCell.m; path = views/OnListDetailHeaderCell.m; sourceTree = "<group>"; };
 		64C808591A21D1DC0037ED25 /* product_detail_email_btn_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = product_detail_email_btn_normal.png; sourceTree = "<group>"; };
 		64C8085B1A21D32A0037ED25 /* navi_custom_email_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navi_custom_email_normal@2x.png"; sourceTree = "<group>"; };
 		64C8085C1A21D32A0037ED25 /* navi_custom_email_press@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navi_custom_email_press@2x.png"; sourceTree = "<group>"; };
@@ -1010,6 +1016,8 @@
 			children = (
 				643AB16B1A013C3500171976 /* OnListViewController.h */,
 				643AB16C1A013C3500171976 /* OnListViewController.m */,
+				644A70941A454AE000A39922 /* OnListDetailViewController.h */,
+				644A70951A454AE000A39922 /* OnListDetailViewController.m */,
 			);
 			name = OnList;
 			sourceTree = "<group>";
@@ -1026,6 +1034,8 @@
 				643AB1701A01400A00171976 /* percentRectView.m */,
 				643AB1721A0143B500171976 /* OnlistViewCell.h */,
 				643AB1731A0143B500171976 /* OnlistViewCell.m */,
+				64C5805D1A486E2F0050F1D6 /* OnListDetailHeaderCell.h */,
+				64C5805E1A486E2F0050F1D6 /* OnListDetailHeaderCell.m */,
 				B113B63D1A244EF600F0A04C /* orderListViewCell.h */,
 				B113B63E1A244EF600F0A04C /* orderListViewCell.m */,
 				643BBD841A02670100D151E4 /* searchListViewCell.h */,
@@ -1608,6 +1618,7 @@
 				B10C26EB1A2C6DC7005CFB36 /* SKSTableViewCellIndicator.m in Sources */,
 				6417B8571A04CB2D0060E236 /* UIButtonImageOrder+reversal.m in Sources */,
 				B10FB1A01A36A14B00515148 /* MeOrderDetailViewController.m in Sources */,
+				64C5805F1A486E2F0050F1D6 /* OnListDetailHeaderCell.m in Sources */,
 				643B66271A238E5300F14AC5 /* MeOrderListViewController.m in Sources */,
 				643BBD8C1A02958E00D151E4 /* productDetailViewController.m in Sources */,
 				64702AFA1A107C1A00850E32 /* ASINetworkQueue.m in Sources */,
@@ -1632,6 +1643,7 @@
 				640C71131A1602930091BE8F /* RemindLoginViewController.m in Sources */,
 				640C71051A15ECF80091BE8F /* ForgetPassWordViewController.m in Sources */,
 				643AB1631A01386600171976 /* CommonTabbarViewController.m in Sources */,
+				644A70961A454AE000A39922 /* OnListDetailViewController.m in Sources */,
 				64702AF91A107C1A00850E32 /* ASIInputStream.m in Sources */,
 				643AB1741A0143B500171976 /* OnlistViewCell.m in Sources */,
 				64B6C77A1A06641B00F251D4 /* MeAttentionViewController.m in Sources */,
@@ -1750,8 +1762,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: xin fu (H6NR6KPK2Z)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: xin fu (H6NR6KPK2Z)";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -1762,7 +1774,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "342daada-089d-4705-bb2b-607c33f98c50";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1771,8 +1783,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: xin fu (H6NR6KPK2Z)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: xin fu (H6NR6KPK2Z)";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -1783,7 +1795,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "342daada-089d-4705-bb2b-607c33f98c50";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

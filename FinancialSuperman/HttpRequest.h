@@ -55,6 +55,9 @@
 
 //获取某产品详细信息
 +(void)productOneDetailRequest:(NSMutableDictionary*)infoDic delegate:(id)delegate finishSel:(SEL)finishSel failSel:(SEL)failSel tag:(NSUInteger)tag;
+
+//获取私募净值表
++(void)productSiMuDetailRequest:(NSMutableDictionary*)infoDic delegate:(id)delegate finishSel:(SEL)finishSel failSel:(SEL)failSel tag:(NSUInteger)tag;
 @end
 
 

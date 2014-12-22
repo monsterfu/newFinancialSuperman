@@ -113,6 +113,12 @@
 +(void)productOneDetailRequest:(NSMutableDictionary*)infoDic delegate:(id)delegate finishSel:(SEL)finishSel failSel:(SEL)failSel tag:(NSUInteger)tag{
     [self Request:[NSString stringWithFormat:@"%@%@",Test2_Server,PRODUCT_DETAIL_API] postdate:infoDic tag:tag delegate:delegate finishSel:finishSel failSel:failSel];
 }
+
+//获取私募净值表
++(void)productSiMuDetailRequest:(NSMutableDictionary*)infoDic delegate:(id)delegate finishSel:(SEL)finishSel failSel:(SEL)failSel tag:(NSUInteger)tag
+{
+    [self Request:[NSString stringWithFormat:@"%@%@",Test2_Server,PRODUCT_SIMUTABLE_API] postdate:infoDic tag:tag delegate:delegate finishSel:finishSel failSel:failSel];
+}
 @end
 
 
