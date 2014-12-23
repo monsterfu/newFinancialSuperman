@@ -28,7 +28,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *alreadyBookNumLabel;
 
 
-
 //buttons
 
 - (IBAction)zsButtonTouch:(UIButton *)sender;

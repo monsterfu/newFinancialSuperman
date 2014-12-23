@@ -100,22 +100,22 @@
 {
     return 2;
 }
-//-(NSInteger)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    if (indexPath.section == 0) {
-//        return 180;
-//    }else{
-//        return 300;
-//    }
-//}
-//-(NSInteger)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-//{
-//    if (section == 0) {
-//        return 10;
-//    }else{
-//        return 30;
-//    }
-//}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 0) {
+        return 180.0f;
+    }else{
+        return 390.0f;
+    }
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    if (section == 0) {
+        return 1.0f;
+    }else{
+        return 30.0f;
+    }
+}
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return 1;

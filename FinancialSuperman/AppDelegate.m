@@ -23,7 +23,7 @@
     NSString* passWord = [USER_DEFAULT objectForKey:KEY_PASSWORD_INFO];
     
     [USER_DEFAULT setBool:NO forKey:KEY_ISLOGIN_INFO];
-#if 0
+#if 1
     if (userName && passWord&&[USER_DEFAULT boolForKey:KEY_ISLOGIN_WHEN_EXIT_INFO]) {
         [HttpRequest userLoginRequest:[LoginModel stanceWithUserName:userName password:passWord captcha:@""] delegate:self finishSel:@selector(GetResult:) failSel:@selector(GetErr:) tag:TAG_ProductAll];
     }
