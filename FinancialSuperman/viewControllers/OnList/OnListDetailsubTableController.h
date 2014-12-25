@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "SKSTableView.h"
 #import "SKSTableViewCell.h"
+#import "BEMSimpleLineGraphView.h"
 
 typedef enum : NSUInteger {
     EnumTypeTable_jzzs,     //净值走势
@@ -17,7 +18,7 @@ typedef enum : NSUInteger {
     EnumTypeTable_fyfl,     //返佣费率
 } EnumTypeTable_Enum;
 
-@interface OnListDetailsubTableController : UIViewController
+@interface OnListDetailsubTableController : UIViewController<BEMSimpleLineGraphDelegate>
 {
     NSArray* _rgxzTitleArray;
     NSArray* _xxxxTitleArray;
@@ -26,6 +27,10 @@ typedef enum : NSUInteger {
     UITableViewCell* _cell;
     UITableViewCell* _headerCell;
 }
+
+@property (strong, nonatomic) NSMutableArray *ArrayOfValues;
+@property (strong, nonatomic) NSMutableArray *ArrayOfDates;
+
 @property (weak, nonatomic) IBOutlet SKSTableView *tableView;
 @property(nonatomic, assign)EnumTypeTable_Enum tableEnum;
 

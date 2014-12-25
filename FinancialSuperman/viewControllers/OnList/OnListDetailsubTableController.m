@@ -33,6 +33,29 @@
     UIView* footView = [UIView new];
     [footView setBackgroundColor:[UIColor clearColor]];
     [_tableView setTableFooterView:footView];
+    
+    for (int i=0; i < 66; i++) {
+        [self.ArrayOfValues addObject:[NSNumber numberWithInteger:(arc4random() % 70000)]]; // Random values for the graph
+        [self.ArrayOfDates addObject:[NSString stringWithFormat:@"%@",[NSNumber numberWithInt:2000 + i]]]; // Dates for the X-Axis of the graph
+        
+        //        totalNumber = totalNumber + [[self.ArrayOfValues objectAtIndex:i] intValue]; // All of the values added together
+    }
+    
+    /* This is commented out because the graph is created in the interface with this sample app. However, the code remains as an example for creating the graph using code.
+     BEMSimpleLineGraphView *myGraph = [[BEMSimpleLineGraphView alloc] initWithFrame:CGRectMake(0, 60, 320, 250)];
+     myGraph.delegate = self;
+     [self.view addSubview:myGraph]; */
+    
+    // Customization of the graph
+    self.lineGraphView.delegate = self;
+    self.lineGraphView.enableTouchReport = YES;
+    self.lineGraphView.colorTop = [UIColor clearColor];
+    self.lineGraphView.colorBottom = [UIColor clearColor]; // Leaving this not-set on iOS 7 will default to your window's tintColor
+    self.lineGraphView.colorLine = [UIColor whiteColor];
+    self.lineGraphView.backgroundColor = [UIColor clearColor];
+    self.lineGraphView.colorXaxisLabel = [UIColor whiteColor];
+    self.lineGraphView.widthLine = 3.0;
+    self.lineGraphView.enableTouchReport = YES;
 }
 
 - (void)didReceiveMemoryWarning {

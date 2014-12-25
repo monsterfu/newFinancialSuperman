@@ -63,6 +63,7 @@
 #import "SKSTableViewCell.h"
 #import "EGORefreshTableHeaderView.h"
 #import "ProgressHUD.h"
+#import "BEMSimpleLineGraphView.h"
 
 //http
 #import "HttpRequest.h"

@@ -231,6 +231,10 @@
 		64702B7B1A1108CA00850E32 /* timeline_new_status_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 64702B791A1108CA00850E32 /* timeline_new_status_background.png */; };
 		64702B7C1A1108CA00850E32 /* timeline_new_status_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 64702B7A1A1108CA00850E32 /* timeline_new_status_background@2x.png */; };
 		648E766C1A4C5B440049201D /* OnListDetailsubTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 648E766B1A4C5B440049201D /* OnListDetailsubTableController.m */; };
+		648E76761A4C70580049201D /* BEMAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = 648E766F1A4C70580049201D /* BEMAnimations.m */; };
+		648E76771A4C70580049201D /* BEMCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 648E76711A4C70580049201D /* BEMCircle.m */; };
+		648E76781A4C70580049201D /* BEMLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 648E76731A4C70580049201D /* BEMLine.m */; };
+		648E76791A4C70580049201D /* BEMSimpleLineGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 648E76751A4C70580049201D /* BEMSimpleLineGraphView.m */; };
 		64B6C77A1A06641B00F251D4 /* MeAttentionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64B6C7791A06641B00F251D4 /* MeAttentionViewController.m */; };
 		64B7D4BD1A223C550035E60F /* user_login_user_cellphone_number_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 64B7D4BC1A223C550035E60F /* user_login_user_cellphone_number_logo@2x.png */; };
 		64B7D4C01A223D6C0035E60F /* navi_custom_back_btn_hgihlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 64B7D4BE1A223D6C0035E60F /* navi_custom_back_btn_hgihlight.png */; };
@@ -579,6 +583,14 @@
 		64702B7A1A1108CA00850E32 /* timeline_new_status_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "timeline_new_status_background@2x.png"; sourceTree = "<group>"; };
 		648E766A1A4C5B440049201D /* OnListDetailsubTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OnListDetailsubTableController.h; path = viewControllers/OnList/OnListDetailsubTableController.h; sourceTree = "<group>"; };
 		648E766B1A4C5B440049201D /* OnListDetailsubTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OnListDetailsubTableController.m; path = viewControllers/OnList/OnListDetailsubTableController.m; sourceTree = "<group>"; };
+		648E766E1A4C70580049201D /* BEMAnimations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMAnimations.h; sourceTree = "<group>"; };
+		648E766F1A4C70580049201D /* BEMAnimations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMAnimations.m; sourceTree = "<group>"; };
+		648E76701A4C70580049201D /* BEMCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMCircle.h; sourceTree = "<group>"; };
+		648E76711A4C70580049201D /* BEMCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMCircle.m; sourceTree = "<group>"; };
+		648E76721A4C70580049201D /* BEMLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMLine.h; sourceTree = "<group>"; };
+		648E76731A4C70580049201D /* BEMLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMLine.m; sourceTree = "<group>"; };
+		648E76741A4C70580049201D /* BEMSimpleLineGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMSimpleLineGraphView.h; sourceTree = "<group>"; };
+		648E76751A4C70580049201D /* BEMSimpleLineGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMSimpleLineGraphView.m; sourceTree = "<group>"; };
 		64B6C7781A06641B00F251D4 /* MeAttentionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeAttentionViewController.h; path = viewControllers/Me/MeAttentionViewController.h; sourceTree = "<group>"; };
 		64B6C7791A06641B00F251D4 /* MeAttentionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeAttentionViewController.m; path = viewControllers/Me/MeAttentionViewController.m; sourceTree = "<group>"; };
 		64B7D4BC1A223C550035E60F /* user_login_user_cellphone_number_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user_login_user_cellphone_number_logo@2x.png"; sourceTree = "<group>"; };
@@ -1228,6 +1240,7 @@
 		64702B2E1A10918E00850E32 /* thirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				648E766D1A4C70580049201D /* BemLine */,
 				B10C26DE1A2C6DC7005CFB36 /* sksTableView */,
 				640C711A1A1661480091BE8F /* ProgressHUD */,
 				64702B651A10B37900850E32 /* DKScrollingTabController */,
@@ -1288,6 +1301,22 @@
 				64702B721A10F88900850E32 /* grayArrow@2x.png */,
 			);
 			path = refreshIcon;
+			sourceTree = "<group>";
+		};
+		648E766D1A4C70580049201D /* BemLine */ = {
+			isa = PBXGroup;
+			children = (
+				648E766E1A4C70580049201D /* BEMAnimations.h */,
+				648E766F1A4C70580049201D /* BEMAnimations.m */,
+				648E76701A4C70580049201D /* BEMCircle.h */,
+				648E76711A4C70580049201D /* BEMCircle.m */,
+				648E76721A4C70580049201D /* BEMLine.h */,
+				648E76731A4C70580049201D /* BEMLine.m */,
+				648E76741A4C70580049201D /* BEMSimpleLineGraphView.h */,
+				648E76751A4C70580049201D /* BEMSimpleLineGraphView.m */,
+			);
+			name = BemLine;
+			path = views/thirdParty/BemLine;
 			sourceTree = "<group>";
 		};
 		64C84EA91A2AD916007574AA /* NSMutableAttributedString+custom */ = {
@@ -1570,6 +1599,8 @@
 				640C71101A15FD1F0091BE8F /* loginTableViewCell.m in Sources */,
 				64702AF31A107C1A00850E32 /* ASIAuthenticationDialog.m in Sources */,
 				640C70E31A15A5840091BE8F /* DDProgressView.m in Sources */,
+				648E76781A4C70580049201D /* BEMLine.m in Sources */,
+				648E76791A4C70580049201D /* BEMSimpleLineGraphView.m in Sources */,
 				64702B001A107C1A00850E32 /* ASICloudFilesObject.m in Sources */,
 				648E766C1A4C5B440049201D /* OnListDetailsubTableController.m in Sources */,
 				64702B021A107C1A00850E32 /* ASICloudFilesRequest.m in Sources */,
@@ -1629,6 +1660,7 @@
 				643BBD8C1A02958E00D151E4 /* productDetailViewController.m in Sources */,
 				64702AFA1A107C1A00850E32 /* ASINetworkQueue.m in Sources */,
 				643AB06B1A01316900171976 /* AppDelegate.m in Sources */,
+				648E76771A4C70580049201D /* BEMCircle.m in Sources */,
 				640C711F1A1661480091BE8F /* ProgressHUD.m in Sources */,
 				64702B071A107C1A00850E32 /* ASIS3BucketRequest.m in Sources */,
 				643637251A39DD0500E7289C /* earnModel.m in Sources */,
@@ -1646,6 +1678,7 @@
 				643AB0681A01316900171976 /* main.m in Sources */,
 				64702B041A107C1A00850E32 /* Reachability.m in Sources */,
 				642A16D91A1DD3CF0022DC51 /* MeInfoViewController.m in Sources */,
+				648E76761A4C70580049201D /* BEMAnimations.m in Sources */,
 				640C71131A1602930091BE8F /* RemindLoginViewController.m in Sources */,
 				640C71051A15ECF80091BE8F /* ForgetPassWordViewController.m in Sources */,
 				643AB1631A01386600171976 /* CommonTabbarViewController.m in Sources */,
