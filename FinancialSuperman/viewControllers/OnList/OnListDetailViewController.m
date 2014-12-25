@@ -40,6 +40,11 @@
     [self.navigationItem setRightBarButtonItem:emailButtonItem];
     
     
+    _tableType = EnumTypeTable_jzzs;
+    
+    UIStoryboard* storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    _subTableViewController  = [storyBoard instantiateViewControllerWithIdentifier:@"OnListDetailsubTableControllerID"];
+    _subTableViewController.tableEnum = _tableType;
     
 }
 
@@ -138,6 +143,7 @@
         _cell = [tableView dequeueReusableCellWithIdentifier:@"siMuCellIdentifier"];
     }else{
         _cell = [tableView dequeueReusableCellWithIdentifier:@"siMuCell2Identifier"];
+        [_cell addSubview:_subTableViewController.view];
     }
     return _cell;
 }
@@ -192,6 +198,10 @@
         [_selectButton setBackgroundColor:[UIColor getColor:@"cccccc"]];
         _selectButton = sender;
         [_selectButton setBackgroundColor:[UIColor whiteColor]];
+        
+        _subTableViewController.tableEnum = EnumTypeTable_rgxz;
+        [_subTableViewController.tableView reloadData];
+        [_tableView reloadData];
     }
 }
 
@@ -202,6 +212,10 @@
         [_selectButton setBackgroundColor:[UIColor getColor:@"cccccc"]];
         _selectButton = sender;
         [_selectButton setBackgroundColor:[UIColor whiteColor]];
+        
+        _subTableViewController.tableEnum = EnumTypeTable_rgxz;
+        [_subTableViewController.tableView reloadData];
+        [_tableView reloadData];
     }
 }
 
@@ -212,6 +226,10 @@
         [_selectButton setBackgroundColor:[UIColor getColor:@"cccccc"]];
         _selectButton = sender;
         [_selectButton setBackgroundColor:[UIColor whiteColor]];
+        
+        _subTableViewController.tableEnum = EnumTypeTable_xxxx;
+        [_subTableViewController.tableView reloadData];
+        [_tableView reloadData];
     }
 }
 
@@ -222,6 +240,10 @@
         [_selectButton setBackgroundColor:[UIColor getColor:@"cccccc"]];
         _selectButton = sender;
         [_selectButton setBackgroundColor:[UIColor whiteColor]];
+        
+        _subTableViewController.tableEnum = EnumTypeTable_fyfl;
+        [_subTableViewController.tableView reloadData];
+        [_tableView reloadData];
     }
 }
 @end

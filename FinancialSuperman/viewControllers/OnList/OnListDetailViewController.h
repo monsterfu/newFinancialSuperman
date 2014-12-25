@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "GlobalHeader.h"
 #import "OnListDetailHeaderCell.h"
+#import "OnListDetailsubTableController.h"
 
 @interface OnListDetailViewController : baseLoadViewController<UIAlertViewDelegate>
 {
@@ -19,6 +20,10 @@
     UITextField* _emailTextField;
     
     UIButton* _selectButton;
+    
+    EnumTypeTable_Enum _tableType;
+    
+    OnListDetailsubTableController* _subTableViewController;
 }
 
 @property (nonatomic, retain)ProductOneParamModel* productModel;

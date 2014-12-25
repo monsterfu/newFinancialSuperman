@@ -230,6 +230,7 @@
 		64702B781A10F88900850E32 /* grayArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 64702B721A10F88900850E32 /* grayArrow@2x.png */; };
 		64702B7B1A1108CA00850E32 /* timeline_new_status_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 64702B791A1108CA00850E32 /* timeline_new_status_background.png */; };
 		64702B7C1A1108CA00850E32 /* timeline_new_status_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 64702B7A1A1108CA00850E32 /* timeline_new_status_background@2x.png */; };
+		648E766C1A4C5B440049201D /* OnListDetailsubTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 648E766B1A4C5B440049201D /* OnListDetailsubTableController.m */; };
 		64B6C77A1A06641B00F251D4 /* MeAttentionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64B6C7791A06641B00F251D4 /* MeAttentionViewController.m */; };
 		64B7D4BD1A223C550035E60F /* user_login_user_cellphone_number_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 64B7D4BC1A223C550035E60F /* user_login_user_cellphone_number_logo@2x.png */; };
 		64B7D4C01A223D6C0035E60F /* navi_custom_back_btn_hgihlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 64B7D4BE1A223D6C0035E60F /* navi_custom_back_btn_hgihlight.png */; };
@@ -576,6 +577,8 @@
 		64702B721A10F88900850E32 /* grayArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grayArrow@2x.png"; sourceTree = "<group>"; };
 		64702B791A1108CA00850E32 /* timeline_new_status_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timeline_new_status_background.png; sourceTree = "<group>"; };
 		64702B7A1A1108CA00850E32 /* timeline_new_status_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "timeline_new_status_background@2x.png"; sourceTree = "<group>"; };
+		648E766A1A4C5B440049201D /* OnListDetailsubTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OnListDetailsubTableController.h; path = viewControllers/OnList/OnListDetailsubTableController.h; sourceTree = "<group>"; };
+		648E766B1A4C5B440049201D /* OnListDetailsubTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OnListDetailsubTableController.m; path = viewControllers/OnList/OnListDetailsubTableController.m; sourceTree = "<group>"; };
 		64B6C7781A06641B00F251D4 /* MeAttentionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeAttentionViewController.h; path = viewControllers/Me/MeAttentionViewController.h; sourceTree = "<group>"; };
 		64B6C7791A06641B00F251D4 /* MeAttentionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeAttentionViewController.m; path = viewControllers/Me/MeAttentionViewController.m; sourceTree = "<group>"; };
 		64B7D4BC1A223C550035E60F /* user_login_user_cellphone_number_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user_login_user_cellphone_number_logo@2x.png"; sourceTree = "<group>"; };
@@ -1018,6 +1021,8 @@
 				643AB16C1A013C3500171976 /* OnListViewController.m */,
 				644A70941A454AE000A39922 /* OnListDetailViewController.h */,
 				644A70951A454AE000A39922 /* OnListDetailViewController.m */,
+				648E766A1A4C5B440049201D /* OnListDetailsubTableController.h */,
+				648E766B1A4C5B440049201D /* OnListDetailsubTableController.m */,
 			);
 			name = OnList;
 			sourceTree = "<group>";
@@ -1566,6 +1571,7 @@
 				64702AF31A107C1A00850E32 /* ASIAuthenticationDialog.m in Sources */,
 				640C70E31A15A5840091BE8F /* DDProgressView.m in Sources */,
 				64702B001A107C1A00850E32 /* ASICloudFilesObject.m in Sources */,
+				648E766C1A4C5B440049201D /* OnListDetailsubTableController.m in Sources */,
 				64702B021A107C1A00850E32 /* ASICloudFilesRequest.m in Sources */,
 				6418BE451A1CAB0A00F5B353 /* baseInfoTableViewController.m in Sources */,
 				64702B681A10B37900850E32 /* DKScrollingTabController.m in Sources */,
@@ -1762,8 +1768,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: xin fu (H6NR6KPK2Z)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: xin fu (H6NR6KPK2Z)";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -1774,7 +1780,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "c476f947-f987-499a-91a5-1b93e0bd9156";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1783,8 +1789,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: xin fu (H6NR6KPK2Z)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: xin fu (H6NR6KPK2Z)";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -1795,7 +1801,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "c476f947-f987-499a-91a5-1b93e0bd9156";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
