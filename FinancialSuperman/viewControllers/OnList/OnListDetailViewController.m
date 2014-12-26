@@ -33,7 +33,6 @@
     [footView setBackgroundColor:[UIColor clearColor]];
     [_tableView setTableFooterView:footView];
     
-    self.title = _productModel.baseInfo.product_name;
     UIImage* image = [UIImage imageNamed:@"navi_custom_email_normal"];
     //    image = [image stretchableImageWithLeftCapWidth:20 topCapHeight:20];
     UIBarButtonItem* emailButtonItem = [[UIBarButtonItem alloc]initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(emailButtonTouched)];
@@ -44,8 +43,13 @@
     
     UIStoryboard* storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     _subTableViewController  = [storyBoard instantiateViewControllerWithIdentifier:@"OnListDetailsubTableControllerID"];
+    _subTableViewController.productOne = _productOne;
     _subTableViewController.tableEnum = _tableType;
     
+    self.title = _productOne.baseInfo.product_name;
+    
+    [self startLoadView:self.tableView];
+    [HttpRequest productSiMuDetailRequest:[NSMutableDictionary dictionaryWithObjects:@[[USER_DEFAULT objectForKey:KEY_APPKEY_INFO],_productOne.productId] forKeys:@[@"appkey",@"product_id"]]  delegate:self finishSel:@selector(GetResult:) failSel:@selector(GetErr:) tag:TAG_Product_PrivateTable];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -53,15 +57,19 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"orderproductIdentifier"]) {
+        _orderViewController = [segue destinationViewController];
+        _orderViewController.productOne = _productOne;
+    }
 }
-*/
+
 
 #pragma mark --
 #pragma mark emailButtonTouched
@@ -110,6 +118,32 @@
     if (indexPath.section == 0) {
         return 180.0f;
     }else{
+        switch (_selectedIndex) {
+            case EnumTypeTable_jzzs:
+            {
+                return 390.0f;
+            }
+                break;
+            case EnumTypeTable_rgxz:
+            {
+                return 390.0f;
+            }
+                break;
+            case EnumTypeTable_xxxx:
+            {
+                return customCell_height* 11;
+            }
+                break;
+            case EnumTypeTable_fyfl:
+            {
+                return 390.0f;
+            }
+                break;
+                
+            default:
+                return 390.0f;
+                break;
+        }
         return 390.0f;
     }
 }
@@ -134,13 +168,33 @@
         return headerView;
     }
     _headerCell = [tableView dequeueReusableCellWithIdentifier:@"siMuCell2HeaderIdentifier"];
-    _selectButton = _headerCell.zsButton;
+    
+    [_headerCell.zsButton setBackgroundColor:[UIColor getColor:@"cccccc"]];
+    if (_selectedIndex == 0) {
+        [_headerCell.zsButton setBackgroundColor:[UIColor whiteColor]];
+    }else if (_selectedIndex == 1) {
+        [_headerCell.rgButton setBackgroundColor:[UIColor whiteColor]];
+    }else if (_selectedIndex == 2) {
+        [_headerCell.xxbutton setBackgroundColor:[UIColor whiteColor]];
+    }else if (_selectedIndex == 3) {
+        [_headerCell.fyButton setBackgroundColor:[UIColor whiteColor]];
+    }
+    
+    
     return _headerCell.contentView;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section == 0) {
         _cell = [tableView dequeueReusableCellWithIdentifier:@"siMuCellIdentifier"];
+        UILabel* dateLabel = (UILabel*)[_cell viewWithTag:1];
+        dateLabel.text = _productOne.buy_begin_date;
+        UILabel* Labelone = (UILabel*)[_cell viewWithTag:2];
+        Labelone.text = _productOne.buy_begin_date;
+        UILabel* Labeltwo = (UILabel*)[_cell viewWithTag:3];
+        UILabel* Labelthree = (UILabel*)[_cell viewWithTag:4];
+        UILabel* Labeldp = (UILabel*)[_cell viewWithTag:5];
+        
     }else{
         _cell = [tableView dequeueReusableCellWithIdentifier:@"siMuCell2Identifier"];
         [_cell addSubview:_subTableViewController.view];
@@ -184,9 +238,13 @@
             [self endLoadView];
             [_tableView setHidden:NO];
             [_alreadyBookNumLabel setAttributedText:[NSMutableAttributedString instanceupStr:_productOne.booking_count downStr:@"人预约" upColor:COMMON_RED_COLOR downColor:[UIColor blackColor] upFont:[UIFont fontWithName:@"STHeitiSC-Light" size:19] downFont:[UIFont fontWithName:@"STHeitiSC-Light" size:14]]];
+        }else if (request.tag == TAG_Product_PrivateTable){
+            [self endLoadView];
+            [self.tableView reloadData];
         }
     }else{
         [ProgressHUD showError:@"数据出错！"];
+        [self endLoadView];
     }
 }
 
@@ -199,7 +257,9 @@
         _selectButton = sender;
         [_selectButton setBackgroundColor:[UIColor whiteColor]];
         
-        _subTableViewController.tableEnum = EnumTypeTable_rgxz;
+        _selectedIndex = 0;
+        
+        _subTableViewController.tableEnum = EnumTypeTable_jzzs;
         [_subTableViewController.tableView reloadData];
         [_tableView reloadData];
     }
@@ -212,6 +272,8 @@
         [_selectButton setBackgroundColor:[UIColor getColor:@"cccccc"]];
         _selectButton = sender;
         [_selectButton setBackgroundColor:[UIColor whiteColor]];
+        
+        _selectedIndex = 1;
         
         _subTableViewController.tableEnum = EnumTypeTable_rgxz;
         [_subTableViewController.tableView reloadData];
@@ -227,9 +289,12 @@
         _selectButton = sender;
         [_selectButton setBackgroundColor:[UIColor whiteColor]];
         
+        _selectedIndex = 2;
+        
         _subTableViewController.tableEnum = EnumTypeTable_xxxx;
         [_subTableViewController.tableView reloadData];
         [_tableView reloadData];
+        
     }
 }
 
@@ -240,6 +305,8 @@
         [_selectButton setBackgroundColor:[UIColor getColor:@"cccccc"]];
         _selectButton = sender;
         [_selectButton setBackgroundColor:[UIColor whiteColor]];
+        
+        _selectedIndex = 3;
         
         _subTableViewController.tableEnum = EnumTypeTable_fyfl;
         [_subTableViewController.tableView reloadData];

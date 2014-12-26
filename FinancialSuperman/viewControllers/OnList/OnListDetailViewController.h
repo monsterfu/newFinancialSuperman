@@ -20,13 +20,13 @@
     UITextField* _emailTextField;
     
     UIButton* _selectButton;
+    NSUInteger _selectedIndex;
     
     EnumTypeTable_Enum _tableType;
     
+    orderViewController* _orderViewController;
     OnListDetailsubTableController* _subTableViewController;
 }
-
-@property (nonatomic, retain)ProductOneParamModel* productModel;
 @property(nonatomic, retain)ProductOneParamModel* productOne;
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;

@@ -149,7 +149,7 @@
 #define TAG_Product_OrderList       4005
 #define TAG_Email_Product           4006
 #define TAG_Product_Detail          4007
-
+#define TAG_Product_PrivateTable    4008
 
 #define TAG_PersonCenter_Register    5000
 #define TAG_PersonCenter_CheckCode   5001

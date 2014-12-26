@@ -12,8 +12,9 @@
 #define fyflHeaderCellIdentifier        @"fyflHeaderCellIdentifier"
 #define fyflContentCellIdentifier       @"fyflContentCellIdentifier"
 #define customerLabelCellIdentifier     @"customerLabelCellIdentifier"
+#define bemLineCellIdentifier           @"bemLineCellIdentifier"
 
-#define customCell_height      (44)
+
 
 @interface OnListDetailsubTableController ()
 
@@ -26,13 +27,17 @@
     // Do any additional setup after loading the view.
     
     
-    _rgxzTitleArray = @[@"成立日期:",@"开放日期:",@"认购起点:",@"认购费用:",@"退出费用:",@"管理费用:"];
-    _xxxxTitleArray = @[@"产品状态",@"发行平台",@"托管银行",@"证券经纪",@"基金性质",@"投资类型",@"是否结构化",@"基金经理",@"私募公司",@"投资理念",@"投资团队"];
+    _rgxzTitleArray = @[@"成立日期: ",@"开放日期: ",@"认购起点: ",@"认购费用: ",@"退出费用: ",@"管理费用: "];
+    _xxxxTitleArray = @[@"产品状态: ",@"发行平台: ",@"托管银行: ",@"证券经纪: ",@"基金性质: ",@"投资类型: ",@"是否结构化: ",@"基金经理: ",@"私募公司: ",@"投资理念: ",@"投资团队: "];
     
     
     UIView* footView = [UIView new];
     [footView setBackgroundColor:[UIColor clearColor]];
     [_tableView setTableFooterView:footView];
+    
+    
+    self.ArrayOfValues = [[NSMutableArray alloc] init];
+    self.ArrayOfDates = [[NSMutableArray alloc] init];
     
     for (int i=0; i < 66; i++) {
         [self.ArrayOfValues addObject:[NSNumber numberWithInteger:(arc4random() % 70000)]]; // Random values for the graph
@@ -47,15 +52,6 @@
      [self.view addSubview:myGraph]; */
     
     // Customization of the graph
-    self.lineGraphView.delegate = self;
-    self.lineGraphView.enableTouchReport = YES;
-    self.lineGraphView.colorTop = [UIColor clearColor];
-    self.lineGraphView.colorBottom = [UIColor clearColor]; // Leaving this not-set on iOS 7 will default to your window's tintColor
-    self.lineGraphView.colorLine = [UIColor whiteColor];
-    self.lineGraphView.backgroundColor = [UIColor clearColor];
-    self.lineGraphView.colorXaxisLabel = [UIColor whiteColor];
-    self.lineGraphView.widthLine = 3.0;
-    self.lineGraphView.enableTouchReport = YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -143,16 +139,38 @@
     switch (_tableEnum) {
         case EnumTypeTable_jzzs:
         {
-            _cell = [tableView dequeueReusableCellWithIdentifier:custerIdentifier forIndexPath:indexPath];
-            _cell.textLabel.text = [_rgxzTitleArray objectAtIndex:indexPath.row];
-            return _cell;
+            _bemLineCell = [tableView dequeueReusableCellWithIdentifier:bemLineCellIdentifier forIndexPath:indexPath];
+            _bemLineCell.lineGraphView.delegate = self;
+            _bemLineCell.lineGraphView.enableTouchReport = YES;
+            _bemLineCell.lineGraphView.colorTop = [UIColor clearColor];
+            _bemLineCell.lineGraphView.colorBottom = [UIColor clearColor]; // Leaving this not-set on iOS 7 will default to your window's tintColor
+            _bemLineCell.lineGraphView.colorLine = [UIColor blueColor];
+            _bemLineCell.lineGraphView.backgroundColor = [UIColor clearColor];
+            _bemLineCell.lineGraphView.colorXaxisLabel = [UIColor whiteColor];
+            _bemLineCell.lineGraphView.widthLine = 3.0;
+            _bemLineCell.lineGraphView.enableTouchReport = YES;
+            
+            return _bemLineCell;
         }
             break;
         case EnumTypeTable_rgxz:
         {
             _cell = [tableView dequeueReusableCellWithIdentifier:custerIdentifier forIndexPath:indexPath];
             UILabel* _label = (UILabel*)[_cell viewWithTag:1];
-            _label.text = [_rgxzTitleArray objectAtIndex:indexPath.row];
+            NSString* contentStr = [_rgxzTitleArray objectAtIndex:indexPath.row];
+            if (indexPath.row == 0) {
+                _label.text = [contentStr stringByAppendingString:_productOne.foundation_date];
+            }else if (indexPath.row == 1){
+                _label.text = [contentStr stringByAppendingString:_productOne.open_date];
+            }else if (indexPath.row == 2){
+                _label.text = [contentStr stringByAppendingString:_productOne.investment_amount];
+            }else if (indexPath.row == 3){
+                _label.text = [contentStr stringByAppendingString:_productOne.buy_rate];
+            }else if (indexPath.row == 4){
+                _label.text = [contentStr stringByAppendingString:_productOne.exit_rate];
+            }else if (indexPath.row == 5){
+                _label.text = [contentStr stringByAppendingString:_productOne.management_rate];
+            }
             return _cell;
         }
             break;
@@ -160,16 +178,32 @@
         {
             if (indexPath.row > 6) {
                 _sksCell = [tableView dequeueReusableCellWithIdentifier:sksCusterIdentifier forIndexPath:indexPath];
+                _sksCell.isExpandable = YES;
                 UILabel* _label = (UILabel*)[_cell viewWithTag:1];
                 _label.text = [_xxxxTitleArray objectAtIndex:indexPath.row];
+                NSLog(@"_label.text:--------%@",_label.text);
                 return _sksCell;
             }else{
                 _cell = [tableView dequeueReusableCellWithIdentifier:custerIdentifier forIndexPath:indexPath];
                 UILabel* _label = (UILabel*)[_cell viewWithTag:1];
-                _label.text = [_xxxxTitleArray objectAtIndex:indexPath.row];
+                NSString* contentStr = [_xxxxTitleArray objectAtIndex:indexPath.row];
+                if (indexPath.row == 0) {
+                    _label.text = [contentStr stringByAppendingString:@"进行中"];
+                }else if (indexPath.row == 1){
+                    _label.text = [contentStr stringByAppendingString:_productOne.baseInfo.issuer];
+                }else if (indexPath.row == 2){
+                    _label.text = [contentStr stringByAppendingString:_productOne.trusteeship_bank];
+                }else if (indexPath.row == 3){
+                    _label.text = [contentStr stringByAppendingString:_productOne.stock_broker];
+                }else if (indexPath.row == 4){
+                    _label.text = [contentStr stringByAppendingString:_productOne.found_character];
+                }else if (indexPath.row == 5){
+                    _label.text = [contentStr stringByAppendingString:_productOne.baseInfo.product_category];
+                }else if (indexPath.row == 6){
+                    _label.text = [contentStr stringByAppendingString:_productOne.is_structured];
+                }
                 return _cell;
             }
-            return _cell;
         }
             break;
         case EnumTypeTable_fyfl:
@@ -195,5 +229,24 @@
 {
     
 }
+#pragma mark - SimpleLineGraph Data Source
 
+- (int)numberOfPointsInGraph {
+    return (int)[self.ArrayOfValues count];
+}
+
+- (float)valueForIndex:(NSInteger)index {
+    return [[self.ArrayOfValues objectAtIndex:index] floatValue];
+}
+
+
+#pragma mark - SimpleLineGraph Delegate
+
+- (int)numberOfGapsBetweenLabels {
+    return 1;
+}
+
+- (NSString *)labelOnXAxisForIndex:(NSInteger)index {
+    return [self.ArrayOfDates objectAtIndex:index];
+}
 @end

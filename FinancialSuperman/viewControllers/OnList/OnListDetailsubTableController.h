@@ -9,14 +9,20 @@
 #import <UIKit/UIKit.h>
 #import "SKSTableView.h"
 #import "SKSTableViewCell.h"
+#import "bemLineViewCell.h"
+
 #import "BEMSimpleLineGraphView.h"
+#import "ProductOneParamModel.h"
 
 typedef enum : NSUInteger {
-    EnumTypeTable_jzzs,     //净值走势
+    EnumTypeTable_jzzs = 0,     //净值走势
     EnumTypeTable_rgxz,     //认购须知
     EnumTypeTable_xxxx,     //详细信息
     EnumTypeTable_fyfl,     //返佣费率
 } EnumTypeTable_Enum;
+
+#define customCell_height      (44)
+
 
 @interface OnListDetailsubTableController : UIViewController<BEMSimpleLineGraphDelegate>
 {
@@ -26,7 +32,11 @@ typedef enum : NSUInteger {
     SKSTableViewCell* _sksCell;
     UITableViewCell* _cell;
     UITableViewCell* _headerCell;
+    
+    bemLineViewCell* _bemLineCell;
 }
+
+@property(nonatomic, retain)ProductOneParamModel* productOne;
 
 @property (strong, nonatomic) NSMutableArray *ArrayOfValues;
 @property (strong, nonatomic) NSMutableArray *ArrayOfDates;

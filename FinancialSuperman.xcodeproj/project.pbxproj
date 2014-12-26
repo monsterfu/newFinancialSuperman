@@ -259,6 +259,7 @@
 		B113B6451A2481B500F0A04C /* baseLoadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B113B6441A2481B500F0A04C /* baseLoadViewController.m */; };
 		B113B6481A24866700F0A04C /* baseLoadTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B113B6471A24866700F0A04C /* baseLoadTableTableViewController.m */; };
 		B117CBB31A3ABC44000A38E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B117CBB21A3ABC44000A38E6 /* Main.storyboard */; };
+		B131966D1A4D3D7100380BD4 /* bemLineViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B131966C1A4D3D7100380BD4 /* bemLineViewCell.m */; };
 		B13D4AD11A3ABE0A0093A6B9 /* bankCardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B13D4AD01A3ABE0A0093A6B9 /* bankCardModel.m */; };
 		B1ED85911A25DC68005F97E8 /* processView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1ED85901A25DC68005F97E8 /* processView.m */; };
 		B1FCCC451A2586750052A90A /* NSMutableArray+Sort.m in Sources */ = {isa = PBXBuildFile; fileRef = B1FCCC441A2586750052A90A /* NSMutableArray+Sort.m */; };
@@ -627,6 +628,8 @@
 		B113B6461A24866700F0A04C /* baseLoadTableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = baseLoadTableTableViewController.h; path = common/baseLoadTableTableViewController.h; sourceTree = "<group>"; };
 		B113B6471A24866700F0A04C /* baseLoadTableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = baseLoadTableTableViewController.m; path = common/baseLoadTableTableViewController.m; sourceTree = "<group>"; };
 		B117CBB21A3ABC44000A38E6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		B131966B1A4D3D7100380BD4 /* bemLineViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bemLineViewCell.h; path = views/bemLineViewCell.h; sourceTree = "<group>"; };
+		B131966C1A4D3D7100380BD4 /* bemLineViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = bemLineViewCell.m; path = views/bemLineViewCell.m; sourceTree = "<group>"; };
 		B13D4ACF1A3ABE0A0093A6B9 /* bankCardModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bankCardModel.h; path = Model/bankCardModel.h; sourceTree = "<group>"; };
 		B13D4AD01A3ABE0A0093A6B9 /* bankCardModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = bankCardModel.m; path = Model/bankCardModel.m; sourceTree = "<group>"; };
 		B1ED858F1A25DC68005F97E8 /* processView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = processView.h; path = views/processView.h; sourceTree = "<group>"; };
@@ -1059,6 +1062,8 @@
 				643BBD851A02670100D151E4 /* searchListViewCell.m */,
 				6417B84E1A04C5080060E236 /* searchCustomSegmentView.h */,
 				6417B84F1A04C5080060E236 /* searchCustomSegmentView.m */,
+				B131966B1A4D3D7100380BD4 /* bemLineViewCell.h */,
+				B131966C1A4D3D7100380BD4 /* bemLineViewCell.m */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -1604,6 +1609,7 @@
 				64702B001A107C1A00850E32 /* ASICloudFilesObject.m in Sources */,
 				648E766C1A4C5B440049201D /* OnListDetailsubTableController.m in Sources */,
 				64702B021A107C1A00850E32 /* ASICloudFilesRequest.m in Sources */,
+				B131966D1A4D3D7100380BD4 /* bemLineViewCell.m in Sources */,
 				6418BE451A1CAB0A00F5B353 /* baseInfoTableViewController.m in Sources */,
 				64702B681A10B37900850E32 /* DKScrollingTabController.m in Sources */,
 				6418BE481A1CC50400F5B353 /* personModel.m in Sources */,
@@ -1801,8 +1807,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: xin fu (H6NR6KPK2Z)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: xin fu (H6NR6KPK2Z)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -1813,7 +1819,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c476f947-f987-499a-91a5-1b93e0bd9156";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1822,8 +1828,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: xin fu (H6NR6KPK2Z)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: xin fu (H6NR6KPK2Z)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -1834,7 +1840,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c476f947-f987-499a-91a5-1b93e0bd9156";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

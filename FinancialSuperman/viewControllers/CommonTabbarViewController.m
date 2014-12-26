@@ -11,6 +11,7 @@
 #import "productDetailViewController.h"
 #import "ProductOneParamModel.h"
 #import "Me/MeOrderDetailViewController.h"
+#import "OnListDetailViewController.h"
 
 @interface CommonTabbarViewController ()
 
@@ -83,6 +84,13 @@
         bankCardModel* _product = (bankCardModel*)sender;
         meBackCardAddViewController*vc = (meBackCardAddViewController *) segue.destinationViewController;
         [vc setCardModel:_product];
+    }else if ([segue.identifier isEqualToString:@"OnlistDetailIdentifier"])
+    {
+        if ([sender isKindOfClass:[ProductOneParamModel class]]) {
+            ProductOneParamModel* _product = (ProductOneParamModel*)sender;
+            OnListDetailViewController *vc = (OnListDetailViewController *) segue.destinationViewController;
+            [vc setProductOne:_product];
+        }
     }
 }
 
