@@ -56,6 +56,7 @@
 #import "UserDetailModel.h"
 #import "earnModel.h"
 #import "bankCardModel.h"
+#import "privateFundModel.h"
 
 //thrid-party view control
 #import "DKScrollingTabController.h"

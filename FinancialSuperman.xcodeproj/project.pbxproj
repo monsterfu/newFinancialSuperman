@@ -235,6 +235,7 @@
 		648E76771A4C70580049201D /* BEMCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 648E76711A4C70580049201D /* BEMCircle.m */; };
 		648E76781A4C70580049201D /* BEMLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 648E76731A4C70580049201D /* BEMLine.m */; };
 		648E76791A4C70580049201D /* BEMSimpleLineGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 648E76751A4C70580049201D /* BEMSimpleLineGraphView.m */; };
+		649DDA411A4DD5AC00B5F2F5 /* privateFundModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 649DDA401A4DD5AC00B5F2F5 /* privateFundModel.m */; };
 		64B6C77A1A06641B00F251D4 /* MeAttentionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64B6C7791A06641B00F251D4 /* MeAttentionViewController.m */; };
 		64B7D4BD1A223C550035E60F /* user_login_user_cellphone_number_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 64B7D4BC1A223C550035E60F /* user_login_user_cellphone_number_logo@2x.png */; };
 		64B7D4C01A223D6C0035E60F /* navi_custom_back_btn_hgihlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 64B7D4BE1A223D6C0035E60F /* navi_custom_back_btn_hgihlight.png */; };
@@ -592,6 +593,8 @@
 		648E76731A4C70580049201D /* BEMLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMLine.m; sourceTree = "<group>"; };
 		648E76741A4C70580049201D /* BEMSimpleLineGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMSimpleLineGraphView.h; sourceTree = "<group>"; };
 		648E76751A4C70580049201D /* BEMSimpleLineGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMSimpleLineGraphView.m; sourceTree = "<group>"; };
+		649DDA3F1A4DD5AC00B5F2F5 /* privateFundModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = privateFundModel.h; path = Model/privateFundModel.h; sourceTree = "<group>"; };
+		649DDA401A4DD5AC00B5F2F5 /* privateFundModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = privateFundModel.m; path = Model/privateFundModel.m; sourceTree = "<group>"; };
 		64B6C7781A06641B00F251D4 /* MeAttentionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeAttentionViewController.h; path = viewControllers/Me/MeAttentionViewController.h; sourceTree = "<group>"; };
 		64B6C7791A06641B00F251D4 /* MeAttentionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeAttentionViewController.m; path = viewControllers/Me/MeAttentionViewController.m; sourceTree = "<group>"; };
 		64B7D4BC1A223C550035E60F /* user_login_user_cellphone_number_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user_login_user_cellphone_number_logo@2x.png"; sourceTree = "<group>"; };
@@ -1095,6 +1098,8 @@
 				64702B6A1A10E46500850E32 /* ProductOneParamModel.m */,
 				6418BE401A1CA11F00F5B353 /* BaseInfoModel.h */,
 				6418BE411A1CA11F00F5B353 /* BaseInfoModel.m */,
+				649DDA3F1A4DD5AC00B5F2F5 /* privateFundModel.h */,
+				649DDA401A4DD5AC00B5F2F5 /* privateFundModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1605,6 +1610,7 @@
 				64702AF31A107C1A00850E32 /* ASIAuthenticationDialog.m in Sources */,
 				640C70E31A15A5840091BE8F /* DDProgressView.m in Sources */,
 				648E76781A4C70580049201D /* BEMLine.m in Sources */,
+				649DDA411A4DD5AC00B5F2F5 /* privateFundModel.m in Sources */,
 				648E76791A4C70580049201D /* BEMSimpleLineGraphView.m in Sources */,
 				64702B001A107C1A00850E32 /* ASICloudFilesObject.m in Sources */,
 				648E766C1A4C5B440049201D /* OnListDetailsubTableController.m in Sources */,
@@ -1807,8 +1813,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: xin fu (H6NR6KPK2Z)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: xin fu (H6NR6KPK2Z)";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -1819,7 +1825,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "06b7b8cb-7791-41f8-b213-bcd9fceb03d7";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1828,8 +1834,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: xin fu (H6NR6KPK2Z)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: xin fu (H6NR6KPK2Z)";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -1840,7 +1846,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "06b7b8cb-7791-41f8-b213-bcd9fceb03d7";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

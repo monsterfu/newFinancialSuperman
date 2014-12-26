@@ -29,6 +29,8 @@
 }
 @property(nonatomic, retain)ProductOneParamModel* productOne;
 
+@property(nonatomic, retain)privateFundModel* privateFundModel;
+
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UILabel *alreadyBookNumLabel;
 

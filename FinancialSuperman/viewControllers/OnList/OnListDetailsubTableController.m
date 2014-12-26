@@ -179,9 +179,8 @@
             if (indexPath.row > 6) {
                 _sksCell = [tableView dequeueReusableCellWithIdentifier:sksCusterIdentifier forIndexPath:indexPath];
                 _sksCell.isExpandable = YES;
-                UILabel* _label = (UILabel*)[_cell viewWithTag:1];
+                UILabel* _label = (UILabel*)[_sksCell viewWithTag:1];
                 _label.text = [_xxxxTitleArray objectAtIndex:indexPath.row];
-                NSLog(@"_label.text:--------%@",_label.text);
                 return _sksCell;
             }else{
                 _cell = [tableView dequeueReusableCellWithIdentifier:custerIdentifier forIndexPath:indexPath];

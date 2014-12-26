@@ -131,7 +131,7 @@
                 break;
             case EnumTypeTable_xxxx:
             {
-                return customCell_height* 11;
+                return customCell_height* 14;
             }
                 break;
             case EnumTypeTable_fyfl:
@@ -188,12 +188,15 @@
     if (indexPath.section == 0) {
         _cell = [tableView dequeueReusableCellWithIdentifier:@"siMuCellIdentifier"];
         UILabel* dateLabel = (UILabel*)[_cell viewWithTag:1];
-        dateLabel.text = _productOne.buy_begin_date;
+        dateLabel.text = _privateFundModel.var_day;
         UILabel* Labelone = (UILabel*)[_cell viewWithTag:2];
-        Labelone.text = _productOne.buy_begin_date;
+        Labelone.text = _privateFundModel.fund_net_unit;
         UILabel* Labeltwo = (UILabel*)[_cell viewWithTag:3];
+        Labeltwo.text = _privateFundModel.fund_cumulative_net;
         UILabel* Labelthree = (UILabel*)[_cell viewWithTag:4];
+        Labelthree.text = _productOne.cumulative_income;
         UILabel* Labeldp = (UILabel*)[_cell viewWithTag:5];
+        Labeldp.text = _productOne.comments;
         
     }else{
         _cell = [tableView dequeueReusableCellWithIdentifier:@"siMuCell2Identifier"];
@@ -240,6 +243,7 @@
             [_alreadyBookNumLabel setAttributedText:[NSMutableAttributedString instanceupStr:_productOne.booking_count downStr:@"人预约" upColor:COMMON_RED_COLOR downColor:[UIColor blackColor] upFont:[UIFont fontWithName:@"STHeitiSC-Light" size:19] downFont:[UIFont fontWithName:@"STHeitiSC-Light" size:14]]];
         }else if (request.tag == TAG_Product_PrivateTable){
             [self endLoadView];
+            _privateFundModel = [[privateFundModel alloc]initWithDictionary:[dictionary objectForKey:@"fund_values"]];
             [self.tableView reloadData];
         }
     }else{

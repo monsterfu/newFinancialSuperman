@@ -37,7 +37,6 @@ typedef enum : NSUInteger {
 }
 
 @property(nonatomic, retain)ProductOneParamModel* productOne;
-
 @property (strong, nonatomic) NSMutableArray *ArrayOfValues;
 @property (strong, nonatomic) NSMutableArray *ArrayOfDates;
 
